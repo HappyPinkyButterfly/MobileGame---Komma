@@ -15,6 +15,10 @@ public class RoundStart : MonoBehaviour
     public List<string> typeOfEffectList = new List<string>
     {
         "TAKE",
+        "TAKE",
+        "TAKE",
+        "GIVE",
+        "GIVE",
         "GIVE",
         "TAKE AND GIVE",
         "EVERYONE",
@@ -22,17 +26,85 @@ public class RoundStart : MonoBehaviour
         "SAME GENDER"
     };
 
-    public List<string> typeOfDrinkingTable = new List<string>
+    public List<string> typeOfDrinkingList = new List<string>
     {
         "Sips",
-        "Second\nChug"
+        "Second Chug"
+    };
+
+    public List<string> sideEffectList = new List<string>
+    {
+        "Have or been walked on during sex",
+        "You are simp",
+        "For each bodycount",
+        "Virgin",
+        "Drinking vodka",
+        "Not drinking vodka",
+        "Sexy person",
+        "Nice person",
+        "Hooked up with someone you met online",
+        "Had shot",
+        "Taken",
+        "Been with friends ex",
+        "Attracted to present player",
+        "Benn skinny dipping",
+        "Have made selfie last week",
+        "Kissed or had sex with present player",
+        "Turned on by a fictional character",
+        "Ever lost keys or wallet",
+        "Ever puked first",
+        "For every virgin present",
+        "Under 180cm",
+        "For each relationhip",
+        "Had body shot",
+        "Had condom popped",
+        "For each sibling",
+        "Used dating apps",
+        "Currently using dating apps"
     };
 
     public void RoundStartClick()
     {
         int index = Random.Range(0, typeOfEffectList.Count);
-        int index2 = Random.Range(0, typeOfDrinkingTable.Count);
+        int index2 = Random.Range(0, typeOfDrinkingList.Count);
+
         typeOfEffect.text = typeOfEffectList[index];
-        typeOfDrinking.text =typeOfDrinkingTable[index2];
+
+        if (typeOfEffectList[index] == "TAKE" || typeOfEffectList[index] == "GIVE")
+        {
+            typeOfEffect.fontSize = 200f;
+        }
+        else
+        {
+            typeOfEffect.fontSize = 140f;
+        }
+
+        amount.text = Random.Range(1, 5).ToString();
+
+        typeOfDrinking.text = typeOfDrinkingList[index2];
+
+        if (typeOfDrinkingList[index2] == "Second Chug")
+        {
+            typeOfDrinking.fontSize = 100f;
+        }
+        else
+        {
+            typeOfDrinking.fontSize = 180f;
+        }
+
+        int index3 = Random.Range(0, sideEffectList.Count);
+        sideEffect.text = sideEffectList[index3];
+
+        if (sideEffectList[index3].Length < 13)
+        { 
+            sideEffect.fontSize = 120;
+        }
+        else
+        {
+            sideEffect.fontSize = 90;
+        }
+
+        sideAmounts.text = " +" + Random.Range(1, 4).ToString();
     }
 }
+
