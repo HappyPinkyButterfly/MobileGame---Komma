@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
+
 
 
 public class RoundStart : MonoBehaviour
@@ -86,10 +86,14 @@ public class RoundStart : MonoBehaviour
         if (typeOfDrinkingList[index2] == "Second Chug")
         {
             typeOfDrinking.fontSize = 100f;
+            amount.rectTransform.anchoredPosition =
+            new Vector2(-300f, amount.rectTransform.anchoredPosition.y);
         }
         else
         {
-            typeOfDrinking.fontSize = 180f;
+            typeOfDrinking.fontSize = 150f;
+            amount.rectTransform.anchoredPosition =
+            new Vector2(-150f, amount.rectTransform.anchoredPosition.y);
         }
 
         int index3 = Random.Range(0, sideEffectList.Count);

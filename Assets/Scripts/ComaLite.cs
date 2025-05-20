@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,44 +7,22 @@ using UnityEngine.UI;
 
 public class ComaLite : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-
-    public string typeOfComa { get; set; }
-
-    public List<Button> comaPrefabs;
-    private GameObject currentInstance;
-    public List<string> typeOfComaLsit = new List<string>
+    public void LoadRandomPrefab()
     {
-        "Categories",
-        "Medusa",
-        "Game of 3",
-        "Most likey",
-        "Shiritori",
-        "Stare contest",
-        "Challanger",
-        "Guess underwear colour",
-        "Truth",
-        "Shot",
-        "Waterfall"
-     };
-
-    public void ComaLiteClick()
+        foreach (Transform child in transform)
     {
-        if (currentInstance != null)
-            Destroy(currentInstance);
-        //GameObject randomPrefab = comaPrefabs[Random.Range(0, comaPrefabs.Count)];
-        //currentInstance =  Instantiate(
-                randomPrefab,
-                transform.position,
-                transform.rotation,
-                transform.parent);
+        // Preveri, če otrok NI text (npr. nima komponente Text/TMP_Text)
+        if (child.GetComponent<Text>() == null && child.GetComponent<TMP_Text>() == null)
+        {
+            Destroy(child.gameObject);
+        }
     }
-    
-        
+        // 1. Naloži VSE prefabe iz mape "Resources/Prefabs/"
+        GameObject[] allPrefabs = Resources.LoadAll<GameObject>("Prefabs");
 
+        GameObject randomPrefab = allPrefabs[Random.Range(0, allPrefabs.Length)];
 
-        
+        // 4. Ustvari instanco v sceni
+        Instantiate(randomPrefab, transform);
     }
-
-
 }
