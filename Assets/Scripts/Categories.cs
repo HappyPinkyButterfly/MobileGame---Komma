@@ -5,7 +5,7 @@ public class Categories : MonoBehaviour
 {
     public TextMeshProUGUI typeOfEffect;
 
-    public GameEffects gameEffects;
+    public GameEffects gameEffects { get; set;}
 
     [System.Obsolete]
     public void Start()
