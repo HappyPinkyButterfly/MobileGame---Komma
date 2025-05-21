@@ -624,6 +624,7 @@ GameObject:
   - component: {fileID: 729489015}
   - component: {fileID: 729489014}
   - component: {fileID: 729489013}
+  - component: {fileID: 729489016}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -694,7 +695,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 729489014}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 729489016}
+        m_TargetAssemblyTypeName: ComaLite, Assembly-CSharp
+        m_MethodName: LoadRandomPrefab
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &729489014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -733,6 +746,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 729489011}
   m_CullTransparentMesh: 1
+--- !u!114 &729489016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729489011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80e90b30b20e85549b3ab3fb4d515c88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &945437919
 GameObject:
   m_ObjectHideFlags: 0
@@ -801,9 +826,37 @@ MonoBehaviour:
   - EVERYONE
   - EVERYONE ELSE
   - SAME GENDER
-  typeOfDrinkingTable:
+  typeOfDrinkingList:
   - Sips
   - Second Chug
+  sideEffectList:
+  - Have or been walked on during sex
+  - You are simp
+  - For each bodycount
+  - Virgin
+  - Drinking vodka
+  - Not drinking vodka
+  - Sexy person
+  - Nice person
+  - Hooked up with someone you met online
+  - Had shot
+  - Taken
+  - Been with friends ex
+  - Attracted to present player
+  - Benn skinny dipping
+  - Have made selfie last week
+  - Kissed or had sex with present player
+  - Turned on by a fictional character
+  - Ever lost keys or wallet
+  - Ever puked first
+  - For every virgin present
+  - Under 180cm
+  - For each relationhip
+  - Had body shot
+  - Had condom popped
+  - For each sibling
+  - Used dating apps
+  - Currently using dating apps
 --- !u!114 &945437922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1459,24 +1512,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 1731515871}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ad13272615e58848b5eef86f0bef504, type: 3}
+  m_Script: {fileID: 11500000, guid: 6702d2f7d6907b24a9cd054c2e8186d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typeOfEffect: {fileID: 0}
-  amount: {fileID: 0}
-  typeOfDrinking: {fileID: 0}
-  sideEffect: {fileID: 0}
-  sideAmounts: {fileID: 0}
-  typeOfEffectList:
-  - TAKE
-  - GIVE
-  - TAKE AND GIVE
-  - EVERYONE
-  - EVERYONE ELSE
-  - SAME GENDER
-  typeOfDrinkingTable:
-  - Sips
-  - Second Chug
+  badEffects:
+  - Bottoms Up
+  goodEffects:
+  - Give 3 Round Starts
+  - Give 2 Round Starts
+  - Give 6 Sips
+  - Give 5 Sips
+  - Give 4 Sips
+  - Give 3 Sips
+  - Give Chug 5 Seconds
+  - Give Chug 4 Seconds
+  - Give Chug 3 Seconds
+  - Give Take SHOT
+  - Give Bottoms Up
+  - All diffrent genders take a photo with you and give 5 sips
+  - Take a photo with the person closest to you body count and give 3 sips
+  - Give sips equal to the continets you visited
+  - Give Round Start for each player present
 --- !u!1 &1736543418
 GameObject:
   m_ObjectHideFlags: 0
