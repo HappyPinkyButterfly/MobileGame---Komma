@@ -10,13 +10,7 @@ public class MostLikely : MonoBehaviour
     public void Awake()
     {
         gameEffects = GetComponentInParent<GameEffects>();
-
     }
-
-    public List<string> effectList = new List<string>
-    {
-
-    };
     
 
     public void Start()

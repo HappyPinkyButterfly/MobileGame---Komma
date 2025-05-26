@@ -9,6 +9,10 @@ public class GameEffects : MonoBehaviour
     public List<string> descriptionList;
     public List<string> truth;
 
+    public List<string> wouldYouRather1;
+    public List<string> wouldYouRather2;
+
+
     public void Awake()
     {
         badEffects = new List<string>
@@ -44,7 +48,7 @@ public class GameEffects : MonoBehaviour
             "Give Chug 3 Seconds",
             "Give SHOT",
             "Give Bottoms Up",
-            "All diffrent genders take a photo with you and give 5 sips",
+            "Opposite genders take a photo with you and give 5 sips",
             "Give sips equal to the continets you visited",
             "Give Round Start for each player present",
 
@@ -81,6 +85,18 @@ public class GameEffects : MonoBehaviour
             "Tell us about your ideal character of your partner",
             "What is your biggest turn on",
             "Would you date me if we were single and correct gender"
+        };
+
+        wouldYouRather1 = new List<string>
+        {
+            "Be dominat in bed:",
+            "Have amazing conversation:"
+        };
+
+        wouldYouRather2 = new List<string>
+        {
+            "Be submisive in bed:",
+            "Have an amazing sex:"
         };
     }
 
