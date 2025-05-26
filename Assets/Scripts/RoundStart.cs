@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -11,6 +12,7 @@ public class RoundStart : MonoBehaviour
     public TextMeshProUGUI typeOfDrinking;
     public TextMeshProUGUI sideEffect;
     public TextMeshProUGUI sideAmounts;
+    public GameEffects gameEffects { get; set;}
 
     public List<string> typeOfEffectList = new List<string>
     {
@@ -62,9 +64,33 @@ public class RoundStart : MonoBehaviour
         "Used dating apps",
         "Currently using dating apps"
     };
+    public void Start()
+    {
+        gameEffects = GetComponentInParent<GameEffects>();
+    }
+    public void Update()
+    {
+        if (!gameEffects.roundStart)
+        {
+            typeOfEffect.text = "ROUND START";
+            typeOfEffect.fontSize = 200f;
+            typeOfEffect.rectTransform.anchoredPosition =
+            new Vector2(0f, 0f);
+            amount.text = "";
+            typeOfDrinking.text = "";
+            sideEffect.text = "";
+            sideAmounts.text = "";
+        }
+        else
+        {
+            typeOfEffect.rectTransform.anchoredPosition =
+            new Vector2(0f, 300f);
+        }
+    }
 
     public void RoundStartClick()
     {
+        gameEffects.roundStart = true;
         int index = Random.Range(0, typeOfEffectList.Count);
         int index2 = Random.Range(0, typeOfDrinkingList.Count);
 
@@ -100,7 +126,7 @@ public class RoundStart : MonoBehaviour
         sideEffect.text = sideEffectList[index3];
 
         if (sideEffectList[index3].Length < 13)
-        { 
+        {
             sideEffect.fontSize = 120;
         }
         else

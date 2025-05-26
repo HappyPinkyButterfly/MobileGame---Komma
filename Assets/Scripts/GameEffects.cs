@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class GameEffects : MonoBehaviour
 {
+    public bool comaLite;
+    public bool roundStart;
     public List<string> badEffects;
     public List<string> goodEffects;
     public List<string> contestTypes;
@@ -16,6 +18,10 @@ public class GameEffects : MonoBehaviour
 
     public void Awake()
     {
+
+        comaLite = false;
+        roundStart = false;
+
         badEffects = new List<string>
         {
             "All diffrent genders take a photo with you and 5 sips",
