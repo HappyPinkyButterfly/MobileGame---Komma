@@ -79,7 +79,7 @@ public class RoundStart : MonoBehaviour
             typeOfEffect.fontSize = 140f;
         }
 
-        amount.text = Random.Range(1, 5).ToString();
+        amount.text = Random.Range(1, 4).ToString();
 
         typeOfDrinking.text = typeOfDrinkingList[index2];
 
@@ -108,7 +108,7 @@ public class RoundStart : MonoBehaviour
             sideEffect.fontSize = 90;
         }
 
-        sideAmounts.text = " +" + Random.Range(1, 4).ToString();
+        sideAmounts.text = " +" + Random.Range(1, 3).ToString();
     }
 }
 
