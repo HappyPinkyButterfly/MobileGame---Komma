@@ -11,6 +11,7 @@ public class GameEffects : MonoBehaviour
 
     public List<string> wouldYouRather1;
     public List<string> wouldYouRather2;
+    public List<string> neverHaveIever;
 
 
     public void Awake()
@@ -98,6 +99,16 @@ public class GameEffects : MonoBehaviour
             "Be submisive in bed:",
             "Have an amazing sex:"
         };
+
+        neverHaveIever = new List<string>
+        {
+            "Stolen anything",
+            "Missed a flight",
+            "Drunk-dialed my ex"
+
+            
+        };
+
     }
 
 

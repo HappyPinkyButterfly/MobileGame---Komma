@@ -33,7 +33,10 @@ public class NeverHaveiever : MonoBehaviour
         {
             haveEffect.fontSize = 80f;
         }
-        
+
+        int index3 = Random.Range(0, gameEffects.neverHaveIever.Count);
+        neverHaveIever.text = gameEffects.neverHaveIever[index3];
+
 
 
     }
