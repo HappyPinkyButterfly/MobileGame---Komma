@@ -82,7 +82,21 @@ public class GameEffects : MonoBehaviour
             "To become a pornstar",
             "To have a child first",
             "You would fuck",
-            "Biggest whore or fuckboy"
+            "Biggest whore or fuckboy",
+            "Marry someone rich and famous",
+            "Date more than one person at a time",
+            "Get arrested",
+            "Die first in a horror film",
+            "Regularly check an ex’s Instagram",
+            "Date their best friend’s ex",
+            "Wear socks with sandals",
+            "Give the best hug",
+            "have the highest screen time",
+            "Become an influencer",
+            "Laugh in a serious moment",
+            "Commit a crime?",
+            "Have a threesome?",
+            "Marry for money?"
         };
 
         truth = new List<string>
@@ -91,7 +105,26 @@ public class GameEffects : MonoBehaviour
             "Tell us about your ideal bodytype of  partner",
             "Tell us about your ideal character of your partner",
             "What is your biggest turn on",
-            "Would you date me if we were single and correct gender"
+            "Would you date me if we were single and correct gender",
+            "Describe your worst injury",
+            "What's a mistake you've made that you still feel guilty about",
+            "What's something you've Googled that you aren't proud to admit",
+            "How do you really feel about your job?",
+            "Who in the group has the most attractive parents?",
+            "What's your dream job? ",
+            "Have you ever done something so wrong that you immediately regretted it? What? ",
+            "How do you handle rejection? ",
+            "What do you consider to be the most romantic thing a person could do?",
+            "How do you define love? ",
+            "What habits attract you the most? ",
+            "Would you accept an arranged marriage? ",
+            "What's your craziest one-night stand story?",
+            "What's the most embarrassing experience you've had while in bed?",
+            "What's your favorite position in bed? ",
+            "Would you say it's easy for you to be seduced? ",
+            "What 'type' do you prefer to hook up with? ",
+            "What's a fantasy of yours that has yet to happen?",
+            "What about you do you think turns me on? ",
         };
 
         wouldYouRather1 = new List<string>
@@ -108,6 +141,9 @@ public class GameEffects : MonoBehaviour
             "Sneeze every time you orgasm",
             "Never have sex again",
             "Eat ice cream with ketchup",
+            "Have teeth for hair",
+            "Have drunk sex"
+            
         };
 
         wouldYouRather2 = new List<string>
@@ -123,7 +159,10 @@ public class GameEffects : MonoBehaviour
             "Have sex while handcuffed",
             "Fart every time you orgasm",
             "Never eat your favorite food again",
-            "Eat banana with ketchup"
+            "Eat banana with ketchup",
+            "Hair for teeth",
+            "Have high sex"
+            
         };
 
         neverHaveIever = new List<string>
@@ -143,7 +182,7 @@ public class GameEffects : MonoBehaviour
             "Lied about my age",
             "Been the alibi for a lying friend",
             "Role-played",
-            "Worn someone else’s underwear",
+            "Worn someone elses underwear",
             "Gone to a strip club",
             "Tried psychedelics",
             "Met someone famous",
