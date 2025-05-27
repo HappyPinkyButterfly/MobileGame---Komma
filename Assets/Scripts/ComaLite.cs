@@ -25,7 +25,7 @@ public class ComaLite : MonoBehaviour
                     Destroy(child.gameObject);
                 }
             }
-            
+
             if (!gameEffects.comaLite)
             {
                 GameObject[] allPrefabs = Resources.LoadAll<GameObject>("Prefabs");
@@ -36,14 +36,15 @@ public class ComaLite : MonoBehaviour
                 }
             }
             gameEffects.comaLite = !gameEffects.comaLite;
+            if (!gameEffects.comaLite)
+            {
+                gameEffects.roundStart = !gameEffects.roundStart;
+            }
 
         }
         
 
-        if (!gameEffects.comaLite)
-        {
-            gameEffects.roundStart = !gameEffects.roundStart;
-        }
+        
         
     }
 }
