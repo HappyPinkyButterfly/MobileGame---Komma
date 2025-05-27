@@ -16,6 +16,10 @@ public class GameEffects : MonoBehaviour
     public List<string> wouldYouRather2;
     public List<string> neverHaveIever;
 
+    public List<string> faceOffWho;
+
+    
+
     private bool mustacheState;
     private bool bottomsUpState;
     private bool shotState;
@@ -72,12 +76,24 @@ public class GameEffects : MonoBehaviour
 
         };
 
+        faceOffWho = new List<string>
+        {
+            "with the person with closest to your",
+            "with the person with furthest to your"
+        };
+
         contestTypes = new List<string>
         {
             "BODYCOUNT",
             "AGE",
             "COUNTRIES VISITED",
-            "HAD ONE NIGHT STANDS"
+            "HAD ONE NIGHT STANDS",
+            "INSTAGRAM FOLLOWERS",
+            "YEARS SINGLE/TAKEN CURRENTLY",
+            "NUMBER OF TATTOOS",
+            "LENGTH OF LONGEST RELATIONSHIP",
+            "TIMES GOR REJECTED",
+            "NUMBER OF DRINKS HAD TONIGHT",
         };
 
         descriptionList = new List<string>
@@ -175,6 +191,7 @@ public class GameEffects : MonoBehaviour
             "Have high sex"
 
         };
+        
 
         neverHaveIever = new List<string>
         {
@@ -213,6 +230,7 @@ public class GameEffects : MonoBehaviour
                 if (i == targetSpawn)
                 {
                     goodEffects.Add("Give Mustache");
+                    goodEffects.Add("Give Mustache");
                     goodEffects.Add("Give Mustache 2x");
                 }
             }
@@ -221,6 +239,7 @@ public class GameEffects : MonoBehaviour
             {
                 if (i == targetSpawn)
                 {
+                    badEffects.Add("Take Mustache");
                     badEffects.Add("Take Mustache");
                     badEffects.Add("Take Mustache 2x");
                 }
@@ -244,6 +263,7 @@ public class GameEffects : MonoBehaviour
                     {
                         badEffects.Add("Take SHOT");
                         badEffects.Add("Take SHOT");
+
                     }
                 }
             }
@@ -256,6 +276,7 @@ public class GameEffects : MonoBehaviour
                     {
                         goodEffects.Add("Give BottomsUp");
                         goodEffects.Add("Give BottomsUp");
+                        
                     }
                 }
 
@@ -265,6 +286,7 @@ public class GameEffects : MonoBehaviour
                     {
                         badEffects.Add("Take BottomsUp");
                         badEffects.Add("Take BottomsUp");
+                        
                     }
                 }
             }
