@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,9 +16,19 @@ public class GameEffects : MonoBehaviour
     public List<string> wouldYouRather2;
     public List<string> neverHaveIever;
 
+    private bool mustacheState;
+    private bool bottomsUpState;
+    private bool shotState;
+
 
     public void Awake()
     {
+        if (Prefrences.Instance != null)
+        {
+            mustacheState = Prefrences.Instance.mustacheOn;
+            bottomsUpState = Prefrences.Instance.bottomsUpOn;
+            shotState = Prefrences.Instance.shotOn;
+        }
 
         comaLite = false;
         roundStart = false;
@@ -143,7 +154,7 @@ public class GameEffects : MonoBehaviour
             "Eat ice cream with ketchup",
             "Have teeth for hair",
             "Have drunk sex"
-            
+
         };
 
         wouldYouRather2 = new List<string>
@@ -162,7 +173,7 @@ public class GameEffects : MonoBehaviour
             "Eat banana with ketchup",
             "Hair for teeth",
             "Have high sex"
-            
+
         };
 
         neverHaveIever = new List<string>
@@ -193,9 +204,70 @@ public class GameEffects : MonoBehaviour
             "Kissed a friend"
         };
 
+        if (mustacheState)
+        {
+            int targetSpawn = 10;
+
+            for (int i = 0; i < goodEffects.Count; i++)
+            {
+                if (i == targetSpawn)
+                {
+                    goodEffects.Add("Give Mustache");
+                    goodEffects.Add("Give Mustache 2x");
+                }
+            }
+
+            for (int i = 0; i < badEffects.Count; i++)
+            {
+                if (i == targetSpawn)
+                {
+                    badEffects.Add("Take Mustache");
+                    badEffects.Add("Take Mustache 2x");
+                }
+            }
+
+
+            if (shotState)
+            {
+                for (int i = 0; i < goodEffects.Count; i++)
+                {
+                    if (i == targetSpawn)
+                    {
+                        goodEffects.Add("Give SHOT");
+                        goodEffects.Add("Give SHOT");
+                    }
+                }
+
+                for (int i = 0; i < badEffects.Count; i++)
+                {
+                    if (i == targetSpawn)
+                    {
+                        badEffects.Add("Take SHOT");
+                        badEffects.Add("Take SHOT");
+                    }
+                }
+            }
+
+            if (bottomsUpState)
+            {
+                for (int i = 0; i < goodEffects.Count; i++)
+                {
+                    if (i == targetSpawn)
+                    {
+                        goodEffects.Add("Give BottomsUp");
+                        goodEffects.Add("Give BottomsUp");
+                    }
+                }
+
+                for (int i = 0; i < badEffects.Count; i++)
+                {
+                    if (i == 10)
+                    {
+                        badEffects.Add("Take BottomsUp");
+                        badEffects.Add("Take BottomsUp");
+                    }
+                }
+            }
+        }
     }
-
-
-
-
 }
