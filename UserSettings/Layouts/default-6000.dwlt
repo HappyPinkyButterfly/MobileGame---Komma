@@ -1220,7 +1220,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 10, y: 16}
+  m_TargetSize: {x: 2532, y: 1170}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -1235,10 +1235,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -5
-    m_HBaseRangeMax: 5
-    m_VBaseRangeMin: -8
-    m_VBaseRangeMax: 8
+    m_HBaseRangeMin: -1266
+    m_HBaseRangeMax: 1266
+    m_VBaseRangeMin: -585
+    m_VBaseRangeMax: 585
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -1256,23 +1256,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 1038
-      height: 482
-    m_Scale: {x: 30.000002, y: 29.999998}
-    m_Translation: {x: 519, y: 241}
+      width: 1385
+      height: 680
+    m_Scale: {x: 0.54699844, y: 0.54699844}
+    m_Translation: {x: 692.5, y: 340}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -17.3
-      y: -8.033334
-      width: 34.6
-      height: 16.066668
+      x: -1266
+      y: -621.574
+      width: 2532
+      height: 1243.148
     m_MinimalGUI: 1
-  m_defaultScale: 30
-  m_LastWindowPixelSize: {x: 1038, y: 503}
+  m_defaultScale: 0.54699844
+  m_LastWindowPixelSize: {x: 1385, y: 701}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000100000000000000

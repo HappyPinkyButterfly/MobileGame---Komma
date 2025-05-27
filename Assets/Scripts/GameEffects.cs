@@ -97,22 +97,61 @@ public class GameEffects : MonoBehaviour
         wouldYouRather1 = new List<string>
         {
             "Be dominat in bed:",
-            "Have amazing conversation:"
+            "Have amazing conversation:",
+            "Have toes sucked",
+            "Show porn history to partner",
+            "Be blindfolded",
+            "Only have 'vanilla' sex",
+            "Peg someone",
+            "Watch strangers have sex",
+            "Have sex while blindfolded",
+            "Sneeze every time you orgasm",
+            "Never have sex again",
+            "Eat ice cream with ketchup",
         };
 
         wouldYouRather2 = new List<string>
         {
             "Be submisive in bed:",
-            "Have an amazing sex:"
+            "Have an amazing sex:",
+            "Suck toes",
+            "To best friend",
+            "Be gagged",
+            "Only have 'BDSM' sex",
+            "Be pegged",
+            "Have strangers watch you have sex",
+            "Have sex while handcuffed",
+            "Fart every time you orgasm",
+            "Never eat your favorite food again",
+            "Eat banana with ketchup"
         };
 
         neverHaveIever = new List<string>
         {
             "Stolen anything",
             "Missed a flight",
-            "Drunk-dialed my ex"
-
-            
+            "Drunk-dialed my ex",
+            "Gone skinny-dipping",
+            "Been on a yacht",
+            "Been on TV",
+            "Had to go to court",
+            "Kissed more than one person in 24 hours",
+            "Had a one-night stand",
+            "Gone on a solo vacation",
+            "Gotten stopped by airport security",
+            "Had a threesome",
+            "Lied about my age",
+            "Been the alibi for a lying friend",
+            "Role-played",
+            "Worn someone else’s underwear",
+            "Gone to a strip club",
+            "Tried psychedelics",
+            "Met someone famous",
+            "Had sex on a beach",
+            "Dated someone older than me",
+            "Dated someone younger than me",
+            "Had a friend with benefits",
+            "Kissed a friend"
         };
 
     }
