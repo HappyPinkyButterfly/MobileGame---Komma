@@ -94,6 +94,10 @@ public class GameEffects : MonoBehaviour
             "LENGTH OF LONGEST RELATIONSHIP",
             "TIMES GOR REJECTED",
             "NUMBER OF DRINKS HAD TONIGHT",
+            "NUMBER OF LANGUAGES SPOKEN",
+            "NUMBER OF DIFFERENT JOBS HAD",
+            "NUMBER OF INSTRUMENTS PLAYED",
+            "MOST EXPENSIVE PURCHASE"
         };
 
         descriptionList = new List<string>
