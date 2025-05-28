@@ -1,12 +1,14 @@
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 
 public class RoundStart : MonoBehaviour
 {
+    public Image roundStartButton;
+    public Sprite roundStartSprite;
     public TextMeshProUGUI typeOfEffect;
     public TextMeshProUGUI amount;
     public TextMeshProUGUI typeOfDrinking;
@@ -72,10 +74,8 @@ public class RoundStart : MonoBehaviour
     {
         if (!gameEffects.roundStart)
         {
-            typeOfEffect.text = "ROUND START";
-            typeOfEffect.fontSize = 200f;
-            typeOfEffect.rectTransform.anchoredPosition =
-            new Vector2(0f, 0f);
+            roundStartButton.sprite = roundStartSprite;
+            typeOfEffect.text = "";
             amount.text = "";
             typeOfDrinking.text = "";
             sideEffect.text = "";
@@ -83,6 +83,7 @@ public class RoundStart : MonoBehaviour
         }
         else
         {
+            roundStartButton.sprite = null;
             typeOfEffect.rectTransform.anchoredPosition =
             new Vector2(0f, 300f);
         }

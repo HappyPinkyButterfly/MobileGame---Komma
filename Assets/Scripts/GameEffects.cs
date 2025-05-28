@@ -43,41 +43,46 @@ public class GameEffects : MonoBehaviour
 
         badEffects = new List<string>
         {
-            "All diffrent genders take a photo with you and 5 sips",
-            "Take sips equal to the continets you visited",
-            "Draw Round Start for each player present",
-            "Take photo with the youngest player, make cute faces and SHOT",
-            "Draw 3 Round Starts",
-            "Draw 2 Round Starts",
-            "Take 6 Sips",
-            "Take 5 Sips",
-            "Take 4 Sips",
+            "Draw 1 Round start. it becomes TAKE and + 1",
+            "Draw 2 Round starts and all become TAKE",
+            "Draw 3 Round starts, all become TAKE and -1",
             "Take 3 Sips",
-            "Chug 5 Seconds",
-            "Chug 4 Seconds",
+            "Take 4 Sips",
+            "Take 5 Sips",
             "Chug 3 Seconds",
-            "Take SHOT",
-            "Bottoms Up",
-            "Draw Round Starts equal to your bodycount"
+            "Chug 4 Seconds",
+            "Take sips equal to your bodycount",
+            "Take sips equal to the continents you visited",
+            "You are STARE SLAVE to <-- and they take 2 sips",
+            "You are STARE SLAVE to --> and they take 3 sips",
+            "You are STARE SLAVE to --> and they take 3 sips",
+            "Take photo with <--, make cute faces and both 2 sips",
+            "Take 3 sips, you cannot touch your drink",
+            "Take 3 chug 2 seconds, you cannot touch your drink",
+            "You and <-- take 3 sips",
+            "You and --> take chug 3 seconds"
         };
 
         goodEffects = new List<string>
         {
-            "Give 3 Round Starts",
-            "Give 2 Round Starts",
-            "Give 6 Sips",
-            "Give 5 Sips",
-            "Give 4 Sips",
+            "Draw 1 Round start, all become GIVE and +1",
+            "Draw 2 Round starts and all become GIVE",
+            "Draw 3 Round starts, all become GIVE and -1",
             "Give 3 Sips",
-            "Give Chug 5 Seconds",
-            "Give Chug 4 Seconds",
-            "Give Chug 3 Seconds",
-            "Give SHOT",
-            "Give Bottoms Up",
-            "Opposite genders take a photo with you and give 5 sips",
-            "Give sips equal to the continets you visited",
-            "Give Round Start for each player present",
-
+            "Give 4 Sips",
+            "Give 5 Sips",
+            "Give chug 3 Seconds",
+            "Give chug 4 Seconds",
+            "Give sips equal to your bodycount",
+            "Give sips equal to the continents you visited",
+            "Give STARE SLAVE to <-- on you and they take 2 sips",
+            "Give STARE SLAVE to --> on you and they take 3 sips",
+            "Give STARE SLAVE to --> on you and they take 3 sips",
+            "Take photo with -->, make screaming faces and they take 2 sips",
+            "Everyone else 2 sips",
+            "Everyone else chug 2 Seconds",
+            "Your <-- take 3 sips",
+            "Your --> take chug 3 seconds"
         };
 
         faceOffWho = new List<string>
@@ -122,16 +127,16 @@ public class GameEffects : MonoBehaviour
             "Date more than one person at a time",
             "Get arrested",
             "Die first in a horror film",
-            "Regularly check an ex’s Instagram",
-            "Date their best friend’s ex",
+            "Regularly check an exs Instagram",
+            "Date their best friends ex",
             "Wear socks with sandals",
             "Give the best hug",
             "have the highest screen time",
             "Become an influencer",
             "Laugh in a serious moment",
-            "Commit a crime?",
-            "Have a threesome?",
-            "Marry for money?"
+            "Commit a crime",
+            "Have a threesome",
+            "Marry for money"
         };
 
         truth = new List<string>
@@ -320,25 +325,30 @@ public class GameEffects : MonoBehaviour
                     }
                 }
             }
-            for (int i = 0; i < goodEffects.Count; i++)
+            if (kingsCupState)
             {
-                if (i == targetSpawn)
+                for (int i = 0; i < goodEffects.Count; i++)
                 {
-                    goodEffects.Add("Give Kings Cup");
-                    goodEffects.Add("Give Kings Cup");
-                    goodEffects.Add("Give Kings Cup");
+                    if (i == targetSpawn)
+                    {
+                        goodEffects.Add("Give Kings Cup");
+                        goodEffects.Add("Give Kings Cup");
+                        goodEffects.Add("Give Kings Cup");
+                    }
                 }
-            }
 
-            for (int i = 0; i < badEffects.Count; i++)
-            {
-                if (i == targetSpawn)
+                for (int i = 0; i < badEffects.Count; i++)
                 {
-                    badEffects.Add("Take Kings Cup");
-                    badEffects.Add("Take Kings Cup");
-                    badEffects.Add("Take Kings Cup");
+                    if (i == targetSpawn)
+                    {
+                        badEffects.Add("Take Kings Cup");
+                        badEffects.Add("Take Kings Cup");
+                        badEffects.Add("Take Kings Cup");
+
+                    }
                 }
             }
+            
         }
     }
 }

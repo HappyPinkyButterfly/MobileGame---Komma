@@ -94,20 +94,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: {fileID: 2050988883133869242}
   description: {fileID: 541217313604190255}
-  effectList: []
-  descriptionList:
-  - To get friendzoned
-  - Is the biggest simp
-  - To have the worst cooking skills
-  - To have foot fetish
-  - Catch feelings after one night stand
-  - To never find true love
-  - To be the gayest
-  - To work at McDonalds
-  - To become a pornstar
-  - To have a child first
-  - You would fuck
-  - Biggest whore or fuckboy
+  gameEffects: {fileID: 0}
 --- !u!1 &1318030704150462757
 GameObject:
   m_ObjectHideFlags: 0
@@ -173,7 +160,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Most Likely
+  m_text: MOST LIKELY TO
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -200,8 +187,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 200
-  m_fontSizeBase: 200
+  m_fontSize: 140
+  m_fontSizeBase: 140
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
