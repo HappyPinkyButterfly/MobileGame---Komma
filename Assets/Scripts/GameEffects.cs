@@ -23,6 +23,8 @@ public class GameEffects : MonoBehaviour
     private bool mustacheState;
     private bool bottomsUpState;
     private bool shotState;
+    private bool slammerState;
+    private bool kingsCupState;
 
 
     public void Awake()
@@ -32,6 +34,8 @@ public class GameEffects : MonoBehaviour
             mustacheState = Prefrences.Instance.mustacheOn;
             bottomsUpState = Prefrences.Instance.bottomsUpOn;
             shotState = Prefrences.Instance.shotOn;
+            slammerState = Prefrences.Instance.slammerOn;
+            kingsCupState = Prefrences.Instance.kingsCupOn;
         }
 
         comaLite = false;
@@ -195,7 +199,7 @@ public class GameEffects : MonoBehaviour
             "Have high sex"
 
         };
-        
+
 
         neverHaveIever = new List<string>
         {
@@ -280,7 +284,7 @@ public class GameEffects : MonoBehaviour
                     {
                         goodEffects.Add("Give BottomsUp");
                         goodEffects.Add("Give BottomsUp");
-                        
+
                     }
                 }
 
@@ -290,8 +294,49 @@ public class GameEffects : MonoBehaviour
                     {
                         badEffects.Add("Take BottomsUp");
                         badEffects.Add("Take BottomsUp");
-                        
+
                     }
+                }
+            }
+
+            if (slammerState)
+            {
+                for (int i = 0; i < goodEffects.Count; i++)
+                {
+                    if (i == targetSpawn)
+                    {
+                        goodEffects.Add("Give Slammer");
+                        goodEffects.Add("Give Slammer");
+                    }
+                }
+
+                for (int i = 0; i < badEffects.Count; i++)
+                {
+                    if (i == targetSpawn)
+                    {
+                        badEffects.Add("Take Slammer");
+                        badEffects.Add("Take Slammer");
+
+                    }
+                }
+            }
+            for (int i = 0; i < goodEffects.Count; i++)
+            {
+                if (i == targetSpawn)
+                {
+                    goodEffects.Add("Give Kings Cup");
+                    goodEffects.Add("Give Kings Cup");
+                    goodEffects.Add("Give Kings Cup");
+                }
+            }
+
+            for (int i = 0; i < badEffects.Count; i++)
+            {
+                if (i == targetSpawn)
+                {
+                    badEffects.Add("Take Kings Cup");
+                    badEffects.Add("Take Kings Cup");
+                    badEffects.Add("Take Kings Cup");
                 }
             }
         }

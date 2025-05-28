@@ -15,6 +15,42 @@ EditorBuildSettings:
     path: Assets/Scenes/Prefrences.unity
     guid: 13067eb84ee86614c9a1e45ba90f7c07
   - enabled: 1
+    path: Assets/Scenes/Rules1.unity
+    guid: f10d56f9aaaac7944bc7e5ffd49d4338
+  - enabled: 1
+    path: Assets/Scenes/Rules2.unity
+    guid: b7c7161a7ba0f2c40a4584c49f8b838a
+  - enabled: 1
+    path: Assets/Scenes/Rules3.unity
+    guid: 498768ef6c05c2e4f8d7880e33f0c0d8
+  - enabled: 1
+    path: Assets/Scenes/Rules4.unity
+    guid: 55a0bacfd9fb74346a51728a369d3ad6
+  - enabled: 1
+    path: Assets/Scenes/Rules5.unity
+    guid: ba008675ea5bc3044ac852381f585a9b
+  - enabled: 1
+    path: Assets/Scenes/Rules6.unity
+    guid: c0dc7c453328b344bafecdbc2981447f
+  - enabled: 1
+    path: Assets/Scenes/Rules7.unity
+    guid: 525a3036f61a2f540b4377b2f0922bb0
+  - enabled: 1
+    path: Assets/Scenes/Rules8.unity
+    guid: 277116b6da573b24c9b1c41829c41fc4
+  - enabled: 1
+    path: Assets/Scenes/Rules9.unity
+    guid: 7656eee5f63127442b6dbdeef891baf8
+  - enabled: 1
+    path: Assets/Scenes/Rules10.unity
+    guid: 321c440b2cb68e44687f1ceff20aae13
+  - enabled: 1
+    path: Assets/Scenes/Rules11.unity
+    guid: 803b060b4f4eb0c4b9f4837d847b3bf2
+  - enabled: 1
+    path: Assets/Scenes/Rules12.unity
+    guid: e1378054cc05bae4b918437ca91613d0
+  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: c76af8c24e9cff944b17aa14d6c9e8f4
   m_configObjects:

@@ -7,11 +7,15 @@ public class Prefrences : MonoBehaviour
     public Image shot;
     public Image bottomsUp;
     public Image mustache;
+    public Image kingsCup;
+    public Image slammer;
 
     public bool mustacheOn = false;
     public bool bottomsUpOn = false;
     public bool shotOn = false;
-    public static Prefrences Instance; 
+    public bool kingsCupOn = false;
+    public bool slammerOn = false;
+    public static Prefrences Instance;
 
     public void Awake()
     {
@@ -25,9 +29,11 @@ public class Prefrences : MonoBehaviour
             Destroy(gameObject); // Prepreči podvajanje
         }
 
-        shot.color = Color.red;
-        bottomsUp.color = Color.red;
-        mustache.color = Color.red;
+        //shot.color = Color.red;
+        //bottomsUp.color = Color.red;
+        //mustache.color = Color.red;
+        //kingsCup.color = Color.red;
+        //slammer.color = Color.red;
 
     }
 
@@ -36,12 +42,12 @@ public class Prefrences : MonoBehaviour
         if (!shotOn)
         {
             shotOn = true;
-            shot.color = Color.green;
+            //shot.color = Color.green;
         }
         else
         {
             shotOn = false;
-            shot.color = Color.red;
+            //shot.color = Color.red;
         }
 
     }
@@ -50,12 +56,12 @@ public class Prefrences : MonoBehaviour
         if (!bottomsUpOn)
         {
             bottomsUpOn = true;
-            bottomsUp.color = Color.green;
+           // bottomsUp.color = Color.green;
         }
         else
         {
             bottomsUpOn = false;
-            bottomsUp.color = Color.red;
+           // bottomsUp.color = Color.red;
         }
 
     }
@@ -64,54 +70,44 @@ public class Prefrences : MonoBehaviour
         if (!mustacheOn)
         {
             mustacheOn = true;
-            mustache.color = Color.green;
+            //mustache.color = Color.green;
         }
         else
         {
             mustacheOn = false;
-            mustache.color = Color.red;
+            //mustache.color = Color.red;
         }
 
     }
-    // public void Update()
-    // {
-    //     if (!mustacheOn)
-    //     {
-    //         ColorBlock mustachee = mustache.colors;
-    //         mustachee.normalColor = Color.green;
-    //         mustache.colors = mustachee;
-    //     }
-    //     else
-    //     {
-    //         ColorBlock mustachee = mustache.colors;
-    //         mustachee.normalColor = Color.red;
-    //         mustache.colors = mustachee;
-    //     }
 
-    //     if (!bottomsUpOn)
-    //     {
-    //         ColorBlock bottomsUpp = bottomsUp.colors;
-    //         bottomsUpp.normalColor = Color.green;
-    //         bottomsUp.colors = bottomsUpp;
-    //     }
-    //     else
-    //     {
-    //         ColorBlock bottomsUpp = bottomsUp.colors;
-    //         bottomsUpp.normalColor = Color.red;
-    //         bottomsUp.colors = bottomsUpp;
-    //     }
+    public void KingsCupClick()
+    {
+        if (!mustacheOn)
+        {
+            kingsCupOn = true;
+            //kingsCup.color = Color.green;
+        }
+        else
+        {
+            mustacheOn = false;
+            //kingsCup.color = Color.red;
+        }
 
-    //     if (!shotOn)
-    //     {
-    //         ColorBlock shott = shot.colors;
-    //         shott.normalColor = Color.green;
-    //         shot.colors = shott;
-    //     }
-    //     else
-    //     {
-    //         ColorBlock shott = shot.colors;
-    //         shott.normalColor = Color.red;
-    //         shot.colors = shott;
-    //     }
-    // }
+    }
+
+    public void SlammerClick()
+    {
+        if (!slammerOn)
+        {
+            slammerOn = true;
+            //slammer.color = Color.green;
+        }
+        else
+        {
+            slammerOn = false;
+            //slammer.color = Color.red;
+        }
+
+    }
+    
 }
