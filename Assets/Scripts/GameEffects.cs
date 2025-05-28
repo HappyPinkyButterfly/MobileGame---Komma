@@ -18,6 +18,8 @@ public class GameEffects : MonoBehaviour
 
     public List<string> faceOffWho;
 
+    public List<string> detective;
+
     
 
     private bool mustacheState;
@@ -234,6 +236,11 @@ public class GameEffects : MonoBehaviour
             "Kissed a friend"
         };
 
+        detective = new List<string>
+        {
+            "My best trait"
+        };
+
         if (mustacheState)
         {
             int targetSpawn = 10;
@@ -348,7 +355,7 @@ public class GameEffects : MonoBehaviour
                     }
                 }
             }
-            
+
         }
     }
 }
