@@ -42,10 +42,10 @@ public class Prefrences : MonoBehaviour
             Destroy(gameObject); // Prepreči podvajanje
         }
 
-        //shot.color = Color.red;
-        //bottomsUp.color = Color.red;
-        //mustache.color = Color.red;
-        //kingsCup.color = Color.red;
+        shot.sprite = RedShot;
+        bottomsUp.sprite = RedBottomsUp;
+        mustache.sprite = RedMustache;
+        kingsCup.sprite = RedKingsCup;
         //slammer.color = Color.red;
 
     }
@@ -55,12 +55,12 @@ public class Prefrences : MonoBehaviour
         if (!shotOn)
         {
             shotOn = true;
-            //shot.color = Color.green;
+            shot.sprite = GreenShot;
         }
         else
         {
             shotOn = false;
-            //shot.color = Color.red;
+            shot.sprite = RedShot;
         }
 
     }
@@ -69,12 +69,12 @@ public class Prefrences : MonoBehaviour
         if (!bottomsUpOn)
         {
             bottomsUpOn = true;
-           // bottomsUp.color = Color.green;
+            bottomsUp.sprite = GreenBottomsUp;
         }
         else
         {
             bottomsUpOn = false;
-           // bottomsUp.color = Color.red;
+            bottomsUp.sprite = RedBottomsUp;
         }
 
     }
@@ -83,27 +83,27 @@ public class Prefrences : MonoBehaviour
         if (!mustacheOn)
         {
             mustacheOn = true;
-            //mustache.color = Color.green;
+            mustache.sprite = GreenMustache;
         }
         else
         {
             mustacheOn = false;
-            //mustache.color = Color.red;
+            mustache.sprite = RedMustache;
         }
 
     }
 
     public void KingsCupClick()
     {
-        if (!mustacheOn)
+        if (!kingsCupOn)
         {
             kingsCupOn = true;
-            //kingsCup.color = Color.green;
+            kingsCup.sprite = GreenKingsCup;
         }
         else
         {
-            mustacheOn = false;
-            //kingsCup.color = Color.red;
+            kingsCupOn = false;
+            kingsCup.sprite = RedKingsCup;
         }
 
     }
@@ -113,12 +113,12 @@ public class Prefrences : MonoBehaviour
         if (!slammerOn)
         {
             slammerOn = true;
-            //slammer.color = Color.green;
+            slammer.sprite = GreenSlammer;
         }
         else
         {
             slammerOn = false;
-            //slammer.color = Color.red;
+            slammer.sprite = RedSlammer;
         }
 
     }
