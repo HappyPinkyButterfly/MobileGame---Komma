@@ -10,6 +10,19 @@ public class Prefrences : MonoBehaviour
     public Image kingsCup;
     public Image slammer;
 
+    public Sprite GreenShot;
+    public Sprite RedShot;
+    public Sprite GreenKingsCup;
+    public Sprite RedKingsCup;
+    public Sprite GreenSlammer;
+    public Sprite RedSlammer;
+    public Sprite GreenMustache;
+    public Sprite RedMustache;
+    public Sprite GreenBottomsUp;
+    public Sprite RedBottomsUp;
+    
+
+
     public bool mustacheOn = false;
     public bool bottomsUpOn = false;
     public bool shotOn = false;
