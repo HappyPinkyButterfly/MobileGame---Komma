@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 
 
-public class RoundStart : MonoBehaviour
+public class RoundStartComp2 : MonoBehaviour
 {
     public bool isCompetitiveMode;
     public Image roundStartButton;
@@ -93,8 +93,6 @@ public class RoundStart : MonoBehaviour
         else
         {
             roundStartButton.sprite = null;
-            typeOfEffect.rectTransform.anchoredPosition =
-            new Vector2(0f, 300f);
         }
     }
 
@@ -108,11 +106,11 @@ public class RoundStart : MonoBehaviour
 
         if (typeOfEffectList[index] == "TAKE" || typeOfEffectList[index] == "GIVE")
         {
-            typeOfEffect.fontSize = 200f;
+            typeOfEffect.fontSize = 160f;
         }
         else
         {
-            typeOfEffect.fontSize = 140f;
+            typeOfEffect.fontSize = 112f;
         }
 
         amount.text = Random.Range(1, 4).ToString();
@@ -121,13 +119,13 @@ public class RoundStart : MonoBehaviour
 
         if (typeOfDrinkingList[index2] == "Second Chug")
         {
-            typeOfDrinking.fontSize = 100f;
+            typeOfDrinking.fontSize = 80f;
             amount.rectTransform.anchoredPosition =
             new Vector2(-300f, amount.rectTransform.anchoredPosition.y);
         }
         else
         {
-            typeOfDrinking.fontSize = 150f;
+            typeOfDrinking.fontSize = 120f;
             amount.rectTransform.anchoredPosition =
             new Vector2(-150f, amount.rectTransform.anchoredPosition.y);
         }
@@ -137,11 +135,11 @@ public class RoundStart : MonoBehaviour
 
         if (sideEffectList[index3].Length < 13)
         {
-            sideEffect.fontSize = 120;
+            sideEffect.fontSize = 96f;
         }
         else
         {
-            sideEffect.fontSize = 90;
+            sideEffect.fontSize = 72f;
         }
 
        
