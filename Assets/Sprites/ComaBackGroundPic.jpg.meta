@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8b6ae280852e2754ca7e7b1809bf51ea
+guid: cf4c72d968a0efa448fff5d396d9063e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5234556454459773830
-    second: ComaBackGround_0
+      213: 7199683497202807792
+    second: ComaBackGroundPic_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ComaBackGround_0
+      name: ComaBackGroundPic_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a7c623773ae1b57b0800000000000000
-      internalID: -5234556454459773830
+      spriteID: 0f3f302cef96ae360800000000000000
+      internalID: 7199683497202807792
       vertices: []
       indices: 
       edges: []
