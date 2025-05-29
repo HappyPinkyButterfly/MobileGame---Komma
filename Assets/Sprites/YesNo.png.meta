@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: c291d3845f2045049ab1ada2876711c5
+guid: 9ee4274a324179b4aaf3b3b7a5138b6f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2625406059805260970
-    second: Shot_0
+      213: -7418244443264564079
+    second: YesNo_0
   - first:
-      213: -8502188156620399341
-    second: Shot_1
+      213: 285789831881068135
+    second: YesNo_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -116,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Shot_0
+      name: YesNo_0
       rect:
         serializedVersion: 2
-        x: 47
-        y: 42
-        width: 250
-        height: 234
+        x: 63
+        y: 66
+        width: 210
+        height: 210
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 653462e391fa09bd0800000000000000
-      internalID: -2625406059805260970
+      spriteID: 194433e7bf91d0990800000000000000
+      internalID: -7418244443264564079
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shot_1
+      name: YesNo_1
       rect:
         serializedVersion: 2
-        x: 314
-        y: 42
-        width: 247
-        height: 234
+        x: 327
+        y: 66
+        width: 217
+        height: 210
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,8 +153,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 31d9b170be8220a80800000000000000
-      internalID: -8502188156620399341
+      spriteID: 76e80b1865457f300800000000000000
+      internalID: 285789831881068135
       vertices: []
       indices: 
       edges: []
@@ -172,9 +172,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Shot_0: -2625406059805260970
-      Shot_1: -8502188156620399341
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

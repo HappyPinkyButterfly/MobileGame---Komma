@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      KingsCup_0: -4630157928098490478
+      KingsCup_1: 2803336383883443375
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

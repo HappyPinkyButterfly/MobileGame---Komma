@@ -9,6 +9,7 @@ public class Prefrences : MonoBehaviour
     public Image mustache;
     public Image kingsCup;
     public Image slammer;
+    public Image competitive;
 
     public Sprite GreenShot;
     public Sprite RedShot;
@@ -20,7 +21,12 @@ public class Prefrences : MonoBehaviour
     public Sprite RedMustache;
     public Sprite GreenBottomsUp;
     public Sprite RedBottomsUp;
-    
+
+    public Sprite GreenCompetitive;
+    public Sprite RedCompetitive;
+
+    public CanvasGroup popUp;
+
 
 
     public bool mustacheOn = false;
@@ -28,10 +34,16 @@ public class Prefrences : MonoBehaviour
     public bool shotOn = false;
     public bool kingsCupOn = false;
     public bool slammerOn = false;
+    public bool competitiveOn = false;
+
     public static Prefrences Instance;
 
     public void Awake()
     {
+        popUp.alpha = 0f;
+        popUp.interactable = false;
+        popUp.blocksRaycasts = false;
+
         if (Instance == null)
         {
             Instance = this;
@@ -46,8 +58,50 @@ public class Prefrences : MonoBehaviour
         bottomsUp.sprite = RedBottomsUp;
         mustache.sprite = RedMustache;
         kingsCup.sprite = RedKingsCup;
-        //slammer.color = Color.red;
+        slammer.sprite = RedSlammer;
 
+    }
+    public void YesClick()
+    {
+        mustacheOn = true;
+        bottomsUpOn = true;
+        shotOn = true;
+        kingsCupOn = true;
+        slammerOn = true;
+        competitiveOn = true;
+
+        shot.sprite = GreenShot;
+        bottomsUp.sprite = GreenBottomsUp;
+        mustache.sprite = GreenMustache;
+        kingsCup.sprite = GreenKingsCup;
+        slammer.sprite = GreenSlammer;
+        competitive.sprite = GreenCompetitive;
+
+        popUp.alpha = 0f;
+        popUp.interactable = false;
+        popUp.blocksRaycasts = false;
+    }
+
+    public void NoClick()
+    {
+        popUp.alpha = 0f;
+        popUp.interactable = false;
+        popUp.blocksRaycasts = false;
+    }
+
+    public void CompetitiveClick()
+    {
+        if (!competitiveOn)
+        {
+            popUp.alpha = 1f;
+            popUp.interactable = true;
+            popUp.blocksRaycasts = true;
+        }
+        else
+        {
+            competitiveOn = false;
+            competitive.sprite = RedCompetitive;
+        }
     }
 
     public void ShotClick()
@@ -61,6 +115,9 @@ public class Prefrences : MonoBehaviour
         {
             shotOn = false;
             shot.sprite = RedShot;
+
+            competitiveOn = false;
+            competitive.sprite = RedCompetitive;
         }
 
     }
@@ -75,6 +132,9 @@ public class Prefrences : MonoBehaviour
         {
             bottomsUpOn = false;
             bottomsUp.sprite = RedBottomsUp;
+
+            competitiveOn = false;
+            competitive.sprite = RedCompetitive;
         }
 
     }
@@ -89,6 +149,9 @@ public class Prefrences : MonoBehaviour
         {
             mustacheOn = false;
             mustache.sprite = RedMustache;
+
+            competitiveOn = false;
+            competitive.sprite = RedCompetitive;
         }
 
     }
@@ -104,6 +167,9 @@ public class Prefrences : MonoBehaviour
         {
             kingsCupOn = false;
             kingsCup.sprite = RedKingsCup;
+
+            competitiveOn = false;
+            competitive.sprite = RedCompetitive;
         }
 
     }
@@ -119,8 +185,9 @@ public class Prefrences : MonoBehaviour
         {
             slammerOn = false;
             slammer.sprite = RedSlammer;
-        }
 
+            competitiveOn = false;
+            competitive.sprite = RedCompetitive;
+        }
     }
-    
 }
