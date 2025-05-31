@@ -7,7 +7,16 @@ public class ScoreBoard : MonoBehaviour
     public CanvasGroup popupScoreBoard;
     public TextMeshProUGUI points;
     private int pointsToWin = 20;
-    
+
+    public CanvasGroup youwin;
+
+
+    public CanvasGroup king;
+    public CanvasGroup shot;
+
+    public CanvasGroup bottomsUp;
+
+
 
     public int currentPoints;
 
@@ -19,31 +28,22 @@ public class ScoreBoard : MonoBehaviour
         popupScoreBoard.alpha = 0f;
         popupScoreBoard.interactable = false;
         popupScoreBoard.blocksRaycasts = false;
-    }
 
-    public void PlusSign()
-    {
-        currentPoints++;
-        points.text = currentPoints.ToString();
+        youwin.alpha = 0f;
+        youwin.interactable = false;
+        youwin.blocksRaycasts = false;
 
-        if (currentPoints >= pointsToWin)
-        {
-            currentPoints = pointsToWin;
-            points.text = currentPoints.ToString();
-        }
-        
-        if (currentPoints == pointsToWin)
-        { }
-    }
-    public void MinusSign()
-    {
-        currentPoints--;
-        points.text = currentPoints.ToString(); 
-        if (currentPoints <= 0)
-        {
-            currentPoints = 0;
-            points.text = currentPoints.ToString();
-        }
+        king.alpha = 1f;
+        king.interactable = true;
+        king.blocksRaycasts = true;
+
+        shot.alpha = 1f;
+        shot.interactable = true;
+        shot.blocksRaycasts = true;
+
+        bottomsUp.alpha = 1f;
+        bottomsUp.interactable = true;
+        bottomsUp.blocksRaycasts = true;
     }
 
     public void Confirm()
@@ -57,6 +57,64 @@ public class ScoreBoard : MonoBehaviour
     {
         popupScoreBoard.alpha = 1f;
         popupScoreBoard.interactable = true;
-        popupScoreBoard.blocksRaycasts = true; 
+        popupScoreBoard.blocksRaycasts = true;
     }
+
+    public void KingsCupPoints()
+    {
+        currentPoints++;
+        currentPoints++;
+        currentPoints++;
+        points.text = currentPoints.ToString();
+
+        if (currentPoints >= pointsToWin)
+        {
+            YouWin();
+        }
+    }
+
+    public void ShotSlamemrPoints()
+    {
+        currentPoints++;
+        currentPoints++;
+        points.text = currentPoints.ToString();
+
+        if (currentPoints >= pointsToWin)
+        {
+            YouWin();
+        }
+    }
+
+    public void BottomsUpPoints()
+    {
+        currentPoints++;
+        points.text = currentPoints.ToString();
+
+        if (currentPoints >= pointsToWin)
+        {
+            YouWin();
+        }
+
+    }
+
+    public void YouWin()
+    {
+        king.alpha = 0f;
+        king.interactable = false;
+        king.blocksRaycasts = false;
+
+        shot.alpha = 0f;
+        shot.interactable = false;
+        shot.blocksRaycasts = false;
+
+        bottomsUp.alpha = 0f;
+        bottomsUp.interactable = false;
+        bottomsUp.blocksRaycasts = false;
+
+        youwin.alpha = 1f;
+        youwin.interactable = true;
+        youwin.blocksRaycasts = true;
+    }
+    
+    
 }
