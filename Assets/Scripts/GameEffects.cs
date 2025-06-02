@@ -50,17 +50,15 @@ public class GameEffects : MonoBehaviour
             "Draw 3 Round starts, all become TAKE and -1",
             "Take 3 Sips",
             "Take 4 Sips",
-            "Take 5 Sips",
             "Chug 3 Seconds",
-            "Chug 4 Seconds",
             "Take sips equal to your bodycount",
             "Take sips equal to the continents you visited",
             "You are STARE SLAVE to <-- and they take 2 sips",
             "You are STARE SLAVE to --> and they take 3 sips",
             "You are STARE SLAVE to --> and they take 3 sips",
-            "Take photo with <--, make cute faces and both 2 sips",
+            "Take photo with <-- and random nearby object and both 2 sips",
             "Take 3 sips, you cannot touch your drink",
-            "Take 3 chug 2 seconds, you cannot touch your drink",
+            "Take chug 2 seconds, you cannot touch your drink",
             "You and <-- take 3 sips",
             "You and --> take chug 3 seconds"
         };
@@ -72,15 +70,13 @@ public class GameEffects : MonoBehaviour
             "Draw 3 Round starts, all become GIVE and -1",
             "Give 3 Sips",
             "Give 4 Sips",
-            "Give 5 Sips",
             "Give chug 3 Seconds",
-            "Give chug 4 Seconds",
             "Give sips equal to your bodycount",
             "Give sips equal to the continents you visited",
             "Give STARE SLAVE to <-- on you and they take 2 sips",
             "Give STARE SLAVE to --> on you and they take 3 sips",
             "Give STARE SLAVE to --> on you and they take 3 sips",
-            "Take photo with -->, make screaming faces and they take 2 sips",
+            "Take photo with --> and random nearby object, they take 3 sips",
             "Everyone else 2 sips",
             "Everyone else chug 2 Seconds",
             "Your <-- take 3 sips",
@@ -171,40 +167,38 @@ public class GameEffects : MonoBehaviour
 
         wouldYouRather1 = new List<string>
         {
-            "Be dominat in bed:",
-            "Have amazing conversation:",
-            "Have toes sucked",
-            "Show porn history to partner",
-            "Be blindfolded",
-            "Only have 'vanilla' sex",
-            "Peg someone",
-            "Watch strangers have sex",
-            "Have sex while blindfolded",
-            "Sneeze every time you orgasm",
-            "Never have sex again",
-            "Eat ice cream with ketchup",
-            "Have teeth for hair",
-            "Have drunk sex"
-
+            "BE DOMINANT IN BED:",
+            "HAVE AMAZING CONVERSATION:",
+            "HAVE TOES SUCKED",
+            "SHOW PORN HISTORY TO PARTNER",
+            "BE BLINDFOLDED",
+            "ONLY HAVE 'VANILLA' SEX",
+            "PEG SOMEONE",
+            "WATCH STRANGERS HAVE SEX",
+            "HAVE SEX WHILE BLINDFOLDED",
+            "SNEEZE EVERY TIME YOU ORGASM",
+            "NEVER HAVE SEX AGAIN",
+            "EAT ICE CREAM WITH KETCHUP",
+            "HAVE TEETH FOR HAIR",
+            "HAVE DRUNK SEX"
         };
 
         wouldYouRather2 = new List<string>
         {
-            "Be submisive in bed:",
-            "Have an amazing sex:",
-            "Suck toes",
-            "To best friend",
-            "Be gagged",
-            "Only have 'BDSM' sex",
-            "Be pegged",
-            "Have strangers watch you have sex",
-            "Have sex while handcuffed",
-            "Fart every time you orgasm",
-            "Never eat your favorite food again",
-            "Eat banana with ketchup",
-            "Hair for teeth",
-            "Have high sex"
-
+            "BE SUBMISIVE IN BED:",
+            "HAVE AN AMAZING SEX:",
+            "SUCK TOES",
+            "TO BEST FRIEND",
+            "BE GAGGED",
+            "ONLY HAVE 'BDSM' SEX",
+            "BE PEGGED",
+            "HAVE STRANGERS WATCH YOU HAVE SEX",
+            "HAVE SEX WHILE HANDCUFFED",
+            "FART EVERY TIME YOU ORGASM",
+            "NEVER EAT YOUR FAVORITE FOOD AGAIN",
+            "EAT BANANA WITH KETCHUP",
+            "HAIR FOR TEETH",
+            "HAVE HIGH SEX"
         };
 
 
@@ -238,124 +232,79 @@ public class GameEffects : MonoBehaviour
 
         detective = new List<string>
         {
-            "My best trait"
+            "MY BEST TRAIT",
+            "FAMOUS MOVIE ACTOR",
+            "KITCHEN ITEM",
+            "COUNTRY IN EUROPE",
+            "EVERYDAY JOB",
+            "HISTORICAL FIGURE",
+            "CLASSROOM ITEM",          
         };
 
-        if (mustacheState)
+        int repetitionsGood = goodEffects.Count / 10;
+
+        for (int i = 0; i < repetitionsGood; i++)
         {
-            int targetSpawn = 10;
-
-            for (int i = 0; i < goodEffects.Count; i++)
+            if (mustacheState)
             {
-                if (i == targetSpawn)
-                {
-                    goodEffects.Add("Give Mustache");
-                    goodEffects.Add("Give Mustache");
-                    goodEffects.Add("Give Mustache 2x");
-                }
+                goodEffects.Add("Give Mustache");
+                goodEffects.Add("Give Mustache");
+                goodEffects.Add("Give Mustache 2x");
             }
-
-            for (int i = 0; i < badEffects.Count; i++)
-            {
-                if (i == targetSpawn)
-                {
-                    badEffects.Add("Take Mustache");
-                    badEffects.Add("Take Mustache");
-                    badEffects.Add("Take Mustache 2x");
-                }
-            }
-
-
             if (shotState)
             {
-                for (int i = 0; i < goodEffects.Count; i++)
-                {
-                    if (i == targetSpawn)
-                    {
-                        goodEffects.Add("Give SHOT");
-                        goodEffects.Add("Give SHOT");
-                    }
-                }
-
-                for (int i = 0; i < badEffects.Count; i++)
-                {
-                    if (i == targetSpawn)
-                    {
-                        badEffects.Add("Take SHOT");
-                        badEffects.Add("Take SHOT");
-
-                    }
-                }
+                goodEffects.Add("Give SHOT");
+                goodEffects.Add("Give SHOT");
             }
-
             if (bottomsUpState)
             {
-                for (int i = 0; i < goodEffects.Count; i++)
-                {
-                    if (i == targetSpawn)
-                    {
-                        goodEffects.Add("Give BottomsUp");
-                        goodEffects.Add("Give BottomsUp");
-
-                    }
-                }
-
-                for (int i = 0; i < badEffects.Count; i++)
-                {
-                    if (i == 10)
-                    {
-                        badEffects.Add("Take BottomsUp");
-                        badEffects.Add("Take BottomsUp");
-
-                    }
-                }
+                goodEffects.Add("Give BottomsUp");
+                goodEffects.Add("Give BottomsUp");
             }
-
             if (slammerState)
             {
-                for (int i = 0; i < goodEffects.Count; i++)
-                {
-                    if (i == targetSpawn)
-                    {
-                        goodEffects.Add("Give Slammer");
-                        goodEffects.Add("Give Slammer");
-                    }
-                }
-
-                for (int i = 0; i < badEffects.Count; i++)
-                {
-                    if (i == targetSpawn)
-                    {
-                        badEffects.Add("Take Slammer");
-                        badEffects.Add("Take Slammer");
-
-                    }
-                }
+                goodEffects.Add("Give Slammer");
+                goodEffects.Add("Give Slammer");
             }
             if (kingsCupState)
             {
-                for (int i = 0; i < goodEffects.Count; i++)
-                {
-                    if (i == targetSpawn)
-                    {
-                        goodEffects.Add("Give Kings Cup");
-                        goodEffects.Add("Give Kings Cup");
-                        goodEffects.Add("Give Kings Cup");
-                    }
-                }
-
-                for (int i = 0; i < badEffects.Count; i++)
-                {
-                    if (i == targetSpawn)
-                    {
-                        badEffects.Add("Take Kings Cup");
-                        badEffects.Add("Take Kings Cup");
-                        badEffects.Add("Take Kings Cup");
-
-                    }
-                }
+                goodEffects.Add("Give Kings Cup");
+                goodEffects.Add("Give Kings Cup");
+                goodEffects.Add("Give Kings Cup");
             }
+        }
 
+        int repetitionsBad = badEffects.Count / 10;
+
+        for (int i = 0; i < repetitionsBad; i++)
+        {
+            if (mustacheState)
+            {
+                badEffects.Add("Take Mustache");
+                badEffects.Add("Take Mustache");
+                badEffects.Add("Take Mustache 2x");
+            }
+            if (shotState)
+            {
+                badEffects.Add("Take SHOT");
+                badEffects.Add("Take SHOT");
+            }
+            if (bottomsUpState)
+            {
+                badEffects.Add("Take BottomsUp");
+                badEffects.Add("Take BottomsUp");
+            }
+            if (slammerState)
+            {
+                badEffects.Add("Take Slammer");
+                badEffects.Add("Take Slammer");
+            }
+            if (kingsCupState)
+            {
+                badEffects.Add("Take Kings Cup");
+                badEffects.Add("Take Kings Cup");
+                badEffects.Add("Take Kings Cup");
+            }
         }
     }
 }

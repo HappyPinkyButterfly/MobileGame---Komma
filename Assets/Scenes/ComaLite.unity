@@ -641,14 +641,14 @@ RectTransform:
   m_GameObject: {fileID: 729489011}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.95, y: 0.95, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1731515877}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 500, y: 0}
+  m_AnchoredPosition: {x: 560, y: 0}
   m_SizeDelta: {x: 1400, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &729489013
@@ -786,7 +786,7 @@ RectTransform:
   m_GameObject: {fileID: 945437919}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.95, y: 0.95, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1677753632}
@@ -798,7 +798,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -725, y: 0}
+  m_AnchoredPosition: {x: -600, y: 0}
   m_SizeDelta: {x: 950, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &945437921
@@ -813,6 +813,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ad13272615e58848b5eef86f0bef504, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isCompetitiveMode: 0
   roundStartButton: {fileID: 945437923}
   roundStartSprite: {fileID: -2738560162316262716, guid: 29a197a66b8d64745b1a4fbd4eddf833, type: 3}
   typeOfEffect: {fileID: 1677753633}

@@ -16,7 +16,7 @@ public class Mexican : MonoBehaviour
         two.text = gameEffects.badEffects[index];
         if (gameEffects.badEffects[index].Length > 30)
         {
-            two.fontSize = 70f;
+            two.fontSize = 60f;
 
         }
         else
@@ -28,7 +28,7 @@ public class Mexican : MonoBehaviour
         three.text = gameEffects.goodEffects[index2];
         if (gameEffects.goodEffects[index2].Length > 30)
         {
-            three.fontSize = 70f;
+            three.fontSize = 60f;
         }
         else
         {
@@ -39,7 +39,7 @@ public class Mexican : MonoBehaviour
         four.text = gameEffects.badEffects[index3];
         if (gameEffects.badEffects[index2].Length > 30)
         {
-            four.fontSize = 70f;
+            four.fontSize = 60f;
         }
         else
         {

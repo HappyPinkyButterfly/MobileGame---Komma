@@ -34,6 +34,8 @@ public class RoundStart : MonoBehaviour
     public List<string> typeOfDrinkingList = new List<string>
     {
         "Sips",
+        "Sips",
+        "Sips",
         "Second Chug"
     };
 
@@ -52,7 +54,7 @@ public class RoundStart : MonoBehaviour
         "Taken",
         "Been with friends ex",
         "Attracted to present player",
-        "Benn skinny dipping",
+        "Been skinny dipping",
         "Have made selfie last week",
         "Kissed or had sex with present player",
         "Turned on by a fictional character",
@@ -115,7 +117,7 @@ public class RoundStart : MonoBehaviour
             typeOfEffect.fontSize = 140f;
         }
 
-        amount.text = Random.Range(1, 4).ToString();
+        amount.text = Random.Range(1, 3).ToString();
 
         typeOfDrinking.text = typeOfDrinkingList[index2];
 

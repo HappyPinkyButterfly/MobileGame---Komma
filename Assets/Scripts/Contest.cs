@@ -30,6 +30,7 @@ public class Contest : MonoBehaviour
         {
             farthestEffect.fontSize = 75f;
         }
+        
         else
         {
             farthestEffect.fontSize = 90f;
