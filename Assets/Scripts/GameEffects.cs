@@ -20,6 +20,8 @@ public class GameEffects : MonoBehaviour
 
     public List<string> detective;
 
+    public List<string> photographer;
+
     
 
     private bool mustacheState;
@@ -27,6 +29,7 @@ public class GameEffects : MonoBehaviour
     private bool shotState;
     private bool slammerState;
     private bool kingsCupState;
+    
 
 
     public void Awake()
@@ -56,7 +59,6 @@ public class GameEffects : MonoBehaviour
             "You are STARE SLAVE to <-- and they take 2 sips",
             "You are STARE SLAVE to --> and they take 3 sips",
             "You are STARE SLAVE to --> and they take 3 sips",
-            "Take photo with <-- and random nearby object and both 2 sips",
             "Take 3 sips, you cannot touch your drink",
             "Take chug 2 seconds, you cannot touch your drink",
             "You and <-- take 3 sips",
@@ -76,7 +78,6 @@ public class GameEffects : MonoBehaviour
             "Give STARE SLAVE to <-- on you and they take 2 sips",
             "Give STARE SLAVE to --> on you and they take 3 sips",
             "Give STARE SLAVE to --> on you and they take 3 sips",
-            "Take photo with --> and random nearby object, they take 3 sips",
             "Everyone else 2 sips",
             "Everyone else chug 2 Seconds",
             "Your <-- take 3 sips",
@@ -238,7 +239,21 @@ public class GameEffects : MonoBehaviour
             "COUNTRY IN EUROPE",
             "EVERYDAY JOB",
             "HISTORICAL FIGURE",
-            "CLASSROOM ITEM",          
+            "CLASSROOM ITEM",
+        };
+
+        photographer = new List<string>
+        {
+            "Take photo with --> and random nearby object, they take 3 sips",
+            "Everyone takes a photo of their drink like it's a luxury product ad, group votes best one, others 2 sips drink",
+            "Everyone else takes photo of you, everyone else but the best one take 3 sips",
+            "Take photo with <-- making intelectual faces and both take 2 sips",
+            "Take group photo with all your drinks",
+            "Take a video of everyone else chuging 3 seconds",
+            "Take a photo with <-- and --> making one you each sad, happy and confused faces, they drink 2 sips",
+            "Take a photo with --> hugging and both of you are fed 2 sips",
+            "Everyone grabs an oject and balace it on their heads, take selfie",
+            "Take a video of someone swiping on dating app, if no present player has one, you take 2 sips",
         };
 
         int repetitionsGood = goodEffects.Count / 10;
