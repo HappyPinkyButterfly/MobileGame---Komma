@@ -264,10 +264,13 @@ public class GameEffects : MonoBehaviour
             {
                 goodEffects.Add("Give Mustache");
                 goodEffects.Add("Give Mustache");
+                goodEffects.Add("Give Mustache");
+                goodEffects.Add("Give Mustache");
                 goodEffects.Add("Give Mustache 2x");
             }
             if (shotState)
             {
+                goodEffects.Add("Give SHOT");
                 goodEffects.Add("Give SHOT");
                 goodEffects.Add("Give SHOT");
             }
@@ -275,14 +278,18 @@ public class GameEffects : MonoBehaviour
             {
                 goodEffects.Add("Give BottomsUp");
                 goodEffects.Add("Give BottomsUp");
+                goodEffects.Add("Give BottomsUp");
             }
             if (slammerState)
             {
                 goodEffects.Add("Give Slammer");
                 goodEffects.Add("Give Slammer");
+                goodEffects.Add("Give Slammer");
             }
             if (kingsCupState)
             {
+                goodEffects.Add("Give Kings Cup");
+                goodEffects.Add("Give Kings Cup");
                 goodEffects.Add("Give Kings Cup");
                 goodEffects.Add("Give Kings Cup");
                 goodEffects.Add("Give Kings Cup");
@@ -297,10 +304,13 @@ public class GameEffects : MonoBehaviour
             {
                 badEffects.Add("Take Mustache");
                 badEffects.Add("Take Mustache");
+                badEffects.Add("Take Mustache");
+                badEffects.Add("Take Mustache");
                 badEffects.Add("Take Mustache 2x");
             }
             if (shotState)
             {
+                badEffects.Add("Take SHOT");
                 badEffects.Add("Take SHOT");
                 badEffects.Add("Take SHOT");
             }
@@ -308,14 +318,18 @@ public class GameEffects : MonoBehaviour
             {
                 badEffects.Add("Take BottomsUp");
                 badEffects.Add("Take BottomsUp");
+                badEffects.Add("Take BottomsUp");
             }
             if (slammerState)
             {
                 badEffects.Add("Take Slammer");
                 badEffects.Add("Take Slammer");
+                badEffects.Add("Take Slammer");
             }
             if (kingsCupState)
             {
+                badEffects.Add("Take Kings Cup");
+                badEffects.Add("Take Kings Cup");
                 badEffects.Add("Take Kings Cup");
                 badEffects.Add("Take Kings Cup");
                 badEffects.Add("Take Kings Cup");

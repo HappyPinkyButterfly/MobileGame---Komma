@@ -62,12 +62,16 @@ public class RoundStart : MonoBehaviour
         "Ever puked first",
         "For every virgin present",
         "Under 180cm",
+        "Over 180cm",
         "For each relationhip",
         "Had body shot",
         "Had condom popped",
         "For each sibling",
         "Used dating apps",
-        "Currently using dating apps"
+        "Currently using dating apps",
+        "For each virtginity taken",
+        "Been pregnancy scared",
+        "Slept with older"
     };
     public void Start()
     {
