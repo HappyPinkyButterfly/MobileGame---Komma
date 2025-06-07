@@ -15,6 +15,8 @@ public class ScoreBoard : MonoBehaviour
     public CanvasGroup shot;
 
     public CanvasGroup bottomsUp;
+    public CanvasGroup score;
+    public GameEffects gameEffects;
 
 
 
@@ -22,6 +24,19 @@ public class ScoreBoard : MonoBehaviour
 
     public void Awake()
     {
+        if (gameEffects.competitiveState)
+        {
+            score.alpha = 1f;
+            score.interactable = true;
+            score.blocksRaycasts = true;
+        }
+        else
+        {
+            score.alpha = 0f;
+            score.interactable = false;
+            score.blocksRaycasts = false;
+        }
+        
         currentPoints = 0;
         points.text = currentPoints.ToString();
 

@@ -15,7 +15,7 @@ public class RoundStart : MonoBehaviour
     public TextMeshProUGUI typeOfDrinking;
     public TextMeshProUGUI sideEffect;
     public TextMeshProUGUI sideAmounts;
-    public GameEffects gameEffects { get; set;}
+    public GameEffects gameEffects { get; set; }
 
     public List<string> typeOfEffectList = new List<string>
     {
@@ -83,8 +83,8 @@ public class RoundStart : MonoBehaviour
         }
     }
 
-     // Preveri, če Instance obstaja
-        
+    // Preveri, če Instance obstaja
+
     public void Update()
     {
         if (!gameEffects.roundStart)
@@ -150,9 +150,11 @@ public class RoundStart : MonoBehaviour
             sideEffect.fontSize = 90;
         }
 
-       
+
 
         sideAmounts.text = " +" + Random.Range(1, 3).ToString();
     }
+
+
 }
 

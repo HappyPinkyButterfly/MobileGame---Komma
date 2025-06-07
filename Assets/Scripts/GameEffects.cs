@@ -24,16 +24,16 @@ public class GameEffects : MonoBehaviour
 
     
 
-    private bool mustacheState;
-    private bool bottomsUpState;
-    private bool shotState;
-    private bool slammerState;
-    private bool kingsCupState;
+    public bool mustacheState;
+    public bool bottomsUpState;
+    public bool shotState;
+    public bool slammerState;
+    public bool kingsCupState;
+    public bool competitiveState;
     
-
-
     public void Awake()
     {
+
         if (Prefrences.Instance != null)
         {
             mustacheState = Prefrences.Instance.mustacheOn;
@@ -41,6 +41,7 @@ public class GameEffects : MonoBehaviour
             shotState = Prefrences.Instance.shotOn;
             slammerState = Prefrences.Instance.slammerOn;
             kingsCupState = Prefrences.Instance.kingsCupOn;
+            competitiveState = Prefrences.Instance.competitiveOn;
         }
 
         comaLite = false;
@@ -48,9 +49,8 @@ public class GameEffects : MonoBehaviour
 
         badEffects = new List<string>
         {
-            "Draw 1 Round start. it becomes TAKE and + 1",
+            "Draw 1 Round start. It becomes TAKE and + 1",
             "Draw 2 Round starts and all become TAKE",
-            "Draw 3 Round starts, all become TAKE and -1",
             "Take 3 Sips",
             "Take 4 Sips",
             "Chug 3 Seconds",
@@ -62,14 +62,17 @@ public class GameEffects : MonoBehaviour
             "Take 3 sips, you cannot touch your drink",
             "Take chug 2 seconds, you cannot touch your drink",
             "You and <-- take 3 sips",
-            "You and --> take chug 3 seconds"
+            "You and --> take chug 3 seconds",
+            "All sips and Chugs YOU take are +1, take 1 sip",
+            "All sips and Chugs YOU take are +1, take 1 sip",
+            "All sips and Chugs YOU take are +1, take 1 sip",
+            "Everyones sips and chugs they take are + 1"
         };
 
         goodEffects = new List<string>
         {
             "Draw 1 Round start, all become GIVE and +1",
             "Draw 2 Round starts and all become GIVE",
-            "Draw 3 Round starts, all become GIVE and -1",
             "Give 3 Sips",
             "Give 4 Sips",
             "Give chug 3 Seconds",
@@ -81,7 +84,11 @@ public class GameEffects : MonoBehaviour
             "Everyone else 2 sips",
             "Everyone else chug 2 Seconds",
             "Your <-- take 3 sips",
-            "Your --> take chug 3 seconds"
+            "Your --> take chug 3 seconds",
+            "Give 'All sips and Chugs YOU take are +1, take 1 sip'",
+            "Give 'All sips and Chugs YOU take are +1, take 1 sip'",
+            "Give 'All sips and Chugs YOU take are +1, take 1 sip'",
+            "Everyones sips and chugs they take are - 1"
         };
 
         faceOffWho = new List<string>

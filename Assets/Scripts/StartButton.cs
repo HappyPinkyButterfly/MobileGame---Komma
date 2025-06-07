@@ -39,14 +39,6 @@ public class StartButton : MonoBehaviour
 
     public void StartClick()
     {
-        if (isCompetitiveMode)
-        {
-            SceneManager.LoadScene("Competitive");
-        }
-        else
-        {
-            SceneManager.LoadScene("ComaLite");
-        }
-     }
+        SceneManager.LoadScene("Competitive");
+    }
 }
-  
