@@ -81,29 +81,24 @@ public class RoundStartComp2 : MonoBehaviour
             isCompetitiveMode = Prefrences.Instance.competitiveOn;
 
         }
+
+        
     }
-
-    // Preveri, če Instance obstaja
-
-    public void Update()
+    public void Reset()
     {
-        if (!gameEffects.roundStart)
-        {
-            roundStartButton.sprite = roundStartSprite;
-            typeOfEffect.text = "";
-            amount.text = "";
-            typeOfDrinking.text = "";
-            sideEffect.text = "";
-            sideAmounts.text = "";
-        }
-        else
-        {
-            roundStartButton.sprite = null;
-        }
+        roundStartButton.sprite = roundStartSprite;
+        typeOfEffect.text = "";
+        amount.text = "";
+        typeOfDrinking.text = "";
+        sideEffect.text = "";
+        sideAmounts.text = "";
     }
+
+
 
     public void RoundStartClick()
     {
+        roundStartButton.sprite = null;
         gameEffects.roundStart = true;
         int index = Random.Range(0, typeOfEffectList.Count);
         int index2 = Random.Range(0, typeOfDrinkingList.Count);

@@ -263,6 +263,7 @@ GameObject:
   - component: {fileID: 192091872}
   - component: {fileID: 192091871}
   - component: {fileID: 192091870}
+  - component: {fileID: 192091873}
   m_Layer: 5
   m_Name: Points
   m_TagString: Untagged
@@ -383,6 +384,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 192091868}
   m_CullTransparentMesh: 1
+--- !u!225 &192091873
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192091868}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &212975501
 GameObject:
   m_ObjectHideFlags: 0
@@ -580,8 +593,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   comaLiteScript: {fileID: 212975503}
-  roundStartScript: {fileID: 0}
-  gameEffects: {fileID: 0}
+  roundStartScript: {fileID: 2067224914}
+  gameEffects: {fileID: 1037557675}
 --- !u!114 &252929521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -733,7 +746,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sips
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -869,7 +882,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 4
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1141,7 +1154,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Have or gave been walked on druing sex:'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1272,8 +1285,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   comaLiteScript: {fileID: 212975503}
-  roundStartScript: {fileID: 0}
-  gameEffects: {fileID: 0}
+  roundStartScript: {fileID: 2067224914}
+  gameEffects: {fileID: 1037557675}
 --- !u!114 &501524468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1666,7 +1679,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: +3
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1802,7 +1815,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: TAKE
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2230,7 +2243,6 @@ MonoBehaviour:
   slammerState: 0
   kingsCupState: 0
   competitiveState: 0
-  scoreBoard: {fileID: 1781337349}
 --- !u!114 &1037557676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2349,10 +2361,10 @@ RectTransform:
   - {fileID: 2022638686}
   - {fileID: 192091869}
   - {fileID: 1053801808}
-  - {fileID: 1781337348}
   - {fileID: 879156351}
   - {fileID: 252929519}
   - {fileID: 501524466}
+  - {fileID: 1781337348}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -3545,8 +3557,8 @@ CanvasGroup:
   m_GameObject: {fileID: 1781337347}
   m_Enabled: 1
   m_Alpha: 0
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!114 &1781337350
 MonoBehaviour:
@@ -3604,7 +3616,7 @@ MonoBehaviour:
   king: {fileID: 1492386055}
   shot: {fileID: 1180191209}
   bottomsUp: {fileID: 1233130812}
-  score: {fileID: 1781337349}
+  score: {fileID: 192091873}
   gameEffects: {fileID: 1037557675}
   currentPoints: 0
 --- !u!1 &1816833854
@@ -4076,9 +4088,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2067224914}
         m_TargetAssemblyTypeName: RoundStartComp2, Assembly-CSharp
-        m_MethodName: ProtectionpPrefabClick
+        m_MethodName: RoundStartClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4108,8 +4120,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -2738560162316262716, guid: 29a197a66b8d64745b1a4fbd4eddf833, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4

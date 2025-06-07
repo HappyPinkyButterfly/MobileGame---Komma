@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class ComaLite : MonoBehaviour
 {
     public GameEffects gameEffects { get; set; }
+    public RoundStartComp2 roundStartComp2;
     
     public void Start()
     {
@@ -28,7 +29,7 @@ public class ComaLite : MonoBehaviour
 
             if (!gameEffects.comaLite)
             {
-                GameObject[] allPrefabs = Resources.LoadAll<GameObject>("Prefabs");
+                GameObject[] allPrefabs = Resources.LoadAll<GameObject>("Coma");
                 if (allPrefabs.Length > 0)
                 {
                     GameObject randomPrefab = allPrefabs[Random.Range(0, allPrefabs.Length)];
@@ -39,8 +40,11 @@ public class ComaLite : MonoBehaviour
             if (!gameEffects.comaLite)
             {
                 gameEffects.roundStart = !gameEffects.roundStart;
+
+                roundStartComp2.Reset();
             }
 
         }
+        
     }
 }

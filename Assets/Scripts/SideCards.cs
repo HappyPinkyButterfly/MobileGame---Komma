@@ -2,7 +2,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 
 public class SideCards : MonoBehaviour
 {
@@ -13,6 +12,11 @@ public class SideCards : MonoBehaviour
     public RoundStartComp2 roundStartScript;
     public GameEffects gameEffects;
 
+    public bool protectionOn = false;
+    public bool curseOn = false;
+    public bool treasureOn = false;
+
+
 
     public void ProtectionPrefabClick()
     {
@@ -20,6 +24,9 @@ public class SideCards : MonoBehaviour
     }
     public void ProtectionClick()
     {
+
+        roundStartScript.Reset();
+            
         if (curretnProtectionPrefab != null)
         {
             Destroy(curretnProtectionPrefab);
@@ -65,7 +72,7 @@ public class SideCards : MonoBehaviour
             allProtections.AddRange(bottomsUpProtectionPrefab);
         }
 
-        
+
 
 
         if (allProtections.Count > 0)
@@ -78,10 +85,14 @@ public class SideCards : MonoBehaviour
                 roundStartScript.transform
             );
         }
+        
+    
 
     }
     public void CurseClick()
     {
+        roundStartScript.Reset();
+
         // Če že imamo Curse prefab, ga uniči
         if (currentCursePrefab != null)
         {
@@ -89,31 +100,54 @@ public class SideCards : MonoBehaviour
             currentCursePrefab = null;
         }
 
-        // Uniči vse obstoječe prefabe na ComaLite (tudi če jih je ustvaril ComaLite)
-        foreach (Transform child in comaLiteScript.transform)
+
+
+        GameObject[] normalCurse = Resources.LoadAll<GameObject>("Curse/NormalCurse");
+        GameObject[] kingCurse = Resources.LoadAll<GameObject>("Curse/King");
+        GameObject[] shotCurse = Resources.LoadAll<GameObject>("Curse/Shot");
+        GameObject[] slamCurse = Resources.LoadAll<GameObject>("Curse/Slam");
+        GameObject[] mustacheCurse = Resources.LoadAll<GameObject>("Curse/Mustache");
+        GameObject[] bottomsCurse = Resources.LoadAll<GameObject>("Curse/Bottoms");
+
+        List<GameObject> allCurses = new List<GameObject>(normalCurse);
+
+        if (gameEffects.mustacheState)
         {
-            if (child.GetComponent<Text>() == null && child.GetComponent<TMP_Text>() == null)
-            {
-                Destroy(child.gameObject);
-            }
+            allCurses.AddRange(mustacheCurse);
+        }
+        if (gameEffects.kingsCupState)
+        {
+            allCurses.AddRange(kingCurse);
+        }
+        if (gameEffects.shotState)
+        {
+            allCurses.AddRange(shotCurse);
+        }
+        if (gameEffects.slammerState)
+        {
+            allCurses.AddRange(slamCurse);
+        }
+        if (gameEffects.bottomsUpState)
+        {
+            allCurses.AddRange(bottomsCurse);
         }
 
-        // Naloži Curse prefabe
-        GameObject[] cursePrefabs = Resources.LoadAll<GameObject>("Treasure");
-        
-        if (cursePrefabs.Length > 0)
+        if (allCurses.Count > 0)
         {
             // Ustvari nov Curse prefab na poziciji ComaLite
             currentCursePrefab = Instantiate(
-                cursePrefabs[Random.Range(0, cursePrefabs.Length)],
+                allCurses[Random.Range(0, allCurses.Count)],
                 comaLiteScript.transform.position,
                 comaLiteScript.transform.rotation,
                 comaLiteScript.transform
             );
         }
+        
+      
     }
     public void TreasureClcik()
     {
+        roundStartScript.Reset();
 
         if (currentTreasurePrefab != null)
         {
@@ -132,7 +166,7 @@ public class SideCards : MonoBehaviour
 
         
         // Naloži Curse prefabe
-        GameObject[] treasurePrefabs = Resources.LoadAll<GameObject>("Curse");
+        GameObject[] treasurePrefabs = Resources.LoadAll<GameObject>("Treasure");
         
         if (treasurePrefabs.Length > 0)
         {
