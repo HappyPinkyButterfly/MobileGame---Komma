@@ -39,6 +39,6 @@ public class StartButton : MonoBehaviour
 
     public void StartClick()
     {
-        SceneManager.LoadScene("Competitive");
+        SceneManager.LoadScene("Coma");
     }
 }

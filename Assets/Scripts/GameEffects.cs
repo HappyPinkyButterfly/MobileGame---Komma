@@ -52,7 +52,6 @@ public class GameEffects : MonoBehaviour
             "Draw 1 Round start. It becomes TAKE and + 1",
             "Draw 2 Round starts and all become TAKE",
             "Take 3 Sips",
-            "Take 4 Sips",
             "Chug 3 Seconds",
             "Take sips equal to your bodycount",
             "Take sips equal to the continents you visited",
@@ -66,7 +65,14 @@ public class GameEffects : MonoBehaviour
             "All sips and Chugs YOU take are +1, take 1 sip",
             "All sips and Chugs YOU take are +1, take 1 sip",
             "All sips and Chugs YOU take are +1, take 1 sip",
-            "Everyones sips and chugs they take are + 1"
+            "All sips and Chugs YOU take are +1, take 1 sip",
+            "Everyones sips and chugs they take are + 1",
+            "DRAW Curse and TAKE 2 sips",
+            "DRAW Curse and TAKE 1 sip",
+            "DRAW Curse and TAKE 2 sips",
+            "DRAW Curse and TAKE 1 sip",
+            "Give Protection to your RIGHT and Take 1 sip",
+            "Give Protection to your RIGHT and TAKE 2 sips"
         };
 
         goodEffects = new List<string>
@@ -88,7 +94,12 @@ public class GameEffects : MonoBehaviour
             "Give 'All sips and Chugs YOU take are +1, take 1 sip'",
             "Give 'All sips and Chugs YOU take are +1, take 1 sip'",
             "Give 'All sips and Chugs YOU take are +1, take 1 sip'",
-            "Everyones sips and chugs they take are - 1"
+            "Everyones sips and chugs they take are - 1",
+            "DRAW Protection",
+            "DRAW Protection",
+            "DRAW Protection",
+            "DRAW Protection",
+            "DRAW Treasure"
         };
 
         faceOffWho = new List<string>
@@ -261,6 +272,7 @@ public class GameEffects : MonoBehaviour
             "Take a photo with --> hugging and both of you are fed 2 sips",
             "Everyone grabs an oject and balace it on their heads, take selfie",
             "Take a video of someone swiping on dating app, if no present player has one, you take 2 sips",
+            "Make a group photo where everyone else puts their hands on your head"
         };
 
         int repetitionsGood = goodEffects.Count / 10;
@@ -273,7 +285,6 @@ public class GameEffects : MonoBehaviour
                 goodEffects.Add("Give Mustache");
                 goodEffects.Add("Give Mustache");
                 goodEffects.Add("Give Mustache");
-                goodEffects.Add("Give Mustache 2x");
             }
             if (shotState)
             {
@@ -295,7 +306,6 @@ public class GameEffects : MonoBehaviour
             }
             if (kingsCupState)
             {
-                goodEffects.Add("Give Kings Cup");
                 goodEffects.Add("Give Kings Cup");
                 goodEffects.Add("Give Kings Cup");
                 goodEffects.Add("Give Kings Cup");
@@ -313,14 +323,13 @@ public class GameEffects : MonoBehaviour
                 badEffects.Add("Take Mustache");
                 badEffects.Add("Take Mustache");
                 badEffects.Add("Take Mustache");
-                badEffects.Add("Take Mustache 2x");
             }
             if (shotState)
-            {
-                badEffects.Add("Take SHOT");
-                badEffects.Add("Take SHOT");
-                badEffects.Add("Take SHOT");
-            }
+                {
+                    badEffects.Add("Take SHOT");
+                    badEffects.Add("Take SHOT");
+                    badEffects.Add("Take SHOT");
+                }
             if (bottomsUpState)
             {
                 badEffects.Add("Take BottomsUp");
@@ -335,7 +344,6 @@ public class GameEffects : MonoBehaviour
             }
             if (kingsCupState)
             {
-                badEffects.Add("Take Kings Cup");
                 badEffects.Add("Take Kings Cup");
                 badEffects.Add("Take Kings Cup");
                 badEffects.Add("Take Kings Cup");

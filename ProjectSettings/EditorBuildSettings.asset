@@ -8,11 +8,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/OpeningScene.unity
     guid: fbcbe8ea2484f5c4ba632115e1944b29
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ComaLite.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/Scenes/Prefrences.unity
+    path: Assets/Scenes/GameMode.unity
     guid: 13067eb84ee86614c9a1e45ba90f7c07
   - enabled: 1
     path: Assets/Scenes/Rules1.unity
@@ -48,7 +48,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Rules11.unity
     guid: 803b060b4f4eb0c4b9f4837d847b3bf2
   - enabled: 1
-    path: Assets/Scenes/Competitive.unity
+    path: Assets/Scenes/Coma.unity
     guid: 1174b19338ed32d4bb663689ef10a1a3
   - enabled: 1
     path: Assets/Scenes/Rules12.unity

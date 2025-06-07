@@ -165,14 +165,41 @@ public class SideCards : MonoBehaviour
         }
 
         
-        // Naloži Curse prefabe
-        GameObject[] treasurePrefabs = Resources.LoadAll<GameObject>("Treasure");
+        GameObject[] normalTreasure = Resources.LoadAll<GameObject>("Treasure/NormalTreasure");
+        GameObject[] kingTreasure = Resources.LoadAll<GameObject>("Treasure/King");
+        GameObject[] shotTreasure = Resources.LoadAll<GameObject>("Treasure/Shot");
+        GameObject[] slamTreasure = Resources.LoadAll<GameObject>("Treasure/Slam");
+        GameObject[] mustacheTreasure = Resources.LoadAll<GameObject>("Treasure/Mustache");
+        GameObject[] bottomsTreasure = Resources.LoadAll<GameObject>("Treasure/Bottoms");
+
+        List<GameObject> allTreasure = new List<GameObject>(normalTreasure);
+
+        if (gameEffects.mustacheState)
+        {
+            allTreasure.AddRange(mustacheTreasure);
+        }
+        if (gameEffects.kingsCupState)
+        {
+            allTreasure.AddRange(kingTreasure);
+        }
+        if (gameEffects.shotState)
+        {
+            allTreasure.AddRange(shotTreasure);
+        }
+        if (gameEffects.slammerState)
+        {
+            allTreasure.AddRange(slamTreasure);
+        }
+        if (gameEffects.bottomsUpState)
+        {
+            allTreasure.AddRange(bottomsTreasure);
+        }
         
-        if (treasurePrefabs.Length > 0)
+        if (allTreasure.Count > 0)
         {
             // Ustvari nov Curse prefab na poziciji ComaLite
             currentTreasurePrefab = Instantiate(
-                treasurePrefabs[Random.Range(0, treasurePrefabs.Length)],
+                allTreasure[Random.Range(0, allTreasure.Count)],
                 comaLiteScript.transform.position,
                 comaLiteScript.transform.rotation,
                 comaLiteScript.transform

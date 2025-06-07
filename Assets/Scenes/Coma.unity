@@ -447,6 +447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e90b30b20e85549b3ab3fb4d515c88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roundStartComp2: {fileID: 2067224914}
 --- !u!114 &212975504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -595,6 +596,9 @@ MonoBehaviour:
   comaLiteScript: {fileID: 212975503}
   roundStartScript: {fileID: 2067224914}
   gameEffects: {fileID: 1037557675}
+  protectionOn: 0
+  curseOn: 0
+  treasureOn: 0
 --- !u!114 &252929521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1287,6 +1291,9 @@ MonoBehaviour:
   comaLiteScript: {fileID: 212975503}
   roundStartScript: {fileID: 2067224914}
   gameEffects: {fileID: 1037557675}
+  protectionOn: 0
+  curseOn: 0
+  treasureOn: 0
 --- !u!114 &501524468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1948,6 +1955,9 @@ MonoBehaviour:
   comaLiteScript: {fileID: 212975503}
   roundStartScript: {fileID: 2067224914}
   gameEffects: {fileID: 1037557675}
+  protectionOn: 0
+  curseOn: 0
+  treasureOn: 0
 --- !u!114 &879156353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2024,7 +2034,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -8061149487327183114, guid: b51e45f860675564aaf0f0f4f825414c, type: 3}
+  m_Sprite: {fileID: -6063953934309545421, guid: 7201aeeb2accfe243bbc256d3b118b46, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

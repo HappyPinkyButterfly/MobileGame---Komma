@@ -1,4 +1,5 @@
 
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -29,10 +30,38 @@ public class ComaLite : MonoBehaviour
 
             if (!gameEffects.comaLite)
             {
-                GameObject[] allPrefabs = Resources.LoadAll<GameObject>("Coma");
-                if (allPrefabs.Length > 0)
+                GameObject[] normalComa = Resources.LoadAll<GameObject>("Coma/NormalComa");
+                GameObject[] kingComa = Resources.LoadAll<GameObject>("Coma/King");
+                GameObject[] shotComa = Resources.LoadAll<GameObject>("Coma/Shot");
+                GameObject[] slamComa = Resources.LoadAll<GameObject>("Coma/Slam");
+                GameObject[] mustacheComa = Resources.LoadAll<GameObject>("Coma/Mustache");
+                GameObject[] bottomsComa = Resources.LoadAll<GameObject>("Coma/Bottoms");
+
+                List<GameObject> allComa = new List<GameObject>(normalComa);
+
+                if (gameEffects.mustacheState)
                 {
-                    GameObject randomPrefab = allPrefabs[Random.Range(0, allPrefabs.Length)];
+                    allComa.AddRange(mustacheComa);
+                }
+                if (gameEffects.kingsCupState)
+                {
+                    allComa.AddRange(kingComa);
+                }
+                if (gameEffects.shotState)
+                {
+                    allComa.AddRange(shotComa);
+                }
+                if (gameEffects.slammerState)
+                {
+                    allComa.AddRange(slamComa);
+                }
+                if (gameEffects.bottomsUpState)
+                {
+                    allComa.AddRange(bottomsComa);
+                }
+                if (allComa.Count > 0)
+                {
+                    GameObject randomPrefab = allComa[Random.Range(0, allComa.Count)];
                     Instantiate(randomPrefab, transform);
                 }
             }
