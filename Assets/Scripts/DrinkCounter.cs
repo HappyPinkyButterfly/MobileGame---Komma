@@ -30,7 +30,7 @@ public class DrinkCounter : MonoBehaviour
         currentCounter++;
         if (currentCounter < 0)
         {
-            counter.text = "-" + currentCounter.ToString();
+            counter.text =  currentCounter.ToString();
 
         }
         else if (currentCounter >= maxCounter)

@@ -55,7 +55,7 @@ public class GameEffects : MonoBehaviour
             "Chug 3 Seconds",
             "Take sips equal to your bodycount",
             "Take sips equal to the continents you visited",
-            "You are STARE SLAVE to <-- and they take 2 sips",
+            "You are STARE SLAVE to your LEFT and they take 2 sips",
             "You are STARE SLAVE to --> and they take 3 sips",
             "You are STARE SLAVE to --> and they take 3 sips",
             "Take 3 sips, you cannot touch your drink",

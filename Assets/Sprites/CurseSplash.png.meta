@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 89a50cec9d05d6e4d8ea2c215220b68f
+guid: 84e31745c5359374696f8b5123218447
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -439224921095972518
-    second: ProtectBack_0
+      213: 8793890276793953605
+    second: CurseSplash_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ProtectBack_0
+      name: CurseSplash_0
       rect:
         serializedVersion: 2
-        x: 160
-        y: 167
-        width: 322
-        height: 318
+        x: 38
+        y: 83
+        width: 565
+        height: 466
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a595399e24f87e9f0800000000000000
-      internalID: -439224921095972518
+      spriteID: 54da01e5d9c2a0a70800000000000000
+      internalID: 8793890276793953605
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ProtectBack_0: -439224921095972518
+      CurseSplash_0: 8793890276793953605
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
