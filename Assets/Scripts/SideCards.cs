@@ -100,6 +100,14 @@ public class SideCards : MonoBehaviour
             currentCursePrefab = null;
         }
 
+        foreach (Transform child in comaLiteScript.transform)
+        {
+            if (child.GetComponent<Text>() == null && child.GetComponent<TMP_Text>() == null)
+            {
+                Destroy(child.gameObject);
+            }
+        }
+
 
 
         GameObject[] normalCurse = Resources.LoadAll<GameObject>("Curse/NormalCurse");

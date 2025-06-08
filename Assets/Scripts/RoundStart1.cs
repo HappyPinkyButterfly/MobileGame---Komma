@@ -8,14 +8,17 @@ using UnityEngine.UI;
 public class RoundStartComp2 : MonoBehaviour
 {
     public bool isCompetitiveMode;
+    public RectTransform roundStart;
     public Image roundStartButton;
     public Sprite roundStartSprite;
+    public Sprite roundStartSpritePlay;
     public TextMeshProUGUI typeOfEffect;
     public TextMeshProUGUI amount;
     public TextMeshProUGUI typeOfDrinking;
     public TextMeshProUGUI sideEffect;
     public TextMeshProUGUI sideAmounts;
     public GameEffects gameEffects { get; set; }
+
 
     public List<string> typeOfEffectList = new List<string>
     {
@@ -82,6 +85,7 @@ public class RoundStartComp2 : MonoBehaviour
 
         }
 
+        roundStart.sizeDelta = new Vector2(950f, 800);
         
     }
     public void Reset()
@@ -92,13 +96,15 @@ public class RoundStartComp2 : MonoBehaviour
         typeOfDrinking.text = "";
         sideEffect.text = "";
         sideAmounts.text = "";
+        roundStart.sizeDelta = new Vector2(950f, 800f);
     }
 
 
 
     public void RoundStartClick()
     {
-        roundStartButton.sprite = null;
+        roundStart.sizeDelta = new Vector2(1000f, 900f);
+        roundStartButton.sprite = roundStartSpritePlay;
         gameEffects.roundStart = true;
         int index = Random.Range(0, typeOfEffectList.Count);
         int index2 = Random.Range(0, typeOfDrinkingList.Count);
