@@ -16,8 +16,7 @@ public class SideCards : MonoBehaviour
     public bool curseOn = false;
     public bool treasureOn = false;
 
-
-
+    
     public void ProtectionPrefabClick()
     {
         Destroy(gameObject);

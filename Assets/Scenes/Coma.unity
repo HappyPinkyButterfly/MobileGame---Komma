@@ -4005,8 +4005,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCompetitiveMode: 0
+  roundStart: {fileID: 2067224913}
   roundStartButton: {fileID: 2067224916}
   roundStartSprite: {fileID: -2738560162316262716, guid: 29a197a66b8d64745b1a4fbd4eddf833, type: 3}
+  roundStartSpritePlay: {fileID: -1463332897399157701, guid: 70361c660fa2dd04f9d738ef56ead929, type: 3}
   typeOfEffect: {fileID: 830581649}
   amount: {fileID: 287186927}
   typeOfDrinking: {fileID: 282232751}
