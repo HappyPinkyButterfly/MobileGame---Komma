@@ -386,7 +386,6 @@ MonoBehaviour:
   m_text: 'KINGS CUP RULES
 
 
-
     First 3 Times: Player adds 1 unit of alcohol to
     the Kings Cup
 
@@ -403,8 +402,7 @@ MonoBehaviour:
 
 
     Requires ability to perform all special drinking types from the
-    gamemode section
-
+    gamemode section.
 
     A red scoreboard appears to track progress
 

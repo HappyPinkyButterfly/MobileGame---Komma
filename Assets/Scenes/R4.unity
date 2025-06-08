@@ -537,8 +537,8 @@ MonoBehaviour:
     - Negative effects\r\nPROTECTION - Shields against sips, chugs or ROUND STARTS\r\n\r\nPROTECTION
     RULES:\r\n\r\nLasts until your next turn. Use it by clicking on it, to remove
     it from play\r\n\r\nOn your turn, Instead of drawing ROUND START you can\r\nredirect
-    your ROUND START to another player\r\n\r\nApply the protection's additional effect\r\n\r\nAll
-    special cards have dedicated draw buttons below the COMA deck.\n"
+    your ROUND START to another player\r\r\n\r\nAll special cards have dedicated
+    draw buttons below the COMA deck.\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
