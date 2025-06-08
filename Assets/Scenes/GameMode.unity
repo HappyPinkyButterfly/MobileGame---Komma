@@ -836,7 +836,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Objective: Be the first player to reach 20 Victory Points (VP). All 5
+  m_text: "Objective: Be the first player to reach 13 Victory Points (VP). All 5
     unique special moves are enabled. Some may require similar setups or preparations.\n\nScoring:\r\n\r\nDrinking
     King\u2019s Cup: 3 VP\r\nShot & Slammer: 2 VP\r\nBottoms Up: 1 VP\n\nThis mode
     involves heavy drinking. Ensure all players can safely perform the required actions.

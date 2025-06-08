@@ -6,7 +6,7 @@ public class ScoreBoard : MonoBehaviour
 {
     public CanvasGroup popupScoreBoard;
     public TextMeshProUGUI points;
-    private int pointsToWin = 20;
+    private int pointsToWin = 13;
 
     public CanvasGroup youwin;
 
