@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4695429591586310699}
   - component: {fileID: 8138955664235931401}
   - component: {fileID: -2953756404113068333}
+  - component: {fileID: 4149886838435169362}
   m_Layer: 5
   m_Name: WorldEnder
   m_TagString: Untagged
@@ -122,18 +123,36 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 4149886838435169362}
+        m_TargetAssemblyTypeName: SideCards, Assembly-CSharp
+        m_MethodName: ProtectionPrefabClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &4149886838435169362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4310382485645670624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17ef5016715f1394486919d37dbb397f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  comaLiteScript: {fileID: 0}
+  roundStartScript: {fileID: 0}
+  gameEffects: {fileID: 0}
+  protectionOn: 0
+  curseOn: 0
+  treasureOn: 0
 --- !u!1 &4759923987747663361
 GameObject:
   m_ObjectHideFlags: 0

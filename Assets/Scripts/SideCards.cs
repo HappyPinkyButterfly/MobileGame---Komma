@@ -18,7 +18,7 @@ public class SideCards : MonoBehaviour
 
 
 
-    public void PrefabClick()
+    public void ProtectionPrefabClick()
     {
         Destroy(gameObject);
     }
