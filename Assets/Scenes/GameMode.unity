@@ -1716,7 +1716,7 @@ MonoBehaviour:
   kingsCup: {fileID: 210523174}
   slammer: {fileID: 824266362}
   competitive: {fileID: 405886012}
-  action: {fileID: 0}
+  action: {fileID: 1665341953237735013}
   GreenShot: {fileID: -2625406059805260970, guid: c291d3845f2045049ab1ada2876711c5, type: 3}
   RedShot: {fileID: -8502188156620399341, guid: c291d3845f2045049ab1ada2876711c5, type: 3}
   GreenKingsCup: {fileID: 2803336383883443375, guid: ca763438313453148918d29d2d8f2d04, type: 3}
@@ -1732,7 +1732,7 @@ MonoBehaviour:
   GreenAction: {fileID: -7373731215013966594, guid: 6e8c5cf62af844e409c632582db5c908, type: 3}
   RedAction: {fileID: 8560375013889371971, guid: 6e8c5cf62af844e409c632582db5c908, type: 3}
   popUp: {fileID: 988985619}
-  popUpAction: {fileID: 0}
+  popUpAction: {fileID: 1091506475784138870}
   mustacheOn: 0
   bottomsUpOn: 0
   shotOn: 0
@@ -1860,8 +1860,8 @@ RectTransform:
   - {fileID: 1613820342}
   - {fileID: 405886015}
   - {fileID: 1523708452}
-  - {fileID: 988985618}
   - {fileID: 1323355655700177756}
+  - {fileID: 988985618}
   - {fileID: 6146232548845748250}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2401,7 +2401,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1902373766}
         m_TargetAssemblyTypeName: Prefrences, Assembly-CSharp
         m_MethodName: ActionYesClick
         m_Mode: 1
@@ -2476,7 +2476,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1902373766}
         m_TargetAssemblyTypeName: Prefrences, Assembly-CSharp
         m_MethodName: ActionNoClick
         m_Mode: 1
@@ -2856,7 +2856,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1902373766}
         m_TargetAssemblyTypeName: Prefrences, Assembly-CSharp
         m_MethodName: ActionClick
         m_Mode: 1
