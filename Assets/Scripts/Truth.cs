@@ -11,5 +11,6 @@ public class Truth : MonoBehaviour
         gameEffects = GetComponentInParent<GameEffects>();
         int index = Random.Range(0, gameEffects.truth.Count);
         question.text = gameEffects.truth[index];
+        question.fontSize = 132f;
     }
 }

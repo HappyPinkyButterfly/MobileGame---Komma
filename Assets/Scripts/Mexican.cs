@@ -16,34 +16,34 @@ public class Mexican : MonoBehaviour
         two.text = gameEffects.badEffects[index];
         if (gameEffects.badEffects[index].Length > 30)
         {
-            two.fontSize = 60f;
+            two.fontSize = 58f;
 
         }
         else
         {
-            two.fontSize = 90f;
+            two.fontSize = 88f;
         }
 
         int index2 = Random.Range(0, gameEffects.goodEffects.Count);
         three.text = gameEffects.goodEffects[index2];
         if (gameEffects.goodEffects[index2].Length > 30)
         {
-            three.fontSize = 60f;
+            three.fontSize = 58f;
         }
         else
         {
-            three.fontSize = 90f;
+            three.fontSize = 88f;
         }
 
         int index3 = Random.Range(0, gameEffects.badEffects.Count);
         four.text = gameEffects.badEffects[index3];
         if (gameEffects.badEffects[index2].Length > 30)
         {
-            four.fontSize = 60f;
+            four.fontSize = 58f;
         }
         else
         {
-            four.fontSize = 90f;
+            four.fontSize = 88f;
         }
         
         

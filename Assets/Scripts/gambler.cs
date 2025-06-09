@@ -13,12 +13,12 @@ public class gambler : MonoBehaviour
         coorectEffect.text = gameEffects.goodEffects[index];
         if (gameEffects.goodEffects[index].Length > 30)
         {
-            coorectEffect.fontSize = 60f;
+            coorectEffect.fontSize = 58f;
 
         }
         else
         {
-            coorectEffect.fontSize = 90f;
+            coorectEffect.fontSize = 88f;
         }
 
     }

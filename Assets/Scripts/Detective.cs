@@ -18,12 +18,12 @@ public class Detective : MonoBehaviour
         succeful.text = gameEffects.badEffects[index2];
         if (gameEffects.badEffects[index2].Length > 30)
         {
-            succeful.fontSize = 55f;
+            succeful.fontSize = 53f;
 
         }
         else
         {
-            succeful.fontSize = 70f;
+            succeful.fontSize = 68f;
         }
 
         amount.text = Random.Range(5, 9).ToString();

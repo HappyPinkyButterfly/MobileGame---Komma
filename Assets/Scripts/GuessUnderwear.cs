@@ -14,23 +14,23 @@ public class GuessUnderwear : MonoBehaviour
         wrongEffect.text = gameEffects.badEffects[index];
         if (gameEffects.badEffects[index].Length > 30)
         {
-            wrongEffect.fontSize = 60f;
+            wrongEffect.fontSize = 58f;
             
         }
         else
         {
-            wrongEffect.fontSize = 100f;
+            wrongEffect.fontSize = 98f;
         }
 
         int index2 = Random.Range(0, gameEffects.goodEffects.Count);
         correctEffect.text = gameEffects.goodEffects[index2];
         if (gameEffects.goodEffects[index2].Length > 30)
         {
-            correctEffect.fontSize = 60f;
+            correctEffect.fontSize = 58f;
         }
         else
         {
-            correctEffect.fontSize = 100f;
+            correctEffect.fontSize = 98f;
         }
     
     }

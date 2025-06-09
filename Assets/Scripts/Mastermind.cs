@@ -33,42 +33,42 @@ public class Mastermind : MonoBehaviour
         four.text = gameEffects.badEffects[index4];
         if (gameEffects.badEffects[index].Length > 30)
         {
-            one.fontSize = 50f;
+            one.fontSize = 48f;
 
         }
         else
         {
-            one.fontSize = 65f;
+            one.fontSize = 63f;
         }
 
         if (gameEffects.badEffects[index2].Length > 30)
         {
-            two.fontSize = 50f;
+            two.fontSize = 48f;
 
         }
         else
         {
-            two.fontSize = 65f;
+            two.fontSize = 63f;
         }
 
         if (gameEffects.badEffects[index3].Length > 30)
         {
-            three.fontSize = 50f;
+            three.fontSize = 48f;
 
         }
         else
         {
-            three.fontSize = 65f;
+            three.fontSize = 63f;
         }
 
         if (gameEffects.badEffects[index4].Length > 30)
         {
-            four.fontSize = 50f;
+            four.fontSize = 48f;
 
         }
         else
         {
-            four.fontSize = 65f;
+            four.fontSize = 63f;
         }
 
         

@@ -22,6 +22,13 @@ public class GameEffects : MonoBehaviour
 
     public List<string> photographer;
 
+    public List<string> actionBad;
+
+    public List<string> actionGood;
+    public List<string> typeOfEffectList;
+    public List<string> typeOfDrinkingList;
+    public List<string> sideEffectList;
+
     
 
     public bool mustacheState;
@@ -30,9 +37,12 @@ public class GameEffects : MonoBehaviour
     public bool slammerState;
     public bool kingsCupState;
     public bool competitiveState;
-    
+    public bool actionState;
+
     public void Awake()
     {
+        comaLite = false;
+        roundStart = false;
 
         if (Prefrences.Instance != null)
         {
@@ -42,31 +52,97 @@ public class GameEffects : MonoBehaviour
             slammerState = Prefrences.Instance.slammerOn;
             kingsCupState = Prefrences.Instance.kingsCupOn;
             competitiveState = Prefrences.Instance.competitiveOn;
-        }
+            actionState = Prefrences.Instance.actionOn;
+        } 
 
-        comaLite = false;
-        roundStart = false;
+        
+
+        typeOfEffectList = new List<string>
+        {
+            "TAKE",
+            "TAKE",
+            "TAKE",
+            "GIVE",
+            "GIVE",
+            "GIVE",
+            "TAKE AND GIVE",
+            "EVERYONE",
+            "EVERYONE ELSE",
+            "SAME GENDER"
+        };
+
+        typeOfDrinkingList = new List<string>
+        {
+            "Sips",
+            "Sips",
+            "Sips",
+            "Second Chug"
+        };
+
+        sideEffectList = new List<string>
+        {
+            "Have or been walked on during sex",
+            "You are simp",
+            "For each bodycount",
+            "Virgin",
+            "Drinking vodka",
+            "Not drinking vodka",
+            "Sexy person",
+            "Nice person",
+            "Hooked up with someone you met online",
+            "Taken",
+            "Been with friends ex",
+            "Attracted to present player",
+            "Been skinny dipping",
+            "Have made selfie last week",
+            "Kissed or had sex with present player",
+            "Turned on by a fictional character",
+            "Ever lost keys or wallet",
+            "Ever puked first",
+            "For every virgin present",
+            "Under 180cm",
+            "Over 180cm",
+            "For each relationhip",
+            "Ever had body shot",
+            "Had condom popped",
+            "For each sibling",
+            "Used dating apps",
+            "Currently using dating apps",
+            "For each virginity taken",
+            "Been pregnancy scared",
+            "Slept with older",
+            "Have a child"
+        };
 
         badEffects = new List<string>
         {
+            
             "Draw 1 Round start. It becomes TAKE and + 1",
-            "Draw 2 Round starts and all become TAKE",
+            "Draw 1 Round start. It becomes TAKE and + 1",
+            "Draw 2 Round starts and they become TAKE",
+            "Draw 2 Round starts and they become TAKE",
             "Take 3 Sips",
             "Chug 3 Seconds",
             "Take sips equal to your bodycount",
             "Take sips equal to the continents you visited",
             "You are STARE SLAVE to your LEFT and they take 2 sips",
-            "You are STARE SLAVE to --> and they take 3 sips",
-            "You are STARE SLAVE to --> and they take 3 sips",
+            "You are STARE SLAVE to your LEFT and they take 3 sips",
+            "You are STARE SLAVE to your RIGHT and they take 3 sips",
+            "You are STARE SLAVE to your RIGHT and they take 2 sips",
             "Take 3 sips, you cannot touch your drink",
             "Take chug 2 seconds, you cannot touch your drink",
-            "You and <-- take 3 sips",
-            "You and --> take chug 3 seconds",
+            "You and your RIGHT take 3 sips",
+            "You and your LEFT take chug 3 seconds",
             "All sips and Chugs YOU take are +1, take 1 sip",
             "All sips and Chugs YOU take are +1, take 1 sip",
             "All sips and Chugs YOU take are +1, take 1 sip",
             "All sips and Chugs YOU take are +1, take 1 sip",
-            "Everyones sips and chugs they take are + 1",
+            "Everyones sips and chugs they take are + 1"
+
+        };
+        
+        actionBad = new List<string>
+        {
             "DRAW Curse and TAKE 2 sips",
             "DRAW Curse and TAKE 1 sip",
             "DRAW Curse and TAKE 2 sips",
@@ -75,32 +151,46 @@ public class GameEffects : MonoBehaviour
             "Give Protection to your RIGHT and TAKE 2 sips"
         };
 
+        
+
         goodEffects = new List<string>
         {
-            "Draw 1 Round start, all become GIVE and +1",
-            "Draw 2 Round starts and all become GIVE",
-            "Give 3 Sips",
+            "Draw 1 Round start. It becomes GIVE and +1",
+            "Draw 1 Round start. It becomes GIVE and +1",
+            "Draw 2 Round starts and they become GIVE",
             "Give 4 Sips",
             "Give chug 3 Seconds",
             "Give sips equal to your bodycount",
             "Give sips equal to the continents you visited",
-            "Give STARE SLAVE to <-- on you and they take 2 sips",
-            "Give STARE SLAVE to --> on you and they take 3 sips",
-            "Give STARE SLAVE to --> on you and they take 3 sips",
+            "Give STARE SLAVE to your LEFT on you and they take 2 sips",
+            "Give STARE SLAVE to your LEFT on you and they take 2 sips",
+            "Give STARE SLAVE to your RIGHT on you and they take 3 sips",
+            "Give STARE SLAVE to your RIGHT on you and they take 3 sips",
             "Everyone else 2 sips",
             "Everyone else chug 2 Seconds",
-            "Your <-- take 3 sips",
-            "Your --> take chug 3 seconds",
+            "Your LEFT take 3 sips",
+            "Your RIGHT take chug 3 seconds",
             "Give 'All sips and Chugs YOU take are +1, take 1 sip'",
             "Give 'All sips and Chugs YOU take are +1, take 1 sip'",
             "Give 'All sips and Chugs YOU take are +1, take 1 sip'",
             "Everyones sips and chugs they take are - 1",
+            
+        };
+
+        actionGood = new List<string>
+        {
             "DRAW Protection",
             "DRAW Protection",
             "DRAW Protection",
             "DRAW Protection",
             "DRAW Treasure"
         };
+
+        if (actionState)
+        {
+            badEffects.AddRange(actionBad);
+            goodEffects.AddRange(actionGood);
+        }
 
         faceOffWho = new List<string>
         {
@@ -118,7 +208,7 @@ public class GameEffects : MonoBehaviour
             "YEARS SINGLE/TAKEN CURRENTLY",
             "NUMBER OF TATTOOS",
             "LENGTH OF LONGEST RELATIONSHIP",
-            "TIMES GOR REJECTED",
+            "TIMES GOT REJECTED",
             "NUMBER OF DRINKS HAD TONIGHT",
             "NUMBER OF LANGUAGES SPOKEN",
             "NUMBER OF DIFFERENT JOBS HAD",
@@ -162,7 +252,6 @@ public class GameEffects : MonoBehaviour
             "Tell us about your ideal bodytype of  partner",
             "Tell us about your ideal character of your partner",
             "What is your biggest turn on",
-            "Would you date me if we were single and correct gender",
             "Describe your worst injury",
             "What's a mistake you've made that you still feel guilty about",
             "What's something you've Googled that you aren't proud to admit",
@@ -174,7 +263,7 @@ public class GameEffects : MonoBehaviour
             "What do you consider to be the most romantic thing a person could do?",
             "How do you define love? ",
             "What habits attract you the most? ",
-            "Would you accept an arranged marriage? ",
+            "Would you accept an arranged marriage? Why? ",
             "What's your craziest one-night stand story?",
             "What's the most embarrassing experience you've had while in bed?",
             "What's your favorite position in bed? ",
@@ -262,14 +351,14 @@ public class GameEffects : MonoBehaviour
 
         photographer = new List<string>
         {
-            "Take photo with --> and random nearby object, they take 3 sips",
+            "Take photo with your RIGHT and random nearby object, they take 3 sips",
             "Everyone takes a photo of their drink like it's a luxury product ad, group votes best one, others 2 sips drink",
             "Everyone else takes photo of you, everyone else but the best one take 3 sips",
             "Take photo with <-- making intelectual faces and both take 2 sips",
             "Take group photo with all your drinks",
             "Take a video of everyone else chuging 3 seconds",
-            "Take a photo with <-- and --> making one you each sad, happy and confused faces, they drink 2 sips",
-            "Take a photo with --> hugging and both of you are fed 2 sips",
+            "Take a photo with your RIGHT and your LEFT making one you each sad, happy and confused faces, they drink 2 sips",
+            "Take a photo with your RIGHT hugging and both of you are fed 2 sips",
             "Everyone grabs an oject and balace it on their heads, take selfie",
             "Take a video of someone swiping on dating app, if no present player has one, you take 2 sips",
             "Make a group photo where everyone else puts their hands on your head"
@@ -325,11 +414,11 @@ public class GameEffects : MonoBehaviour
                 badEffects.Add("Take Mustache");
             }
             if (shotState)
-                {
-                    badEffects.Add("Take SHOT");
-                    badEffects.Add("Take SHOT");
-                    badEffects.Add("Take SHOT");
-                }
+            {
+                badEffects.Add("Take SHOT");
+                badEffects.Add("Take SHOT");
+                badEffects.Add("Take SHOT");
+            }
             if (bottomsUpState)
             {
                 badEffects.Add("Take BottomsUp");

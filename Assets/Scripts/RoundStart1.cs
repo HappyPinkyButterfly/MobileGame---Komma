@@ -18,64 +18,7 @@ public class RoundStartComp2 : MonoBehaviour
     public TextMeshProUGUI sideEffect;
     public TextMeshProUGUI sideAmounts;
     public GameEffects gameEffects { get; set; }
-
-
-    public List<string> typeOfEffectList = new List<string>
-    {
-        "TAKE",
-        "TAKE",
-        "TAKE",
-        "GIVE",
-        "GIVE",
-        "GIVE",
-        "TAKE AND GIVE",
-        "EVERYONE",
-        "EVERYONE ELSE",
-        "SAME GENDER"
-    };
-
-    public List<string> typeOfDrinkingList = new List<string>
-    {
-        "Sips",
-        "Sips",
-        "Sips",
-        "Second Chug"
-    };
-
-    public List<string> sideEffectList = new List<string>
-    {
-        "Have or been walked on during sex",
-        "You are simp",
-        "For each bodycount",
-        "Virgin",
-        "Drinking vodka",
-        "Not drinking vodka",
-        "Sexy person",
-        "Nice person",
-        "Hooked up with someone you met online",
-        "Had shot",
-        "Taken",
-        "Been with friends ex",
-        "Attracted to present player",
-        "Been skinny dipping",
-        "Have made selfie last week",
-        "Kissed or had sex with present player",
-        "Turned on by a fictional character",
-        "Ever lost keys or wallet",
-        "Ever puked first",
-        "For every virgin present",
-        "Under 180cm",
-        "Over 180cm",
-        "For each relationhip",
-        "Had body shot",
-        "Had condom popped",
-        "For each sibling",
-        "Used dating apps",
-        "Currently using dating apps",
-        "For each virtginity taken",
-        "Been pregnancy scared",
-        "Slept with older"
-    };
+    
     public void Start()
     {
         gameEffects = GetComponentInParent<GameEffects>();
@@ -86,7 +29,7 @@ public class RoundStartComp2 : MonoBehaviour
         }
 
         roundStart.sizeDelta = new Vector2(950f, 800);
-        
+
     }
     public void Reset()
     {
@@ -106,12 +49,12 @@ public class RoundStartComp2 : MonoBehaviour
         roundStart.sizeDelta = new Vector2(1000f, 900f);
         roundStartButton.sprite = roundStartSpritePlay;
         gameEffects.roundStart = true;
-        int index = Random.Range(0, typeOfEffectList.Count);
-        int index2 = Random.Range(0, typeOfDrinkingList.Count);
+        int index = Random.Range(0, gameEffects.typeOfEffectList.Count);
+        int index2 = Random.Range(0, gameEffects.typeOfDrinkingList.Count);
 
-        typeOfEffect.text = typeOfEffectList[index];
+        typeOfEffect.text = gameEffects.typeOfEffectList[index];
 
-        if (typeOfEffectList[index] == "TAKE" || typeOfEffectList[index] == "GIVE")
+        if (gameEffects.typeOfEffectList[index] == "TAKE" || gameEffects.typeOfEffectList[index] == "GIVE")
         {
             typeOfEffect.fontSize = 160f;
         }
@@ -122,9 +65,9 @@ public class RoundStartComp2 : MonoBehaviour
 
         amount.text = Random.Range(1, 3).ToString();
 
-        typeOfDrinking.text = typeOfDrinkingList[index2];
+        typeOfDrinking.text = gameEffects.typeOfDrinkingList[index2];
 
-        if (typeOfDrinkingList[index2] == "Second Chug")
+        if (gameEffects.typeOfDrinkingList[index2] == "Second Chug")
         {
             typeOfDrinking.fontSize = 80f;
             amount.rectTransform.anchoredPosition =
@@ -137,10 +80,10 @@ public class RoundStartComp2 : MonoBehaviour
             new Vector2(-150f, amount.rectTransform.anchoredPosition.y);
         }
 
-        int index3 = Random.Range(0, sideEffectList.Count);
-        sideEffect.text = sideEffectList[index3];
+        int index3 = Random.Range(0, gameEffects.sideEffectList.Count);
+        sideEffect.text = gameEffects.sideEffectList[index3];
 
-        if (sideEffectList[index3].Length < 13)
+        if (gameEffects.sideEffectList[index3].Length < 13)
         {
             sideEffect.fontSize = 96f;
         }
@@ -148,8 +91,6 @@ public class RoundStartComp2 : MonoBehaviour
         {
             sideEffect.fontSize = 72f;
         }
-
-
 
         sideAmounts.text = " +" + Random.Range(1, 3).ToString();
     }

@@ -427,7 +427,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.9, y: 0.9, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 8262025424516891400}
   m_Father: {fileID: 1037557681}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -448,6 +449,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roundStartComp2: {fileID: 2067224914}
+  comaLite: {fileID: 212975502}
+  treasure: {fileID: 501524471}
+  protection: {fileID: 879156356}
+  curse: {fileID: 252929524}
 --- !u!114 &212975504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -555,6 +560,7 @@ GameObject:
   - component: {fileID: 252929522}
   - component: {fileID: 252929521}
   - component: {fileID: 252929520}
+  - component: {fileID: 252929524}
   m_Layer: 5
   m_Name: Curse
   m_TagString: Untagged
@@ -693,6 +699,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 252929518}
   m_CullTransparentMesh: 1
+--- !u!225 &252929524
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252929518}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &282232749
 GameObject:
   m_ObjectHideFlags: 0
@@ -1250,6 +1268,7 @@ GameObject:
   - component: {fileID: 501524469}
   - component: {fileID: 501524468}
   - component: {fileID: 501524467}
+  - component: {fileID: 501524471}
   m_Layer: 5
   m_Name: Treasure
   m_TagString: Untagged
@@ -1388,6 +1407,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 501524465}
   m_CullTransparentMesh: 1
+--- !u!225 &501524471
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501524465}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &522738847
 GameObject:
   m_ObjectHideFlags: 0
@@ -1914,6 +1945,7 @@ GameObject:
   - component: {fileID: 879156354}
   - component: {fileID: 879156353}
   - component: {fileID: 879156352}
+  - component: {fileID: 879156356}
   m_Layer: 5
   m_Name: Protection
   m_TagString: Untagged
@@ -2052,6 +2084,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 879156350}
   m_CullTransparentMesh: 1
+--- !u!225 &879156356
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 879156350}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &996795322
 GameObject:
   m_ObjectHideFlags: 0
@@ -2247,12 +2291,18 @@ MonoBehaviour:
   faceOffWho: []
   detective: []
   photographer: []
+  actionBad: []
+  actionGood: []
+  typeOfEffectList: []
+  typeOfDrinkingList: []
+  sideEffectList: []
   mustacheState: 0
   bottomsUpState: 0
   shotState: 0
   slammerState: 0
   kingsCupState: 0
   competitiveState: 0
+  actionState: 0
 --- !u!114 &1037557676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4014,48 +4064,6 @@ MonoBehaviour:
   typeOfDrinking: {fileID: 282232751}
   sideEffect: {fileID: 326840553}
   sideAmounts: {fileID: 720460250}
-  typeOfEffectList:
-  - TAKE
-  - TAKE
-  - TAKE
-  - GIVE
-  - GIVE
-  - GIVE
-  - TAKE AND GIVE
-  - EVERYONE
-  - EVERYONE ELSE
-  - SAME GENDER
-  typeOfDrinkingList:
-  - Sips
-  - Second Chug
-  sideEffectList:
-  - Have or been walked on during sex
-  - You are simp
-  - For each bodycount
-  - Virgin
-  - Drinking vodka
-  - Not drinking vodka
-  - Sexy person
-  - Nice person
-  - Hooked up with someone you met online
-  - Had shot
-  - Taken
-  - Been with friends ex
-  - Attracted to present player
-  - Benn skinny dipping
-  - Have made selfie last week
-  - Kissed or had sex with present player
-  - Turned on by a fictional character
-  - Ever lost keys or wallet
-  - Ever puked first
-  - For every virgin present
-  - Under 180cm
-  - For each relationhip
-  - Had body shot
-  - Had condom popped
-  - For each sibling
-  - Used dating apps
-  - Currently using dating apps
 --- !u!114 &2067224915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4229,6 +4237,108 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &143927500793051842
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 212975502}
+    m_Modifications:
+    - target: {fileID: 243501279543215561, guid: ea13748ffafd10e48a3942c671950097, type: 3}
+      propertyPath: m_Name
+      value: TruthRight
+      objectReference: {fileID: 0}
+    - target: {fileID: 6820896249606749181, guid: ea13748ffafd10e48a3942c671950097, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6820896249606749181, guid: ea13748ffafd10e48a3942c671950097, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6820896249606749181, guid: ea13748ffafd10e48a3942c671950097, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6820896249606749181, guid: ea13748ffafd10e48a3942c671950097, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6820896249606749181, guid: ea13748ffafd10e48a3942c671950097, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6820896249606749181, guid: ea13748ffafd10e48a3942c671950097, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6820896249606749181, guid: ea13748ffafd10e48a3942c671950097, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 6820896249606749181, guid: ea13748ffafd10e48a3942c671950097, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 6820896249606749181, guid: ea13748ffafd10e48a3942c671950097, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6820896249606749181, guid: ea13748ffafd10e48a3942c671950097, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6820896249606749181, guid: ea13748ffafd10e48a3942c671950097, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6820896249606749181, guid: ea13748ffafd10e48a3942c671950097, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6820896249606749181, guid: ea13748ffafd10e48a3942c671950097, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6820896249606749181, guid: ea13748ffafd10e48a3942c671950097, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6820896249606749181, guid: ea13748ffafd10e48a3942c671950097, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6820896249606749181, guid: ea13748ffafd10e48a3942c671950097, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6820896249606749181, guid: ea13748ffafd10e48a3942c671950097, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6820896249606749181, guid: ea13748ffafd10e48a3942c671950097, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6820896249606749181, guid: ea13748ffafd10e48a3942c671950097, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6820896249606749181, guid: ea13748ffafd10e48a3942c671950097, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ea13748ffafd10e48a3942c671950097, type: 3}
+--- !u!224 &8262025424516891400 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6820896249606749181, guid: ea13748ffafd10e48a3942c671950097, type: 3}
+  m_PrefabInstance: {fileID: 143927500793051842}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

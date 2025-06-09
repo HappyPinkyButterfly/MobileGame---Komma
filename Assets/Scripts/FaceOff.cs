@@ -16,12 +16,12 @@ public class FaceOff : MonoBehaviour
         wrongEffect.text = gameEffects.badEffects[index];
         if (gameEffects.badEffects[index].Length > 30)
         {
-            wrongEffect.fontSize = 80f;
+            wrongEffect.fontSize = 78f;
 
         }
         else
         {
-            wrongEffect.fontSize = 100f;
+            wrongEffect.fontSize = 98f;
         }
 
         int index2 = Random.Range(0, gameEffects.contestTypes.Count);

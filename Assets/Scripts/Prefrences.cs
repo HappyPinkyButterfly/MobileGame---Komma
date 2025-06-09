@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class Prefrences : MonoBehaviour
 {
@@ -10,6 +9,7 @@ public class Prefrences : MonoBehaviour
     public Image kingsCup;
     public Image slammer;
     public Image competitive;
+    public Image action;
 
     public Sprite GreenShot;
     public Sprite RedShot;
@@ -25,7 +25,11 @@ public class Prefrences : MonoBehaviour
     public Sprite GreenCompetitive;
     public Sprite RedCompetitive;
 
+    public Sprite GreenAction;
+    public Sprite RedAction;
+
     public CanvasGroup popUp;
+    public CanvasGroup popUpAction;
 
 
 
@@ -35,6 +39,8 @@ public class Prefrences : MonoBehaviour
     public bool kingsCupOn = false;
     public bool slammerOn = false;
     public bool competitiveOn = false;
+    public bool actionOn = false;
+
 
     public static Prefrences Instance;
 
@@ -102,6 +108,38 @@ public class Prefrences : MonoBehaviour
             competitiveOn = false;
             competitive.sprite = RedCompetitive;
         }
+    }
+
+    public void ActionYesClick()
+    {
+        actionOn = true;
+        popUpAction.alpha = 0f;
+        popUpAction.interactable = false;
+        popUpAction.blocksRaycasts = false;
+        action.sprite = GreenAction;
+    }
+
+    public void ActionNoClick()
+    {
+        popUpAction.alpha = 0f;
+        popUpAction.interactable = false;
+        popUpAction.blocksRaycasts = false;
+    }
+
+    public void ActionClick()
+    {
+        if (!actionOn)
+        {
+            popUpAction.alpha = 1f;
+            popUpAction.interactable = true;
+            popUpAction.blocksRaycasts = true;
+        }
+        else
+        {
+            actionOn = false;
+            action.sprite = RedAction;
+        }
+
     }
 
     public void ShotClick()

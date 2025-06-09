@@ -14,21 +14,21 @@ public class WouldYouRather : MonoBehaviour
     {
         if (first.ToString().Length > 20)
         {
-            first.fontSize = 62f;
+            first.fontSize = 60f;
 
         }
         else
         {
-            first.fontSize = 70f;
+            first.fontSize = 68f;
         }
         if (second.ToString().Length > 20)
         {
-            second.fontSize = 62f;
+            second.fontSize = 60f;
 
         }
         else
         {
-            second.fontSize = 70f;
+            second.fontSize = 68f;
         }
         
         gameEffects = GetComponentInParent<GameEffects>();
@@ -36,23 +36,23 @@ public class WouldYouRather : MonoBehaviour
         firstEff.text = gameEffects.badEffects[index];
         if (gameEffects.badEffects[index].Length > 30)
         {
-            firstEff.fontSize = 65f;
+            firstEff.fontSize = 63f;
 
         }
         else
         {
-            firstEff.fontSize = 80f;
+            firstEff.fontSize = 78f;
         }
 
         int index2 = Random.Range(0, gameEffects.goodEffects.Count);
         secondEff.text = gameEffects.goodEffects[index2];
         if (gameEffects.goodEffects[index2].Length > 30)
         {
-            secondEff.fontSize = 65;
+            secondEff.fontSize = 63f;
         }
         else
         {
-            secondEff.fontSize = 80f;
+            secondEff.fontSize = 78f;
         }
 
         int index3 = Random.Range(0, gameEffects.wouldYouRather1.Count);

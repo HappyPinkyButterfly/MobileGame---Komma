@@ -14,11 +14,11 @@ public class CallOfTheWILD : MonoBehaviour
         typeOfEffect.text = gameEffects.badEffects[index];
         if (gameEffects.badEffects[index].Length > 30)
         {
-            typeOfEffect.fontSize = 80f;
+            typeOfEffect.fontSize = 78f;
         }
         else
         {
-            typeOfEffect.fontSize = 100f;
+            typeOfEffect.fontSize = 98f;
         }
     
     }
