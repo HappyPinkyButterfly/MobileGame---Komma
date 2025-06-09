@@ -75,6 +75,7 @@ public class Prefrences : MonoBehaviour
         kingsCupOn = true;
         slammerOn = true;
         competitiveOn = true;
+        actionOn = true;
 
         shot.sprite = GreenShot;
         bottomsUp.sprite = GreenBottomsUp;
@@ -82,6 +83,7 @@ public class Prefrences : MonoBehaviour
         kingsCup.sprite = GreenKingsCup;
         slammer.sprite = GreenSlammer;
         competitive.sprite = GreenCompetitive;
+        action.sprite = GreenAction;
 
         popUp.alpha = 0f;
         popUp.interactable = false;
@@ -138,6 +140,8 @@ public class Prefrences : MonoBehaviour
         {
             actionOn = false;
             action.sprite = RedAction;
+            competitiveOn = false;
+            competitive.sprite = RedCompetitive;
         }
 
     }

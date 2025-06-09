@@ -404,23 +404,24 @@ MonoBehaviour:
     Requires ability to perform all special drinking types from the
     gamemode section.
 
-    A red scoreboard appears to track progress
+    A red scoreboard appears to track progress and ACTION
+    MODE will be turned ON!
 
 
-    Scoring
-    System:
+    Scoring System:
 
     Kings Cup Drank = 3 points
 
-    Shot/Slammer = 2 points
+    Shot/Slammer
+    = 2 points
 
-    Bottoms
-    Up = 1 point
+    Bottoms Up = 1 point
 
 
     Winning Condition:
 
-    First player to reach 13 points wins'
+    First player
+    to reach 13 points wins'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
