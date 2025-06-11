@@ -189,10 +189,10 @@ public class GameEffects : MonoBehaviour
             "GIVE chug 3 Seconds",
             "GIVE sips equal to your bodycount",
             "GIVE sips equal to the continents you visited",
-            "GIVE STARE SLAVE to your LEFT on you and they TAKE 2 sips",
-            "GIVE STARE SLAVE to your LEFT on you and they TAKE 3 sips",
-            "GIVE STARE SLAVE to your RIGHT on you and they TAKE 2 sips",
-            "GIVE STARE SLAVE to your RIGHT on you and they TAKE 3 sips",
+            "GIVE STARE SLAVE to anyone on anyone and they TAKE 2 sips",
+            "GIVE STARE SLAVE to anyone on anyone  and they TAKE 3 sips",
+            "Your RIGHT is your STARE SLAVE  and they TAKE 2 sips",
+            "Your RIGHT is your STARE SLAVE  and they TAKE 3 sips",
             "Everyone else 2 sips",
             "Everyone else chug 2 seconds",
             "Your LEFT TAKE 2 sips",
@@ -204,7 +204,7 @@ public class GameEffects : MonoBehaviour
             "GIVE 'Increase your SipChug Counter by 1, TAKE 3 sip'",
             "Decrease your SipChug Countey by 1 and GIVE 1 sip",
             "Decrease your SipChug Countey by 1 and GIVE 2 sip",
-            "Everyones sips and chugs they take are - 1"
+            "Everyones Decreases their SipChug Counter by 1"
         };
 
         actionGood = new List<string>
