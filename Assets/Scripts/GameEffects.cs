@@ -44,7 +44,7 @@ public class GameEffects : MonoBehaviour
 
     public string GenerateRandomEffect(List<string> tableOfEffects)
     {
-        int ableToRepeat = tableOfEffects.Count - 1;
+        int ableToRepeat = 10;
         if (tableOfEffects.Count <= 10 || tableOfEffects.Count == 0)
         {
             return "Error has occured, contanct SupremeLab Productions";
@@ -174,7 +174,7 @@ public class GameEffects : MonoBehaviour
             "DRAW Curse and TAKE 1 sip",
             "DRAW Curse and TAKE 2 sips",
             "DRAW Curse and TAKE 1 sip",
-            "Give Protection to your RIGHT and Take 1 sip",
+            "Give Protection to your RIGHT and TAKE 1 sip",
             "Give Protection to your RIGHT and TAKE 2 sips"
         };
 
@@ -221,6 +221,16 @@ public class GameEffects : MonoBehaviour
 
         faceOffWho = new List<string>
         {
+            "with the person with closest to your",
+            "with the person with furthest to your",
+            "with the person with closest to your",
+            "with the person with furthest to your",
+            "with the person with closest to your",
+            "with the person with furthest to your",
+            "with the person with closest to your",
+            "with the person with furthest to your",
+            "with the person with closest to your",
+            "with the person with furthest to your",
             "with the person with closest to your",
             "with the person with furthest to your"
         };
@@ -374,7 +384,14 @@ public class GameEffects : MonoBehaviour
             "EVERYDAY JOB",
             "HISTORICAL FIGURE",
             "CLASSROOM ITEM",
-        };
+            "MY BEST TRAIT",
+            "FAMOUS MOVIE ACTOR",
+            "KITCHEN ITEM",
+            "COUNTRY IN EUROPE",
+            "EVERYDAY JOB",
+            "HISTORICAL FIGURE",
+            "CLASSROOM ITEM",
+            };
 
         photographer = new List<string>
         {
