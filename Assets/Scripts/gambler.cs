@@ -9,7 +9,6 @@ public class gambler : MonoBehaviour
     public void Start()
     {
         gameEffects = GetComponentInParent<GameEffects>();
-        int index = Random.Range(0, gameEffects.goodEffects.Count);
         coorectEffect.text = gameEffects.GenerateRandomEffect(gameEffects.goodEffects);
         if (coorectEffect.text.Length > 30)
         {

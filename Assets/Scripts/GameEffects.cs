@@ -44,8 +44,8 @@ public class GameEffects : MonoBehaviour
 
     public string GenerateRandomEffect(List<string> tableOfEffects)
     {
-        int ableToRepeat = 10;
-        if (tableOfEffects.Count <= 10 || tableOfEffects.Count == 0)
+        int ableToRepeat = 9;
+        if (tableOfEffects.Count <= ableToRepeat || tableOfEffects.Count == 0 || tableOfEffects == null)
         {
             return "Error has occured, contanct SupremeLab Productions";
         }
@@ -143,74 +143,79 @@ public class GameEffects : MonoBehaviour
 
         badEffects = new List<string>
         {
-
-            "Draw 1 Round start. It becomes TAKE and + 1",
+            "Draw 1 Round start. It becomes TAKE.",
             "Draw 1 Round start. It becomes TAKE and + 1",
             "Draw 2 Round starts and they become TAKE",
-            "Draw 2 Round starts and they become TAKE",
-            "Take 3 Sips",
+            "Draw 2 Round starts and they become TAKE - 1",
+            "TAKE 3 sips",
             "Chug 3 Seconds",
-            "Take sips equal to your bodycount",
-            "Take sips equal to the continents you visited",
-            "You are STARE SLAVE to your LEFT and they take 2 sips",
-            "You are STARE SLAVE to your LEFT and they take 3 sips",
-            "You are STARE SLAVE to your RIGHT and they take 3 sips",
-            "You are STARE SLAVE to your RIGHT and they take 2 sips",
-            "Take 3 sips, you cannot touch your drink",
-            "Take chug 2 seconds, you cannot touch your drink",
-            "You and your RIGHT take 3 sips",
-            "You and your LEFT take chug 3 seconds",
-            "All sips and Chugs YOU take are +1, take 1 sip",
-            "All sips and Chugs YOU take are +1, take 1 sip",
-            "All sips and Chugs YOU take are +1, take 1 sip",
-            "All sips and Chugs YOU take are +1, take 1 sip",
-            "Everyones sips and chugs they take are + 1"
+            "TAKE sips equal to your bodycount",
+            "TAKE sips equal to the continents you visited",
+            "You are STARE SLAVE to your LEFT and they TAKE 2 sips",
+            "You are STARE SLAVE to your LEFT and they TAKE 3 sips",
+            "You are STARE SLAVE to your RIGHT and they TAKE 2 sips",
+            "You are STARE SLAVE to your RIGHT and they TAKE 3 sips",
+            "TAKE 3 sips, you cannot touch your drink",
+            "TAKE chug 2 seconds, you cannot touch your drink",
+            "You and your RIGHT TAKE 3 sips",
+            "You and your LEFT TAKE chug 3 seconds",
+            "Increase your SipChug Counter by 1",
+            "Increase your SipChug Counter by 1, TAKE 1 sip",
+            "Increase your SipChug Counter by 1, TAKE 1 sip",
+            "Increase your SipChug Counter by 1, TAKE 2 sips",
+            "Everyones Increases their SipChug Counter by 1"
 
         };
 
         actionBad = new List<string>
-        {
-            "DRAW Curse and TAKE 2 sips",
-            "DRAW Curse and TAKE 1 sip",
-            "DRAW Curse and TAKE 2 sips",
-            "DRAW Curse and TAKE 1 sip",
-            "Give Protection to your RIGHT and TAKE 1 sip",
-            "Give Protection to your RIGHT and TAKE 2 sips"
+        {   "Draw CURSE and TAKE 1 sip",
+            "Draw CURSE and TAKE 1 sip",
+            "Draw CURSE and TAKE 2 sips",
+            "Draw CURSE and TAKE 3 sips",
+            "GIVE PROTECTION to your RIGHT and they TAKE 1 sip",
+            "GEIVE PROTECTION to your RIGHT and they TAKE 2 sips",
+            "GIVE PROTECTION to your RIGHT and they TAKE 3 sip",
         };
 
 
 
         goodEffects = new List<string>
         {
-            "Draw 1 Round start. It becomes GIVE and +1",
+            "Draw 1 Round start. It becomes GIVE",
             "Draw 1 Round start. It becomes GIVE and +1",
             "Draw 2 Round starts and they become GIVE",
-            "Give 4 Sips",
-            "Give chug 3 Seconds",
-            "Give sips equal to your bodycount",
-            "Give sips equal to the continents you visited",
-            "Give STARE SLAVE to your LEFT on you and they take 2 sips",
-            "Give STARE SLAVE to your LEFT on you and they take 2 sips",
-            "Give STARE SLAVE to your RIGHT on you and they take 3 sips",
-            "Give STARE SLAVE to your RIGHT on you and they take 3 sips",
+            "Draw 2 Round starts and they become GIVE - 1",
+            "GIVE 4 Sips",
+            "GIVE chug 3 Seconds",
+            "GIVE sips equal to your bodycount",
+            "GIVE sips equal to the continents you visited",
+            "GIVE STARE SLAVE to your LEFT on you and they TAKE 2 sips",
+            "GIVE STARE SLAVE to your LEFT on you and they TAKE 3 sips",
+            "GIVE STARE SLAVE to your RIGHT on you and they TAKE 2 sips",
+            "GIVE STARE SLAVE to your RIGHT on you and they TAKE 3 sips",
             "Everyone else 2 sips",
-            "Everyone else chug 2 Seconds",
-            "Your LEFT take 3 sips",
-            "Your RIGHT take chug 3 seconds",
-            "Give 'All sips and Chugs YOU take are +1, take 1 sip'",
-            "Give 'All sips and Chugs YOU take are +1, take 1 sip'",
-            "Give 'All sips and Chugs YOU take are +1, take 1 sip'",
-            "Everyones sips and chugs they take are - 1",
-
+            "Everyone else chug 2 seconds",
+            "Your LEFT TAKE 2 sips",
+            "Your RIGHT TAKE 3 sips",
+            "Your LEFT TAKE chug 3 seconds",
+            "Your RIGHT TAKE chug 2 seconds",
+            "GIVE 'Increase your SipChug Counter by 1, TAKE 1 sip'",
+            "GIVE 'Increase your SipChug Counter by 1, TAKE 2 sip'",
+            "GIVE 'Increase your SipChug Counter by 1, TAKE 3 sip'",
+            "Decrease your SipChug Countey by 1 and GIVE 1 sip",
+            "Decrease your SipChug Countey by 1 and GIVE 2 sip",
+            "Everyones sips and chugs they take are - 1"
         };
 
         actionGood = new List<string>
         {
-            "DRAW Protection",
-            "DRAW Protection",
-            "DRAW Protection",
-            "DRAW Protection",
-            "DRAW Treasure"
+            "Draw PROTECTION",
+            "Draw PROTECTION",
+            "Draw PROTECTION and GIVE 1 sip",
+            "Draw PROTECTION and GIVE 2 sips",
+            "Draw PROTECTION and GIVE 3 sips", 
+            "Draw TREASURE",
+            "Draw TREASURE"
         };
 
         if (actionState)
@@ -395,17 +400,17 @@ public class GameEffects : MonoBehaviour
 
         photographer = new List<string>
         {
-            "Take photo with your RIGHT and random nearby object, they take 3 sips",
-            "Everyone takes a photo of their drink like it's a luxury product ad, group votes best one, others 2 sips drink",
-            "Everyone else takes photo of you, everyone else but the best one take 3 sips",
-            "Take photo with <-- making intelectual faces and both take 2 sips",
-            "Take group photo with all your drinks",
-            "Take a video of everyone else chuging 3 seconds",
-            "Take a photo with your RIGHT and your LEFT making one you each sad, happy and confused faces, they drink 2 sips",
-            "Take a photo with your RIGHT hugging and both of you are fed 2 sips",
-            "Everyone grabs an oject and balace it on their heads, take selfie",
-            "Take a video of someone swiping on dating app, if no present player has one, you take 2 sips",
-            "Make a group photo where everyone else puts their hands on your head"
+            "TAKE photo with your RIGHT and random nearby object, they TAKE 3 sips",
+            "Everyone takes a photo of their drink like it's a luxury product ad, group votes best one, others TAKE 2 sips",
+            "Everyone else takes photo of you, everyone else but the best one TAKE 3 sips",
+            "TAKE photo with <-- making intelectual faces and both TAKE 2 sips",
+            "TAKE group photo with all your drinks",
+            "TAKE a video of everyone else chuging 3 seconds",
+            "TAKE a photo with your RIGHT and your LEFT making one you each sad, happy and confused faces, they TAKE 2 sips",
+            "TAKE a photo with your RIGHT hugging and both of you are fed 2 sips",
+            "Everyone grabs an oject and balace it on their heads, TAKE selfie",
+            "TAKE a video of someone swiping on dating app, if no present player has one, you TAKE 2 sips",
+            "TAKE a group photo where everyone else puts their hands on your head"
         };
 
         int repetitionsGood = goodEffects.Count / 10;
@@ -414,35 +419,35 @@ public class GameEffects : MonoBehaviour
         {
             if (mustacheState)
             {
-                goodEffects.Add("Give Mustache");
-                goodEffects.Add("Give Mustache");
-                goodEffects.Add("Give Mustache");
-                goodEffects.Add("Give Mustache");
+                goodEffects.Add("GIVE Mustache");
+                goodEffects.Add("GIVE Mustache");
+                goodEffects.Add("GIVE Mustache");
+                goodEffects.Add("GIVE Mustache");
             }
             if (shotState)
             {
-                goodEffects.Add("Give SHOT");
-                goodEffects.Add("Give SHOT");
-                goodEffects.Add("Give SHOT");
+                goodEffects.Add("GIVE SHOT");
+                goodEffects.Add("GIVE SHOT");
+                goodEffects.Add("GIVE SHOT");
             }
             if (bottomsUpState)
             {
-                goodEffects.Add("Give BottomsUp");
-                goodEffects.Add("Give BottomsUp");
-                goodEffects.Add("Give BottomsUp");
+                goodEffects.Add("GIVE BottomsUp");
+                goodEffects.Add("GIVE BottomsUp");
+                goodEffects.Add("GIVE BottomsUp");
             }
             if (slammerState)
             {
-                goodEffects.Add("Give Slammer");
-                goodEffects.Add("Give Slammer");
-                goodEffects.Add("Give Slammer");
+                goodEffects.Add("GIVE Slammer");
+                goodEffects.Add("GIVE Slammer");
+                goodEffects.Add("GIVE Slammer");
             }
             if (kingsCupState)
             {
-                goodEffects.Add("Give Kings Cup");
-                goodEffects.Add("Give Kings Cup");
-                goodEffects.Add("Give Kings Cup");
-                goodEffects.Add("Give Kings Cup");
+                goodEffects.Add("GIVE Kings Cup");
+                goodEffects.Add("GIVE Kings Cup");
+                goodEffects.Add("GIVE Kings Cup");
+                goodEffects.Add("GIVE Kings Cup");
             }
         }
 
@@ -452,35 +457,35 @@ public class GameEffects : MonoBehaviour
         {
             if (mustacheState)
             {
-                badEffects.Add("Take Mustache");
-                badEffects.Add("Take Mustache");
-                badEffects.Add("Take Mustache");
-                badEffects.Add("Take Mustache");
+                badEffects.Add("TAKE Mustache");
+                badEffects.Add("TAKE Mustache");
+                badEffects.Add("TAKE Mustache");
+                badEffects.Add("TAKE Mustache");
             }
             if (shotState)
             {
-                badEffects.Add("Take SHOT");
-                badEffects.Add("Take SHOT");
-                badEffects.Add("Take SHOT");
+                badEffects.Add("TAKE SHOT");
+                badEffects.Add("TAKE SHOT");
+                badEffects.Add("TAKE SHOT");
             }
             if (bottomsUpState)
             {
-                badEffects.Add("Take BottomsUp");
-                badEffects.Add("Take BottomsUp");
-                badEffects.Add("Take BottomsUp");
+                badEffects.Add("TAKE BottomsUp");
+                badEffects.Add("TAKE BottomsUp");
+                badEffects.Add("TAKE BottomsUp");
             }
             if (slammerState)
             {
-                badEffects.Add("Take Slammer");
-                badEffects.Add("Take Slammer");
-                badEffects.Add("Take Slammer");
+                badEffects.Add("TAKE Slammer");
+                badEffects.Add("TAKE Slammer");
+                badEffects.Add("TAKE Slammer");
             }
             if (kingsCupState)
             {
-                badEffects.Add("Take Kings Cup");
-                badEffects.Add("Take Kings Cup");
-                badEffects.Add("Take Kings Cup");
-                badEffects.Add("Take Kings Cup");
+                badEffects.Add("TAKE Kings Cup");
+                badEffects.Add("TAKE Kings Cup");
+                badEffects.Add("TAKE Kings Cup");
+                badEffects.Add("TAKE Kings Cup");
             }
         }
     }

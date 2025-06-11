@@ -78,6 +78,11 @@ public class RuelsExplanation : MonoBehaviour
         GameObject auctionRule = Resources.Load<GameObject>("Explanations/Would");
         Instantiate(auctionRule, comaLite.transform.position, comaLite.transform.rotation, comaLite.transform);
     }
+    public void Gambler()
+    {
+        GameObject auctionRule = Resources.Load<GameObject>("Explanations/Gambler");
+        Instantiate(auctionRule, comaLite.transform.position, comaLite.transform.rotation, comaLite.transform);
+    }
 
 
     

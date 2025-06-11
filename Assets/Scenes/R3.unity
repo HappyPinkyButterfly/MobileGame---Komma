@@ -435,7 +435,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -150, y: 400}
+  m_AnchoredPosition: {x: -120, y: 400}
   m_SizeDelta: {x: 850, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1108501077
@@ -459,12 +459,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "COMA Cards \n\nMINI GAMES - (e.g., \"CALL OF THE WILD\") - Click the card
-    name to see rules, then click back to resume.\n\nPermanent Effects *(e.g., \"All
-    sips/chugs +1\")* - Track them via the SipChug Counter (click +/- to adjust).\n\nAll
-    thi can be played even if not ALL PLAYERS HAVE Coma downloaded by just passint
-    the phone around.\n\nIf all players have coma downloaded you can turn on ACTION
-    MODE in gamemodes to add exciting new DECKS like TREASURE,PROTECTION, CURSE and
-    COMA card and effects"
+    name to see rules, then click back to resume.\n\nSipChug COUNTER - when a players
+    has to drink sips or chug seconds he has to increase or decrease that number
+    based on the number of the counter. Click on it to add or subtract based on effects\n\nIf
+    all players have coma downloaded you can turn on ACTION MODE in gamemodes to
+    add exciting new DECKS like TREASURE,PROTECTION, CURSE and COMA card and effects"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -491,8 +490,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 44
-  m_fontSizeBase: 44
+  m_fontSize: 46
+  m_fontSizeBase: 46
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

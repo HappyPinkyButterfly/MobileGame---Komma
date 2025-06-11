@@ -2302,6 +2302,7 @@ MonoBehaviour:
   kingsCupState: 0
   competitiveState: 0
   actionState: 0
+  usedEffects: []
 --- !u!114 &1037557676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4063,6 +4064,7 @@ MonoBehaviour:
   typeOfDrinking: {fileID: 282232751}
   sideEffect: {fileID: 326840553}
   sideAmounts: {fileID: 720460250}
+  usedEffects: []
 --- !u!114 &2067224915
 MonoBehaviour:
   m_ObjectHideFlags: 0
