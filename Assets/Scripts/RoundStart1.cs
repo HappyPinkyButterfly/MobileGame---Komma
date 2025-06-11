@@ -18,6 +18,7 @@ public class RoundStartComp2 : MonoBehaviour
     public TextMeshProUGUI sideEffect;
     public TextMeshProUGUI sideAmounts;
     public GameEffects gameEffects { get; set; }
+    public  List<string> usedEffects;
     
     public void Start()
     {
@@ -30,6 +31,27 @@ public class RoundStartComp2 : MonoBehaviour
 
         roundStart.sizeDelta = new Vector2(950f, 800);
 
+    }
+
+    public string GenerateRandomRSEffect()
+    {
+        int ableToRepeat = 10;
+        
+        while (true)
+        {
+            string effect = gameEffects.sideEffectList[Random.Range(0, gameEffects.sideEffectList.Count)];
+            if (!usedEffects.Contains(effect) && usedEffects.Count != ableToRepeat)
+            {
+                usedEffects.Add(effect);
+                return effect;
+            }
+            else if (!usedEffects.Contains(effect) && usedEffects.Count == ableToRepeat)
+            {
+                usedEffects.Add(effect);
+                usedEffects.RemoveAt(0);
+                return effect;
+            }
+        }    
     }
     public void Reset()
     {
@@ -80,16 +102,16 @@ public class RoundStartComp2 : MonoBehaviour
             new Vector2(-150f, amount.rectTransform.anchoredPosition.y);
         }
 
-        int index3 = Random.Range(0, gameEffects.sideEffectList.Count);
-        sideEffect.text = gameEffects.sideEffectList[index3];
+        
+        sideEffect.text = GenerateRandomRSEffect();
 
-        if (gameEffects.sideEffectList[index3].Length < 13)
+        if (sideEffect.text.Length < 13)
         {
             sideEffect.fontSize = 96f;
         }
         else
         {
-            sideEffect.fontSize = 72f;
+            sideEffect.fontSize = 69f;
         }
 
         sideAmounts.text = " +" + Random.Range(1, 3).ToString();

@@ -12,23 +12,21 @@ public class FaceOff : MonoBehaviour
     public void Start()
     {
         gameEffects = GetComponentInParent<GameEffects>();
-        int index = Random.Range(0, gameEffects.badEffects.Count);
-        wrongEffect.text = gameEffects.badEffects[index];
-        if (gameEffects.badEffects[index].Length > 30)
+        wrongEffect.text = gameEffects.GenerateRandomEffect(gameEffects.badEffects);
+        if (wrongEffect.text.Length > 30)
         {
             wrongEffect.fontSize = 78f;
-
         }
         else
         {
             wrongEffect.fontSize = 98f;
         }
 
-        int index2 = Random.Range(0, gameEffects.contestTypes.Count);
-        whoYouBattle.text = gameEffects.contestTypes[index2];
 
-        int index3 = Random.Range(0, gameEffects.faceOffWho.Count);
-        distance.text = gameEffects.faceOffWho[index3];
+        whoYouBattle.text = gameEffects.GenerateRandomEffect(gameEffects.contestTypes);
+
+   
+        distance.text = gameEffects.GenerateRandomEffect(gameEffects.faceOffWho);
 
 
 

@@ -10,9 +10,8 @@ public class CallOfTheWILD : MonoBehaviour
     public void Start()
     {
         gameEffects = GetComponentInParent<GameEffects>();
-        int index = Random.Range(0, gameEffects.badEffects.Count);
-        typeOfEffect.text = gameEffects.badEffects[index];
-        if (gameEffects.badEffects[index].Length > 30)
+        typeOfEffect.text = gameEffects.GenerateRandomEffect(gameEffects.badEffects);
+        if (typeOfEffect.text.Length > 30)
         {
             typeOfEffect.fontSize = 78f;
         }

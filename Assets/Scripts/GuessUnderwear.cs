@@ -10,9 +10,8 @@ public class GuessUnderwear : MonoBehaviour
     public void Start()
     {
         gameEffects = GetComponentInParent<GameEffects>();
-        int index = Random.Range(0, gameEffects.badEffects.Count);
-        wrongEffect.text = gameEffects.badEffects[index];
-        if (gameEffects.badEffects[index].Length > 30)
+        wrongEffect.text = gameEffects.GenerateRandomEffect(gameEffects.badEffects);
+        if (wrongEffect.text.Length > 30)
         {
             wrongEffect.fontSize = 58f;
             
@@ -22,9 +21,8 @@ public class GuessUnderwear : MonoBehaviour
             wrongEffect.fontSize = 98f;
         }
 
-        int index2 = Random.Range(0, gameEffects.goodEffects.Count);
-        correctEffect.text = gameEffects.goodEffects[index2];
-        if (gameEffects.goodEffects[index2].Length > 30)
+        correctEffect.text = gameEffects.GenerateRandomEffect(gameEffects.goodEffects);
+        if (correctEffect.text.Length > 30)
         {
             correctEffect.fontSize = 58f;
         }

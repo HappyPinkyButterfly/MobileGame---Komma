@@ -10,8 +10,8 @@ public class gambler : MonoBehaviour
     {
         gameEffects = GetComponentInParent<GameEffects>();
         int index = Random.Range(0, gameEffects.goodEffects.Count);
-        coorectEffect.text = gameEffects.goodEffects[index];
-        if (gameEffects.goodEffects[index].Length > 30)
+        coorectEffect.text = gameEffects.GenerateRandomEffect(gameEffects.goodEffects);
+        if (coorectEffect.text.Length > 30)
         {
             coorectEffect.fontSize = 58f;
 

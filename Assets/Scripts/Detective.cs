@@ -11,12 +11,9 @@ public class Detective : MonoBehaviour
     public void Start()
     {
         gameEffects = GetComponentInParent<GameEffects>();
-        int index = Random.Range(0, gameEffects.detective.Count);
-        description.text = gameEffects.detective[index];
-
-        int index2 = Random.Range(0, gameEffects.goodEffects.Count);
-        succeful.text = gameEffects.badEffects[index2];
-        if (gameEffects.badEffects[index2].Length > 30)
+        description.text = gameEffects.GenerateRandomEffect(gameEffects.detective);
+        succeful.text = gameEffects.GenerateRandomEffect(gameEffects.badEffects);
+        if (succeful.text.Length > 30)
         {
             succeful.fontSize = 53f;
 

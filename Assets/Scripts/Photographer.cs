@@ -9,7 +9,6 @@ public class Photographer : MonoBehaviour
      public void Start()
     {
         gameEffects = GetComponentInParent<GameEffects>();
-        int index = Random.Range(0, gameEffects.photographer.Count);
-        whatKind.text = gameEffects.photographer[index];
+        whatKind.text = gameEffects.GenerateRandomEffect(gameEffects.photographer);
     }
 }

@@ -14,10 +14,8 @@ public class MostLikely : MonoBehaviour
 
     public void Start()
     {
-        int index = Random.Range(0, gameEffects.descriptionList.Count);
-        description.text = gameEffects.descriptionList[index];
-        int index2 = Random.Range(0, gameEffects.badEffects.Count);
-        effect.text = gameEffects.badEffects[index2];
+        description.text = gameEffects.GenerateRandomEffect(gameEffects.descriptionList);
+        effect.text = gameEffects.GenerateRandomEffect(gameEffects.badEffects);
         
     }
 }

@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -38,7 +37,35 @@ public class GameEffects : MonoBehaviour
     public bool kingsCupState;
     public bool competitiveState;
     public bool actionState;
+    
+    public  List<string> usedEffects;
+    
 
+
+    public string GenerateRandomEffect(List<string> tableOfEffects)
+    {
+        int ableToRepeat = tableOfEffects.Count - 1;
+        if (tableOfEffects.Count <= 10 || tableOfEffects.Count == 0)
+        {
+            return "Error has occured, contanct SupremeLab Productions";
+        }
+
+        while (true)
+        {
+            string effect = tableOfEffects[Random.Range(0, badEffects.Count)];
+            if (!usedEffects.Contains(effect) && usedEffects.Count != ableToRepeat)
+            {
+                usedEffects.Add(effect);
+                return effect;
+            }
+            else if (!usedEffects.Contains(effect) && usedEffects.Count == ableToRepeat)
+            {
+                usedEffects.Add(effect);
+                usedEffects.RemoveAt(0);
+                return effect;
+            }
+        }
+    }
     public void Awake()
     {
         comaLite = false;
@@ -53,9 +80,9 @@ public class GameEffects : MonoBehaviour
             kingsCupState = Prefrences.Instance.kingsCupOn;
             competitiveState = Prefrences.Instance.competitiveOn;
             actionState = Prefrences.Instance.actionOn;
-        } 
+        }
 
-        
+
 
         typeOfEffectList = new List<string>
         {
@@ -116,7 +143,7 @@ public class GameEffects : MonoBehaviour
 
         badEffects = new List<string>
         {
-            
+
             "Draw 1 Round start. It becomes TAKE and + 1",
             "Draw 1 Round start. It becomes TAKE and + 1",
             "Draw 2 Round starts and they become TAKE",
@@ -140,7 +167,7 @@ public class GameEffects : MonoBehaviour
             "Everyones sips and chugs they take are + 1"
 
         };
-        
+
         actionBad = new List<string>
         {
             "DRAW Curse and TAKE 2 sips",
@@ -151,7 +178,7 @@ public class GameEffects : MonoBehaviour
             "Give Protection to your RIGHT and TAKE 2 sips"
         };
 
-        
+
 
         goodEffects = new List<string>
         {
@@ -174,7 +201,7 @@ public class GameEffects : MonoBehaviour
             "Give 'All sips and Chugs YOU take are +1, take 1 sip'",
             "Give 'All sips and Chugs YOU take are +1, take 1 sip'",
             "Everyones sips and chugs they take are - 1",
-            
+
         };
 
         actionGood = new List<string>

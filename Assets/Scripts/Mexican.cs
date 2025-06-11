@@ -12,9 +12,8 @@ public class Mexican : MonoBehaviour
     public void Start()
     {
         gameEffects = GetComponentInParent<GameEffects>();
-        int index = Random.Range(0, gameEffects.badEffects.Count);
-        two.text = gameEffects.badEffects[index];
-        if (gameEffects.badEffects[index].Length > 30)
+        two.text = gameEffects.GenerateRandomEffect(gameEffects.badEffects);
+        if (two.text.Length > 30)
         {
             two.fontSize = 58f;
 
@@ -24,9 +23,8 @@ public class Mexican : MonoBehaviour
             two.fontSize = 88f;
         }
 
-        int index2 = Random.Range(0, gameEffects.goodEffects.Count);
-        three.text = gameEffects.goodEffects[index2];
-        if (gameEffects.goodEffects[index2].Length > 30)
+        three.text = gameEffects.GenerateRandomEffect(gameEffects.goodEffects);
+        if (three.text.Length > 30)
         {
             three.fontSize = 58f;
         }
@@ -35,9 +33,8 @@ public class Mexican : MonoBehaviour
             three.fontSize = 88f;
         }
 
-        int index3 = Random.Range(0, gameEffects.badEffects.Count);
-        four.text = gameEffects.badEffects[index3];
-        if (gameEffects.badEffects[index2].Length > 30)
+        four.text = gameEffects.GenerateRandomEffect(gameEffects.badEffects);
+        if (four.text.Length > 30)
         {
             four.fontSize = 58f;
         }

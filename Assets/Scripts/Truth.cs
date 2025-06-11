@@ -9,8 +9,7 @@ public class Truth : MonoBehaviour
     public void Start()
     {
         gameEffects = GetComponentInParent<GameEffects>();
-        int index = Random.Range(0, gameEffects.truth.Count);
-        question.text = gameEffects.truth[index];
+        question.text = gameEffects.GenerateRandomEffect(gameEffects.truth);
         question.fontSize = 132f;
     }
 }
