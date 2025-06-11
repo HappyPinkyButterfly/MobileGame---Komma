@@ -39,6 +39,9 @@ EditorBuildSettings:
     path: Assets/Scenes/R2.unity
     guid: 7b2693328974dc349841fef9db5bb009
   - enabled: 1
+    path: Assets/Scenes/R0.unity
+    guid: d7aec27f21ff606429d3be96c712231b
+  - enabled: 1
     path: Assets/Scenes/R3.unity
     guid: bd77af0c3b50c4144a7f14ae0e910b40
   - enabled: 1
