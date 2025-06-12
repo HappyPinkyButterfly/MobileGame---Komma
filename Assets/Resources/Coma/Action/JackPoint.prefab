@@ -278,7 +278,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Everyone else DRAW Curse and all sips and Chugs they make are +1
+  m_text: 'Everyone else DRAW Curse and they increase their SipChugCounter by 1
 
 
     Pay

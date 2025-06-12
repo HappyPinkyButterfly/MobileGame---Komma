@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 350}
+  m_AnchoredPosition: {x: 0, y: 450}
   m_SizeDelta: {x: 1200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4884651748075526108
@@ -319,7 +319,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 100}
+  m_AnchoredPosition: {x: 0, y: 200}
   m_SizeDelta: {x: 1200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6027697415609265117
@@ -350,11 +350,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Turn player is detective. Everyone else together comes up the with word
-    from given keyword. Turn player can either ask YES/NO questions or try to guess
-    directly what is the word. Each try that is not correct answer turn player takes
-    1 sip. If he succeds in less or equal attemps that is writen on the card, everyone
-    else gets the penalty
+  m_text: "The detective (turn player) must guess a word chosen by the other players.
+    They can ask YES/NO questions (no penalty for \"YES\" answers) or guess directly.
+    Each wrong guess or \"NO\" answer costs the detective 1 sip.\r\n\r\r\nIf the
+    detective guesses correctly within the card's attempt limit, all other players
+    take the penalty. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

@@ -38,30 +38,41 @@ public class GameEffects : MonoBehaviour
     public bool competitiveState;
     public bool actionState;
     
-    public  List<string> usedEffects;
-    
-
+    private Dictionary<int,List<string>> usedEffectsDict = new Dictionary<int, List<string>>();
 
     public string GenerateRandomEffect(List<string> tableOfEffects)
     {
-        int ableToRepeat = 9;
+        int ableToRepeat = 5;
         if (tableOfEffects.Count <= ableToRepeat || tableOfEffects.Count == 0 || tableOfEffects == null)
         {
             return "Error has occured, contanct SupremeLab Productions";
         }
 
+        int tableKey = tableOfEffects.GetHashCode();
+
+        if (!usedEffectsDict.ContainsKey(tableKey))
+        {
+            usedEffectsDict[tableKey] = new List<string>();
+        }
+
+        List<string> currentlyUsed = usedEffectsDict[tableKey];
+        
         while (true)
         {
-            string effect = tableOfEffects[Random.Range(0, badEffects.Count)];
-            if (!usedEffects.Contains(effect) && usedEffects.Count != ableToRepeat)
+            string effect = tableOfEffects[Random.Range(0, tableOfEffects.Count)];
+
+
+            if (!currentlyUsed.Contains(effect) && currentlyUsed.Count != ableToRepeat)
             {
-                usedEffects.Add(effect);
+                currentlyUsed.Add(effect);
+                usedEffectsDict[tableKey] = currentlyUsed;
                 return effect;
             }
-            else if (!usedEffects.Contains(effect) && usedEffects.Count == ableToRepeat)
+            else if (!currentlyUsed.Contains(effect) && currentlyUsed.Count == ableToRepeat)
             {
-                usedEffects.Add(effect);
-                usedEffects.RemoveAt(0);
+                currentlyUsed.Add(effect);
+                currentlyUsed.RemoveAt(0);
+                usedEffectsDict[tableKey] = currentlyUsed;
                 return effect;
             }
         }
@@ -89,6 +100,8 @@ public class GameEffects : MonoBehaviour
             "TAKE",
             "TAKE",
             "TAKE",
+            "TAKE",
+            "GIVE",
             "GIVE",
             "GIVE",
             "GIVE",
@@ -224,21 +237,6 @@ public class GameEffects : MonoBehaviour
             goodEffects.AddRange(actionGood);
         }
 
-        faceOffWho = new List<string>
-        {
-            "with the person with closest to your",
-            "with the person with furthest to your",
-            "with the person with closest to your",
-            "with the person with furthest to your",
-            "with the person with closest to your",
-            "with the person with furthest to your",
-            "with the person with closest to your",
-            "with the person with furthest to your",
-            "with the person with closest to your",
-            "with the person with furthest to your",
-            "with the person with closest to your",
-            "with the person with furthest to your"
-        };
 
         contestTypes = new List<string>
         {
@@ -389,13 +387,8 @@ public class GameEffects : MonoBehaviour
             "EVERYDAY JOB",
             "HISTORICAL FIGURE",
             "CLASSROOM ITEM",
-            "MY BEST TRAIT",
-            "FAMOUS MOVIE ACTOR",
-            "KITCHEN ITEM",
-            "COUNTRY IN EUROPE",
-            "EVERYDAY JOB",
-            "HISTORICAL FIGURE",
-            "CLASSROOM ITEM",
+            "FAMOUS MOVIE ACTRESS",
+            "BEDROOM ITEM",
             };
 
         photographer = new List<string>
@@ -421,14 +414,14 @@ public class GameEffects : MonoBehaviour
             {
                 goodEffects.Add("GIVE Mustache");
                 goodEffects.Add("GIVE Mustache");
-                goodEffects.Add("GIVE Mustache");
+                goodEffects.Add("GIVE Mustaches");
                 goodEffects.Add("GIVE Mustache");
             }
             if (shotState)
             {
-                goodEffects.Add("GIVE SHOT");
-                goodEffects.Add("GIVE SHOT");
-                goodEffects.Add("GIVE SHOT");
+                goodEffects.Add("GIVE Shot");
+                goodEffects.Add("GIVE Shot");
+                goodEffects.Add("GIVE Shot");
             }
             if (bottomsUpState)
             {
@@ -445,9 +438,9 @@ public class GameEffects : MonoBehaviour
             if (kingsCupState)
             {
                 goodEffects.Add("GIVE Kings Cup");
-                goodEffects.Add("GIVE Kings Cup");
-                goodEffects.Add("GIVE Kings Cup");
-                goodEffects.Add("GIVE Kings Cup");
+                goodEffects.Add("GIVE Kings Cup and 1 sip");
+                goodEffects.Add("GIVE Kings Cup and 2 sips");
+                goodEffects.Add("GIVE Kings Cup and 3 sips");
             }
         }
 
@@ -464,9 +457,9 @@ public class GameEffects : MonoBehaviour
             }
             if (shotState)
             {
-                badEffects.Add("TAKE SHOT");
-                badEffects.Add("TAKE SHOT");
-                badEffects.Add("TAKE SHOT");
+                badEffects.Add("TAKE Shot");
+                badEffects.Add("TAKE Shot");
+                badEffects.Add("TAKE Shot");
             }
             if (bottomsUpState)
             {

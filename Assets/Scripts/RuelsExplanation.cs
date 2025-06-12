@@ -88,5 +88,10 @@ public class RuelsExplanation : MonoBehaviour
     {
         GameObject auctionRule = Resources.Load<GameObject>("Explanations/Character");
         Instantiate(auctionRule, comaLite.transform.position, comaLite.transform.rotation, comaLite.transform);
-    }   
+    }
+    public void Daredevil()
+    {
+        GameObject auctionRule = Resources.Load<GameObject>("Explanations/Daredevil");
+        Instantiate(auctionRule, comaLite.transform.position, comaLite.transform.rotation, comaLite.transform);
+    }    
 }

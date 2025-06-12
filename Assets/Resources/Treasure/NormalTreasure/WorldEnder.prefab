@@ -218,9 +218,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Everyone else:\n\n1.) DISCARD Protection \n\n2.) DRAW Curse and all sips
-    and chugs they make are +1\n\n3.) STARE SLAVE to turn player then you take 2
-    sips"
+  m_text: "Everyone else:\n\n1.) DISCARD Protection \n\n2.) DRAW Curse and all increase
+    your SipChug Counter by 1\n\n3.) STARE SLAVE to turn player then you take 2 sips"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

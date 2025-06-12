@@ -204,8 +204,8 @@ MonoBehaviour:
   m_text: 'Set your SipsAndChugs counter to ''-2''
 
 
-    Everyone else all sips and
-    chugs you drink are + 1
+    Everyone else all increases
+    their SipChug Counter by 1
 
 
     Everyone 2 sips'

@@ -5,7 +5,6 @@ public class FaceOff : MonoBehaviour
 {
     public GameEffects gameEffects;
     public TextMeshProUGUI wrongEffect;
-    public TextMeshProUGUI whoYouBattle;
 
     public TextMeshProUGUI distance;
 
@@ -22,11 +21,7 @@ public class FaceOff : MonoBehaviour
             wrongEffect.fontSize = 98f;
         }
 
-
-        whoYouBattle.text = gameEffects.GenerateRandomEffect(gameEffects.contestTypes);
-
-   
-        distance.text = gameEffects.GenerateRandomEffect(gameEffects.faceOffWho);
+        distance.text = gameEffects.GenerateRandomEffect(gameEffects.contestTypes);
 
 
 
