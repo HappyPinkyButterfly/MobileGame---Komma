@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using UnityEngine;
 
 public class GameEffects : MonoBehaviour
@@ -28,7 +29,7 @@ public class GameEffects : MonoBehaviour
     public List<string> typeOfEffectList;
     public List<string> typeOfDrinkingList;
     public List<string> sideEffectList;
-    public List<string> take;
+    public List<string> dare;
 
 
 
@@ -57,7 +58,7 @@ public class GameEffects : MonoBehaviour
 
     public string GenerateRandomEffect(List<string> tableOfEffects)
     {
-        int ableToRepeat = 5;
+        int ableToRepeat = tableOfEffects.Count - 1;
         if (tableOfEffects.Count <= ableToRepeat || tableOfEffects.Count == 0 || tableOfEffects == null)
         {
             return "Error has occured, contanct SupremeLab Productions";
@@ -81,16 +82,38 @@ public class GameEffects : MonoBehaviour
             {
                 currentlyUsed.Add(effect);
                 usedEffectsDict[tableKey] = currentlyUsed;
+                
+
+            string dictContents = "Dictionary contents:\n";
+            foreach (var kvp in usedEffectsDict)
+            {
+                dictContents += $"Key: {kvp.Key}, Values: {string.Join(", ", kvp.Value)}\n";
+            }
+            Debug.Log(dictContents);
+
+
+
                 return effect;
             }
             else if (!currentlyUsed.Contains(effect) && currentlyUsed.Count == ableToRepeat)
             {
+                currentlyUsed.Clear();
                 currentlyUsed.Add(effect);
-                currentlyUsed.RemoveAt(0);
                 usedEffectsDict[tableKey] = currentlyUsed;
+                
+                
+                string dictContents = "Dictionary contents:\n";
+                foreach (var kvp in usedEffectsDict)
+                {
+                    dictContents += $"Key: {kvp.Key}, Values: {string.Join(", ", kvp.Value)}\n";
+                }
+                Debug.Log(dictContents);
+
+
                 return effect;
             }
         }
+        
     }
     public void Awake()
     {
@@ -225,9 +248,9 @@ public class GameEffects : MonoBehaviour
 
         truth = new List<string>
         {
-            "What is your worst date experiance",
-            "Tell us about your ideal bodytype of  partner",
-            "Tell us about your ideal character of your partner",
+            "What is your worst date experiance?",
+            "Tell us about your ideal bodytype of a partner",
+            "Tell us about your ideal character of a partner",
             "What is your biggest turn on",
             "Describe your worst injury",
             "What's a mistake you've made that you still feel guilty about",
@@ -244,10 +267,18 @@ public class GameEffects : MonoBehaviour
             "What's your craziest one-night stand story?",
             "What's the most embarrassing experience you've had while in bed?",
             "What's your favorite position in bed? ",
-            "Would you say it's easy for you to be seduced? ",
+            "Would you say it's easy for you to be seduced? How? ",
             "What 'type' do you prefer to hook up with? ",
             "What's a fantasy of yours that has yet to happen?",
             "What about you do you think turns me on? ",
+        };
+
+        dare = new List<string>
+        {
+            "Go to someone nearby and invite them to join our for a round of the drinking game COMA",
+            "Go up to a stanger nearby and ask for their phone number or social media",
+            "Take a fun group photo of us playing COMA and post it to your story with #DrinkingGameCOMA"
+            //"Go up to a stranger and ask them for a selfie (Optional: everyone else picks your target)"
         };
 
         wouldYouRather1 = new List<string>

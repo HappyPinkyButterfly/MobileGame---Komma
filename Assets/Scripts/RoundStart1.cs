@@ -32,27 +32,6 @@ public class RoundStartComp2 : MonoBehaviour
         roundStart.sizeDelta = new Vector2(950f, 800);
 
     }
-
-    public string GenerateRandomRSEffect()
-    {
-        int ableToRepeat = 10;
-        
-        while (true)
-        {
-            string effect = gameEffects.sideEffectList[Random.Range(0, gameEffects.sideEffectList.Count)];
-            if (!usedEffects.Contains(effect) && usedEffects.Count != ableToRepeat)
-            {
-                usedEffects.Add(effect);
-                return effect;
-            }
-            else if (!usedEffects.Contains(effect) && usedEffects.Count == ableToRepeat)
-            {
-                usedEffects.Add(effect);
-                usedEffects.RemoveAt(0);
-                return effect;
-            }
-        }    
-    }
     public void Reset()
     {
         roundStartButton.sprite = roundStartSprite;
@@ -104,7 +83,7 @@ public class RoundStartComp2 : MonoBehaviour
         }
 
         
-        sideEffect.text = GenerateRandomRSEffect();
+        sideEffect.text = gameEffects.GenerateRandomEffect(gameEffects.sideEffectList);
 
         if (sideEffect.text.Length < 13)
         {
