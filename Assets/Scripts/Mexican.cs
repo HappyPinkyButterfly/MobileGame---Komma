@@ -6,7 +6,6 @@ public class Mexican : MonoBehaviour
     public GameEffects gameEffects;
     public TextMeshProUGUI two;
     public TextMeshProUGUI three;
-    public TextMeshProUGUI four;
 
 
     public void Start()
@@ -33,15 +32,7 @@ public class Mexican : MonoBehaviour
             three.fontSize = 88f;
         }
 
-        four.text = gameEffects.GenerateRandomEffect(gameEffects.badEffects);
-        if (four.text.Length > 30)
-        {
-            four.fontSize = 58f;
-        }
-        else
-        {
-            four.fontSize = 88f;
-        }
+        
         
         
 

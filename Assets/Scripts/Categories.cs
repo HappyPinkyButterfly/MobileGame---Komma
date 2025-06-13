@@ -15,14 +15,10 @@ public class Categories : MonoBehaviour
         if (typeOfEffect.text.Length > 30)
         {
             typeOfEffect.fontSize = 78f;
-            typeOfEffect.rectTransform.anchoredPosition =
-            new Vector2(typeOfEffect.rectTransform.anchoredPosition.x, -70f);
         }
         else
         {
             typeOfEffect.fontSize = 98f;
-            typeOfEffect.rectTransform.anchoredPosition =
-            new Vector2(typeOfEffect.rectTransform.anchoredPosition.x, -150f);
         }
     
     }

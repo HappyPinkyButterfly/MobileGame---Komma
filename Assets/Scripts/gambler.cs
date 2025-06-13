@@ -5,11 +5,13 @@ public class gambler : MonoBehaviour
 {
     public GameEffects gameEffects;
     public TextMeshProUGUI coorectEffect;
+    public TextMeshProUGUI wrongEffect;
 
     public void Start()
     {
         gameEffects = GetComponentInParent<GameEffects>();
         coorectEffect.text = gameEffects.GenerateRandomEffect(gameEffects.goodEffects);
+        wrongEffect.text = gameEffects.GenerateRandomEffect(gameEffects.badEffects);
         if (coorectEffect.text.Length > 30)
         {
             coorectEffect.fontSize = 58f;
@@ -18,6 +20,16 @@ public class gambler : MonoBehaviour
         else
         {
             coorectEffect.fontSize = 88f;
+        }
+
+        if (wrongEffect.text.Length > 30)
+        {
+            wrongEffect.fontSize = 58f;
+
+        }
+        else
+        {
+            wrongEffect.fontSize = 88f;
         }
 
     }

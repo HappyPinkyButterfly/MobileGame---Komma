@@ -68,6 +68,7 @@ public class RoundStartComp2 : MonoBehaviour
 
     public void RoundStartClick()
     {
+        int amountNumber; 
         roundStart.sizeDelta = new Vector2(1000f, 900f);
         roundStartButton.sprite = roundStartSpritePlay;
         gameEffects.roundStart = true;
@@ -84,8 +85,8 @@ public class RoundStartComp2 : MonoBehaviour
         {
             typeOfEffect.fontSize = 112f;
         }
-
-        amount.text = Random.Range(1, 3).ToString();
+        amountNumber = Random.Range(1, 3) + gameEffects.drinkCounter.currentCounter;
+        amount.text = amountNumber.ToString();
 
         typeOfDrinking.text = gameEffects.typeOfDrinkingList[index2];
 

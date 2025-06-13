@@ -8,8 +8,8 @@ public class DrinkCounter : MonoBehaviour
 
     public TextMeshProUGUI counter;
 
-    public int maxCounter = 4;
-    public int minCounter = -2;
+    public int maxCounter;
+    public int minCounter;
 
     public int currentCounter = 0;
 
@@ -18,6 +18,8 @@ public class DrinkCounter : MonoBehaviour
 
     public void Start()
     {
+        maxCounter = 3;
+        minCounter = -1;
 
         counter.text = currentCounter.ToString();
         plusMinus.alpha = 0f;
@@ -30,16 +32,22 @@ public class DrinkCounter : MonoBehaviour
         currentCounter++;
         if (currentCounter < 0)
         {
-            counter.text =  currentCounter.ToString();
+            counter.text = currentCounter.ToString();
 
         }
-        else if (currentCounter >= maxCounter)
+        else if (currentCounter == maxCounter)
         {
-            currentCounter = maxCounter;
             counter.text = "+" + currentCounter.ToString();
             counter.color = Color.red;
             return;
 
+        }
+        else if (currentCounter > maxCounter)
+        {
+            currentCounter = 0;
+            counter.text = currentCounter.ToString();
+            counter.color = Color.black;
+            return;
         }
         else if (currentCounter == 0)
         {
@@ -57,17 +65,23 @@ public class DrinkCounter : MonoBehaviour
     public void MinusClick()
     {
         currentCounter--;
-    
-        if (currentCounter <= minCounter)
+
+        if (currentCounter == minCounter)
         {
-            currentCounter = minCounter;
             counter.text = currentCounter.ToString();
             counter.color = Color.red;
             return;
         }
+        else if(currentCounter < minCounter)
+        {
+            currentCounter = 0;
+            counter.text = currentCounter.ToString();
+            counter.color = Color.black;
+            return;
+        }
         else if (currentCounter < 0)
         {
-            counter.text =  currentCounter.ToString();
+            counter.text = currentCounter.ToString();
 
         }
         else if (currentCounter == 0)

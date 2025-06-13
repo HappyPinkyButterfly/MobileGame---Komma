@@ -201,7 +201,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Set your SipsAndChugs counter to ''-2''
+  m_text: 'Set your SipsAndChugs counter to -1
 
 
     Everyone else all increases

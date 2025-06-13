@@ -459,11 +459,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "COMA Cards \n\nMINI GAMES - (e.g., \"CALL OF THE WILD\") - Click the card
-    name to see rules, then click back to resume.\n\nSipChug COUNTER - when a players
-    has to drink sips or chug seconds he has to increase or decrease that number
-    based on the number of the counter. Click on it to add or subtract based on effects\n\nIf
-    all players have coma downloaded you can turn on ACTION MODE in gamemodes to
-    add exciting new DECKS like TREASURE,PROTECTION, CURSE and COMA card and effects"
+    name to see rules, then click back to resume.\n\nSipChug COUNTER - during effects
+    you will have to increase it or decrease it and it will change your in game effect
+    permenantly\n\nIf all players have coma downloaded you can turn on ACTION MODE
+    in gamemodes to add exciting new DECKS like TREASURE,PROTECTION, CURSE and COMA
+    card and effects"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

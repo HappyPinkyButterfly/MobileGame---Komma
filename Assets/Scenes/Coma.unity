@@ -2261,6 +2261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6702d2f7d6907b24a9cd054c2e8186d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  drinkCounter: {fileID: 1053801809}
   comaLite: 0
   roundStart: 0
   badEffects:
@@ -2295,6 +2296,7 @@ MonoBehaviour:
   typeOfEffectList: []
   typeOfDrinkingList: []
   sideEffectList: []
+  take: []
   mustacheState: 0
   bottomsUpState: 0
   shotState: 0
@@ -2302,6 +2304,8 @@ MonoBehaviour:
   kingsCupState: 0
   competitiveState: 0
   actionState: 0
+  amount: 0
+  previousAmount: 0
 --- !u!114 &1037557676
 MonoBehaviour:
   m_ObjectHideFlags: 0
