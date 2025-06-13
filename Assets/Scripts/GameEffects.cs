@@ -275,7 +275,7 @@ public class GameEffects : MonoBehaviour
 
         dare = new List<string>
         {
-            "Go to someone nearby and invite them to join our for a round of the drinking game COMA",
+            "Go up to a stanger nearby and invite them to join our for a round of the drinking game COMA",
             "Go up to a stanger nearby and ask for their phone number or social media",
             "Take a fun group photo of us playing COMA and post it to your story with #DrinkingGameCOMA"
             //"Go up to a stranger and ask them for a selfie (Optional: everyone else picks your target)"
