@@ -30,6 +30,7 @@ public class GameEffects : MonoBehaviour
     public List<string> typeOfDrinkingList;
     public List<string> sideEffectList;
     public List<string> dare;
+    public List<string> roundStartDescription;
 
 
 
@@ -82,17 +83,6 @@ public class GameEffects : MonoBehaviour
             {
                 currentlyUsed.Add(effect);
                 usedEffectsDict[tableKey] = currentlyUsed;
-                
-
-            string dictContents = "Dictionary contents:\n";
-            foreach (var kvp in usedEffectsDict)
-            {
-                dictContents += $"Key: {kvp.Key}, Values: {string.Join(", ", kvp.Value)}\n";
-            }
-            Debug.Log(dictContents);
-
-
-
                 return effect;
             }
             else if (!currentlyUsed.Contains(effect) && currentlyUsed.Count == ableToRepeat)
@@ -100,16 +90,6 @@ public class GameEffects : MonoBehaviour
                 currentlyUsed.Clear();
                 currentlyUsed.Add(effect);
                 usedEffectsDict[tableKey] = currentlyUsed;
-                
-                
-                string dictContents = "Dictionary contents:\n";
-                foreach (var kvp in usedEffectsDict)
-                {
-                    dictContents += $"Key: {kvp.Key}, Values: {string.Join(", ", kvp.Value)}\n";
-                }
-                Debug.Log(dictContents);
-
-
                 return effect;
             }
         }
@@ -167,7 +147,6 @@ public class GameEffects : MonoBehaviour
         {
             "Have or been walked on during sex",
             "You are simp",
-            "For each bodycount",
             "Virgin",
             "Drinking vodka",
             "Not drinking vodka",
@@ -183,19 +162,49 @@ public class GameEffects : MonoBehaviour
             "Turned on by a fictional character",
             "Ever lost keys or wallet",
             "Ever puked first",
-            "For every virgin present",
             "Under 180cm",
             "Over 180cm",
-            "For each relationhip",
             "Ever had body shot",
             "Had condom popped",
-            "For each sibling",
             "Used dating apps",
             "Currently using dating apps",
-            "For each virginity taken",
             "Been pregnancy scared",
             "Slept with older",
             "Have a child"
+        };
+
+        roundStartDescription = new List<string>
+        {
+            "If YOU have or been walked ON during sex",
+            "If YOU are simp",
+            "If YOU are virgin",
+            "If YOU are drinking vodka",
+            "If YOU are not drinking vodka",
+            "If YOU are sexy person",
+            "If YOU are nice person",
+            "If YOU hooked up with someone you met online",
+            "If YOU are taken",
+            "If YOU been with friends ex",
+            "If YOU are attracted to present player",
+            "If YOU have been skinny dipping",
+            "If YOU have made selfie last week",
+            "If YOU kissed or had sex with present player",
+            "If YOU have been turned on by a fictional character",
+            "If YOU ever lost keys or wallet",
+            "If YOU have ever puked first",
+            "If YOU are under 180cm",
+            "If YOU are over 180cm",
+            "If YOU ever had body shot",
+            "If YOU ever had condom popped",
+            "If YOU are currently using dating apps",
+            "If YOU have been pregnancy scared",
+            "If YOU have slept with odler",
+            "If YOU have a child",
+            "For each relationhip",
+            "For each VIRGINITY taken",
+            "For each SIBLING",
+            "For each BODYCOUNT",
+            "For every virgin present"
         };
 
         

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Mono.Cecil;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,9 +18,10 @@ public class RoundStartComp2 : MonoBehaviour
     public TextMeshProUGUI typeOfDrinking;
     public TextMeshProUGUI sideEffect;
     public TextMeshProUGUI sideAmounts;
+    public TextMeshProUGUI more;
     public GameEffects gameEffects { get; set; }
     public  List<string> usedEffects;
-    
+
     public void Start()
     {
         gameEffects = GetComponentInParent<GameEffects>();
@@ -40,6 +42,7 @@ public class RoundStartComp2 : MonoBehaviour
         typeOfDrinking.text = "";
         sideEffect.text = "";
         sideAmounts.text = "";
+        more.text = "";
         roundStart.sizeDelta = new Vector2(950f, 800f);
     }
 
@@ -47,7 +50,7 @@ public class RoundStartComp2 : MonoBehaviour
 
     public void RoundStartClick()
     {
-        int amountNumber; 
+        int amountNumber;
         roundStart.sizeDelta = new Vector2(1000f, 900f);
         roundStartButton.sprite = roundStartSpritePlay;
         gameEffects.roundStart = true;
@@ -82,8 +85,8 @@ public class RoundStartComp2 : MonoBehaviour
             new Vector2(-150f, amount.rectTransform.anchoredPosition.y);
         }
 
-        
-        sideEffect.text = gameEffects.GenerateRandomEffect(gameEffects.sideEffectList);
+
+        sideEffect.text = gameEffects.GenerateRandomEffect(gameEffects.roundStartDescription);
 
         if (sideEffect.text.Length < 13)
         {
@@ -95,6 +98,7 @@ public class RoundStartComp2 : MonoBehaviour
         }
 
         sideAmounts.text = " +" + Random.Range(1, 3).ToString();
+        more.text = "More";
     }
 }
 
