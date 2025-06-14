@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Contest : MonoBehaviour
 {
-    public GameEffects gameEffects;
+    public GameEffects gameEffects { get; set;}
     public TextMeshProUGUI closestEffect;
     public TextMeshProUGUI farthestEffect;
     public TextMeshProUGUI type;

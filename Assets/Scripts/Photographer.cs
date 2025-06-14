@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Photographer : MonoBehaviour
 {
-    public GameEffects gameEffects;
+    public GameEffects gameEffects { get; set;}
     public TextMeshProUGUI whatKind;
 
      public void Start()

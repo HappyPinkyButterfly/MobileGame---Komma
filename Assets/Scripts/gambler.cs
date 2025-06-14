@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class gambler : MonoBehaviour
 {
-    public GameEffects gameEffects;
+    public GameEffects gameEffects { get; set;}
     public TextMeshProUGUI coorectEffect;
     public TextMeshProUGUI wrongEffect;
 

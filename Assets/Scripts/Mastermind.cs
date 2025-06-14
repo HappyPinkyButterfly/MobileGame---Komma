@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Mastermind : MonoBehaviour
 {
-    public GameEffects gameEffects;
+    public GameEffects gameEffects { get; set;}
     public TextMeshProUGUI howMany;
     public TextMeshProUGUI one;
     public TextMeshProUGUI two;

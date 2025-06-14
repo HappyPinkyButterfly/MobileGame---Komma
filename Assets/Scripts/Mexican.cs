@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Mexican : MonoBehaviour
 {
-    public GameEffects gameEffects;
+    public GameEffects gameEffects { get; set;}
     public TextMeshProUGUI two;
     public TextMeshProUGUI three;
 

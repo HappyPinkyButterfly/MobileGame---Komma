@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Wish : MonoBehaviour
 {
-    public GameEffects gameEffects;
+    public GameEffects gameEffects { get; set;}
     public TextMeshProUGUI one;
     public TextMeshProUGUI two;
     public TextMeshProUGUI three;

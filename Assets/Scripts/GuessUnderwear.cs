@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class GuessUnderwear : MonoBehaviour
 {
-    public GameEffects gameEffects;
+    public GameEffects gameEffects { get; set;}
     public TextMeshProUGUI correctEffect;
     public TextMeshProUGUI wrongEffect;
 

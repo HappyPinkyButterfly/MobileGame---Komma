@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class FaceOff : MonoBehaviour
 {
-    public GameEffects gameEffects;
+    public GameEffects gameEffects { get; set;}
     public TextMeshProUGUI wrongEffect;
 
     public TextMeshProUGUI distance;

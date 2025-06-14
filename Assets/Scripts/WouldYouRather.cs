@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class WouldYouRather : MonoBehaviour
 {
-    public GameEffects gameEffects;
+    public GameEffects gameEffects { get; set;}
     public TextMeshProUGUI first;
     public TextMeshProUGUI second;
     public TextMeshProUGUI firstEff;

@@ -6,7 +6,7 @@ public class NeverHaveiever : MonoBehaviour
     public TextMeshProUGUI neverHaveIever;
     public TextMeshProUGUI haveEffect;
     public TextMeshProUGUI haveNotEffect;
-    public GameEffects gameEffects;
+    public GameEffects gameEffects { get; set;}
 
     public void Start()
     {

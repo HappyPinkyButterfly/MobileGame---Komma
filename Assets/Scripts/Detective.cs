@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Detective : MonoBehaviour
 {
-    public GameEffects gameEffects;
+    public GameEffects gameEffects { get; set;}
     public TextMeshProUGUI description;
     public TextMeshProUGUI amount;
     public TextMeshProUGUI succeful;

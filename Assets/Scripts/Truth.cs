@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Truth : MonoBehaviour
 {
-    public GameEffects gameEffects;
+    public GameEffects gameEffects { get; set;}
     public TextMeshProUGUI question;
 
     public void Start()

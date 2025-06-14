@@ -6,7 +6,7 @@ public class MostLikely : MonoBehaviour
 {
     public TextMeshProUGUI effect;
     public TextMeshProUGUI description;
-    public GameEffects gameEffects;
+    public GameEffects gameEffects { get; set;}
     public void Awake()
     {
         gameEffects = GetComponentInParent<GameEffects>();
