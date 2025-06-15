@@ -2152,7 +2152,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: More
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2434,6 +2434,7 @@ MonoBehaviour:
   sideEffectList: []
   dare: []
   roundStartDescription: []
+  jackpot: []
   mustacheState: 0
   bottomsUpState: 0
   shotState: 0
@@ -4205,6 +4206,7 @@ MonoBehaviour:
   typeOfDrinking: {fileID: 282232751}
   sideEffect: {fileID: 326840553}
   sideAmounts: {fileID: 720460250}
+  more: {fileID: 895410191}
   usedEffects: []
 --- !u!114 &2067224915
 MonoBehaviour:

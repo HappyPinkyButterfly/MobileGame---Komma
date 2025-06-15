@@ -31,6 +31,7 @@ public class GameEffects : MonoBehaviour
     public List<string> sideEffectList;
     public List<string> dare;
     public List<string> roundStartDescription;
+    public List<string> jackpot;
 
 
 
@@ -208,6 +209,8 @@ public class GameEffects : MonoBehaviour
         };
 
         
+
+        
         contestTypes = new List<string>
         {
             "BODYCOUNT",
@@ -375,6 +378,15 @@ public class GameEffects : MonoBehaviour
     }
     public void UpdateDynamicStrings()
     {
+
+        jackpot = new List<string>
+        {
+            "Everyone else "+ (5 + amount) +" sips",
+            "Everyone else "+ (4 + amount) +" second chug",
+            "Everyone else "+ (5 + amount) +" sips without touching their drink",
+            "Everyone else "+ (4 + amount) +" second chug sips without touching their drink",
+            "Everyone else STARE SLAVE to YOU and you take 2 sips",
+        };
         badEffects = new List<string>
         {
             "Draw 1 Round start. It becomes TAKE",
@@ -397,7 +409,6 @@ public class GameEffects : MonoBehaviour
             "Increase your SipChug Counter by 1, TAKE "+ (1 + amount) +" sip",
             "Increase your SipChug Counter by 1, TAKE "+ (2 + amount) +" sip",
             "Increase your SipChug Counter by 1, TAKE "+ (2 + amount) +" sips",
-            "Everyones Increases their SipChug Counter by 1"
         };
 
         actionBad = new List<string>
@@ -469,6 +480,26 @@ public class GameEffects : MonoBehaviour
             badEffects.AddRange(actionBad);
             goodEffects.AddRange(actionGood);
         }
+        if (mustacheState)
+        {
+            jackpot.Add("Everyone else gets Mustache");
+        }
+        if (shotState)
+        {
+            jackpot.Add("Everyone else TAKE shot");
+        }
+        if (bottomsUpState)
+        {
+            jackpot.Add("Everyone else Bottoms Up");
+        }
+        if (slammerState)
+        {
+            jackpot.Add("Everyone else TAKE Slammer");
+        }
+        if (kingsCupState)
+        {
+            jackpot.Add("Everyone else TAKE kings cup going clockwise");
+        }
 
         int repetitionsGood = goodEffects.Count / 10;
 
@@ -478,7 +509,7 @@ public class GameEffects : MonoBehaviour
             {
                 goodEffects.Add("GIVE Mustache");
                 goodEffects.Add("GIVE Mustache");
-                goodEffects.Add("GIVE Mustaches");
+                goodEffects.Add("GIVE Mustache");
                 goodEffects.Add("GIVE Mustache");
             }
             if (shotState)

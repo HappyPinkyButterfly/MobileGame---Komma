@@ -5,7 +5,7 @@ public class Mexican : MonoBehaviour
 {
     public GameEffects gameEffects { get; set;}
     public TextMeshProUGUI two;
-    public TextMeshProUGUI three;
+
 
 
     public void Start()
@@ -14,7 +14,7 @@ public class Mexican : MonoBehaviour
         two.text = gameEffects.GenerateRandomEffect(gameEffects.badEffects);
         if (two.text.Length > 30)
         {
-            two.fontSize = 58f;
+            two.fontSize = 78f;
 
         }
         else
@@ -22,19 +22,6 @@ public class Mexican : MonoBehaviour
             two.fontSize = 88f;
         }
 
-        three.text = gameEffects.GenerateRandomEffect(gameEffects.goodEffects);
-        if (three.text.Length > 30)
-        {
-            three.fontSize = 58f;
-        }
-        else
-        {
-            three.fontSize = 88f;
-        }
-
-        
-        
-        
 
     }
 }
