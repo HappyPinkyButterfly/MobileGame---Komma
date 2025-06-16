@@ -3,32 +3,23 @@ using UnityEngine;
 
 public class TermsAndConditions : MonoBehaviour
 {
-    public static TermsAndConditions Instance { get; private set; }
+    public static bool accepted = false;
 
     private void Awake()
     {
-        // Singleton vzorec (prepreči podvajanje)
-        if (Instance != null)
+        if (!accepted)
         {
-            Destroy(gameObject);
-            return;
+            ShowTermsDialog();
+            accepted = true;
         }
-
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
-
-        // Vedno prikaži dialog ob zagonu igre
-        ShowTermsDialog();
     }
 
     private void ShowTermsDialog()
     {
-        // Ustvari dialog BREZ uporabe OnTermOfServiceAccepted
         var dialog = new TermsOfServiceDialog()
             .SetTermsOfServiceLink("https://sites.google.com/view/comalite/domov")
             .SetPrivacyPolicyLink("https://sites.google.com/view/comalite-privacypolicy/domov");
 
-        // Prikaži dialog (brez callbacka)
         SimpleGDPR.ShowDialog(dialog);
     }
 }

@@ -120,10 +120,6 @@ public class GameEffects : MonoBehaviour
             disclaimerBackGround.interactable = false;
         }
 
-        
-        
-        
-
         amount = drinkCounter.currentCounter;
         previousAmount = drinkCounter.currentCounter - 1;
 
