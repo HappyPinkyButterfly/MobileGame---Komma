@@ -11,10 +11,11 @@ public class ComaLite : MonoBehaviour
     public GameEffects gameEffects { get; set; }
     public RoundStartComp2 roundStartComp2;
     public RectTransform comaLite;
-    
-     public CanvasGroup treasure;
+
+    public CanvasGroup treasure;
     public CanvasGroup protection;
     public CanvasGroup curse;
+    
 
     public void Start()
     {
@@ -53,6 +54,9 @@ public class ComaLite : MonoBehaviour
     public void Awake()
     {
         gameEffects = GetComponentInParent<GameEffects>();
+
+
+        
     }
 
     public void LoadRandomPrefab()
@@ -74,7 +78,7 @@ public class ComaLite : MonoBehaviour
             GameObject[] mustacheComa = Resources.LoadAll<GameObject>("Coma/Mustache");
             GameObject[] bottomsComa = Resources.LoadAll<GameObject>("Coma/Bottoms");
             GameObject[] actionComa = Resources.LoadAll<GameObject>("Coma/Action");
-            
+
 
             List<GameObject> allComa = new List<GameObject>(normalComa);
 
@@ -102,13 +106,13 @@ public class ComaLite : MonoBehaviour
             {
                 allComa.AddRange(actionComa);
             }
-            
+
 
             if (allComa.Count > 0)
-                {
-                    GameObject randomPrefab = allComa[Random.Range(0, allComa.Count)];
-                    Instantiate(randomPrefab, transform);
-                }
+            {
+                GameObject randomPrefab = allComa[Random.Range(0, allComa.Count)];
+                Instantiate(randomPrefab, transform);
+            }
         }
         gameEffects.comaLite = !gameEffects.comaLite;
         if (!gameEffects.comaLite)
@@ -116,6 +120,7 @@ public class ComaLite : MonoBehaviour
             gameEffects.roundStart = !gameEffects.roundStart;
 
             roundStartComp2.Reset();
-        } 
+        }
     }
+    
 }

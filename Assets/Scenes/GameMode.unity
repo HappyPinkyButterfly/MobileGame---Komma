@@ -1289,7 +1289,7 @@ GameObject:
   - component: {fileID: 1523708454}
   - component: {fileID: 1523708453}
   m_Layer: 5
-  m_Name: MainMenu
+  m_Name: Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1312,7 +1312,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 7, y: -400}
-  m_SizeDelta: {x: 350, y: 250}
+  m_SizeDelta: {x: 500, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1523708453
 MonoBehaviour:
@@ -1367,7 +1367,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: MainMenu
+          m_StringArgument: Coma
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1523708454
@@ -1390,7 +1390,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -3451699440861859892, guid: c6edcef7125b15e4c8899788e55eb334, type: 3}
+  m_Sprite: {fileID: -2293001832568053826, guid: 23801a7faa692df4589d5bb3f1938217, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1730,8 +1730,8 @@ MonoBehaviour:
   RedBottomsUp: {fileID: 8358426730784873977, guid: f528bc5bebb02f9418c3c6c17004ce06, type: 3}
   GreenCompetitive: {fileID: 2280445164554052126, guid: a2d94255d05e49444961f0aab0d4bf70, type: 3}
   RedCompetitive: {fileID: 4353682713657087777, guid: a2d94255d05e49444961f0aab0d4bf70, type: 3}
-  GreenAction: {fileID: -7373731215013966594, guid: 6e8c5cf62af844e409c632582db5c908, type: 3}
-  RedAction: {fileID: 8560375013889371971, guid: 6e8c5cf62af844e409c632582db5c908, type: 3}
+  GreenAction: {fileID: -9086902207482287136, guid: 600fcd6fa61aa68429092994d164886b, type: 3}
+  RedAction: {fileID: 2235809432765672834, guid: 600fcd6fa61aa68429092994d164886b, type: 3}
   popUp: {fileID: 988985619}
   popUpAction: {fileID: 1091506475784138870}
   mustacheOn: 0
@@ -2223,7 +2223,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 880, y: -400}
-  m_SizeDelta: {x: 440, y: 210}
+  m_SizeDelta: {x: 480, y: 230}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1510622621871494960
 GameObject:
@@ -2264,7 +2264,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 8560375013889371971, guid: 6e8c5cf62af844e409c632582db5c908, type: 3}
+  m_Sprite: {fileID: 2235809432765672834, guid: 600fcd6fa61aa68429092994d164886b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

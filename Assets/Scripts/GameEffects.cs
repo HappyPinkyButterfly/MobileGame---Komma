@@ -45,6 +45,8 @@ public class GameEffects : MonoBehaviour
 
     public int amount;
     public int previousAmount;
+    public CanvasGroup disclaimerBackGround;
+    public static bool shownDisclaimer = false;
 
     private Dictionary<int, List<string>> usedEffectsDict = new Dictionary<int, List<string>>();
     void Update()
@@ -55,6 +57,12 @@ public class GameEffects : MonoBehaviour
             UpdateDynamicStrings();
             previousAmount = amount;
         }
+    }
+    public void YesReadRules()
+    {
+        disclaimerBackGround.alpha = 0f;
+        disclaimerBackGround.interactable = false;
+        disclaimerBackGround.blocksRaycasts = false;
     }
 
 
@@ -94,10 +102,26 @@ public class GameEffects : MonoBehaviour
                 return effect;
             }
         }
-        
+
     }
     public void Awake()
     {
+        if (!shownDisclaimer)
+        {
+            disclaimerBackGround.alpha = 1f;
+            disclaimerBackGround.blocksRaycasts = true;
+            disclaimerBackGround.interactable = true;
+            shownDisclaimer = true;
+        }
+        else
+        {
+            disclaimerBackGround.alpha = 0f;
+            disclaimerBackGround.blocksRaycasts = false;
+            disclaimerBackGround.interactable = false;
+        }
+
+        
+        
         
 
         amount = drinkCounter.currentCounter;
@@ -291,7 +315,6 @@ public class GameEffects : MonoBehaviour
             "Go up to a stanger nearby and invite them to join our for a round of the drinking game COMA",
             "Go up to a stanger nearby and ask for their phone number or social media",
             "Take a fun group photo of us playing COMA and post it to your story with #DrinkingGameCOMA"
-            //"Go up to a stranger and ask them for a selfie (Optional: everyone else picks your target)"
         };
 
         wouldYouRather1 = new List<string>
@@ -385,7 +408,7 @@ public class GameEffects : MonoBehaviour
             "Everyone else "+ (4 + amount) +" second chug",
             "Everyone else "+ (5 + amount) +" sips without touching their drink",
             "Everyone else "+ (4 + amount) +" second chug sips without touching their drink",
-            "Everyone else STARE SLAVE to YOU and you take 2 sips",
+            "Everyone else STARE SLAVE to YOU and you take "+ (2 + amount) +" sips",
         };
         badEffects = new List<string>
         {
@@ -407,18 +430,19 @@ public class GameEffects : MonoBehaviour
             "You and your LEFT TAKE chug "+ (3 + amount) +" seconds",
             "Increase your SipChug Counter by 1",
             "Increase your SipChug Counter by 1, TAKE "+ (1 + amount) +" sip",
-            "Increase your SipChug Counter by 1, TAKE "+ (2 + amount) +" sip",
             "Increase your SipChug Counter by 1, TAKE "+ (2 + amount) +" sips",
+            "Increase your SipChug Counter by 1, TAKE "+ (3 + amount) +" sips",
         };
 
         actionBad = new List<string>
-        {   "Draw CURSE and TAKE "+ (1 + amount) +" sip",
+        {   "Draw CURSE",
             "Draw CURSE and TAKE "+ (1 + amount) +" sip",
             "Draw CURSE and TAKE "+ (2 + amount) +" sips",
             "Draw CURSE and TAKE "+ (3 + amount) +" sips",
-            "GIVE PROTECTION to your RIGHT and they TAKE "+ (1 + amount) +" sip",
-            "GEIVE PROTECTION to your RIGHT and they TAKE "+ (2 + amount) +" sips",
-            "GIVE PROTECTION to your RIGHT and they TAKE "+ (3 + amount) +" sip",
+            "GIVE PROTECTION to your RIGHT",
+            "GIVE PROTECTION to your RIGHT and you TAKE " + (1 + amount) +" sip",
+            "GIVE PROTECTION to your RIGHT and you TAKE "+ (2 + amount) +" sips",
+            "GIVE PROTECTION to your RIGHT and you TAKE "+ (3 + amount) +" sip",
         };
 
         photographer = new List<string>
@@ -461,24 +485,26 @@ public class GameEffects : MonoBehaviour
             "GIVE 'Increase your SipChug Counter by 1, TAKE "+ (3 + amount) +" sip'",
             "Decrease your SipChug Countey by 1 and GIVE "+ (1 + amount) +" sip",
             "Decrease your SipChug Countey by 1 and GIVE "+ (2 + amount) +" sip",
-            "Everyones Decreases their SipChug Counter by 1"
+            "Decrease your SipChug Countey by 1 and GIVE "+ (3 + amount) +" sip"
         };
 
         actionGood = new List<string>
         {
             "Draw PROTECTION",
-            "Draw PROTECTION",
+            "Draw PROTECTION and TAKE 1 sip",
             "Draw PROTECTION and GIVE "+ (1 + amount) +" sip",
             "Draw PROTECTION and GIVE "+ (2 + amount) +" sips",
             "Draw PROTECTION and GIVE "+ (3 + amount) +" sips",
             "Draw TREASURE",
-            "Draw TREASURE"
+            "Draw TREASURE and TAKE "+ (1 + amount) +" sip",
+            "Draw TREASURE and GIVE "+ (1 + amount) +" sip"
         };
 
         if (actionState)
         {
             badEffects.AddRange(actionBad);
             goodEffects.AddRange(actionGood);
+            jackpot.Add("Draw PROTECTION and TREASURE");
         }
         if (mustacheState)
         {

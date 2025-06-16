@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class FreeSpin : MonoBehaviour
 {
@@ -8,8 +9,15 @@ public class FreeSpin : MonoBehaviour
     public float RotatePower;
     public float StopPower;
     public TextMeshProUGUI reward;
-    public TextMeshProUGUI youWon;
     public GameEffects gameEffects { get; set; }
+    public Button spin;
+    public Sprite jackpot;
+    public Sprite good;
+    public Sprite bad;
+    public Sprite clickToSpin;
+    public Sprite yourPrize;
+    public Image state;
+    public RectTransform sizeOfState;
 
     private Rigidbody2D rbody;
     int inRotate;
@@ -19,7 +27,9 @@ public class FreeSpin : MonoBehaviour
         rbody = GetComponent<Rigidbody2D>();
         gameEffects = GetComponentInParent<GameEffects>();
         reward.text = "";
-        youWon.text = "Click SPIN and do what you win !";
+        sizeOfState.localPosition = new Vector2(-400, -100);
+        sizeOfState.sizeDelta = new Vector2(500, 500);
+        state.sprite = clickToSpin;
     }
 
     float t;
@@ -52,7 +62,8 @@ public class FreeSpin : MonoBehaviour
             rbody.AddTorque(RotatePower);
             inRotate = 1;
         }
-        youWon.text = "You won:";
+        spin.interactable = false;
+        state.sprite = yourPrize;
     }
 
     public void GetReward()
@@ -96,15 +107,24 @@ public class FreeSpin : MonoBehaviour
     {
         if (typeOfReward == "Bad")
         {
+            state.sprite = bad;
+            sizeOfState.localPosition = new Vector2(-400, 100);
+            sizeOfState.sizeDelta = new Vector2(500, 250);
             reward.text = gameEffects.GenerateRandomEffect(gameEffects.badEffects);
 
         }
         else if (typeOfReward == "Good")
         {
+            state.sprite = good;
+            sizeOfState.localPosition = new Vector2(-400, 100);
+            sizeOfState.sizeDelta = new Vector2(500, 250);
             reward.text = gameEffects.GenerateRandomEffect(gameEffects.goodEffects);
         }
         else if (typeOfReward == "Jackpot")
         {
+            state.sprite = jackpot;
+            sizeOfState.localPosition = new Vector2(-400, 100);
+            sizeOfState.sizeDelta = new Vector2(500, 250);
             reward.text = gameEffects.GenerateRandomEffect(gameEffects.jackpot);
         }
         else
