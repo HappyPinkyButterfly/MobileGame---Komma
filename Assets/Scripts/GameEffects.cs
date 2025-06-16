@@ -47,6 +47,7 @@ public class GameEffects : MonoBehaviour
     public int previousAmount;
     public CanvasGroup disclaimerBackGround;
     public static bool shownDisclaimer = false;
+    
 
     private Dictionary<int, List<string>> usedEffectsDict = new Dictionary<int, List<string>>();
     void Update()
@@ -68,12 +69,15 @@ public class GameEffects : MonoBehaviour
 
     public string GenerateRandomEffect(List<string> tableOfEffects)
     {
-        int ableToRepeat = tableOfEffects.Count - 1;
-        if (tableOfEffects.Count <= ableToRepeat || tableOfEffects.Count == 0 || tableOfEffects == null)
+        const int maxAttempts = 100;
+        int attempts = 0;
+        if (tableOfEffects == null || tableOfEffects.Count == 0)
         {
-            return "Error has occured, contanct SupremeLab Productions";
+            Debug.LogError("GenerateRandomEffect: Invalid input table");
+            return "Error - invalid effect table";
         }
 
+        int ableToRepeat = Mathf.Max(1, tableOfEffects.Count - 1);
         int tableKey = tableOfEffects.GetHashCode();
 
         if (!usedEffectsDict.ContainsKey(tableKey))
@@ -83,26 +87,30 @@ public class GameEffects : MonoBehaviour
 
         List<string> currentlyUsed = usedEffectsDict[tableKey];
 
-        while (true)
+        while (attempts < maxAttempts)
         {
+            attempts++;
             string effect = tableOfEffects[Random.Range(0, tableOfEffects.Count)];
 
-
-            if (!currentlyUsed.Contains(effect) && currentlyUsed.Count != ableToRepeat)
+            if (!currentlyUsed.Contains(effect))
             {
+                if (currentlyUsed.Count >= ableToRepeat)
+                {
+                    currentlyUsed.Clear();
+                }
+
                 currentlyUsed.Add(effect);
-                usedEffectsDict[tableKey] = currentlyUsed;
                 return effect;
             }
-            else if (!currentlyUsed.Contains(effect) && currentlyUsed.Count == ableToRepeat)
+
+            if (attempts >= maxAttempts - 5)
             {
                 currentlyUsed.Clear();
-                currentlyUsed.Add(effect);
-                usedEffectsDict[tableKey] = currentlyUsed;
-                return effect;
             }
         }
-
+        currentlyUsed.Clear();
+        return tableOfEffects[Random.Range(0, tableOfEffects.Count)];
+        
     }
     public void Awake()
     {
