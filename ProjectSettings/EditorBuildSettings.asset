@@ -8,72 +8,42 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/OpeningScene.unity
     guid: fbcbe8ea2484f5c4ba632115e1944b29
-  - enabled: 0
-    path: Assets/Scenes/ComaLite.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
     path: Assets/Scenes/GameMode.unity
     guid: 13067eb84ee86614c9a1e45ba90f7c07
   - enabled: 1
-    path: Assets/Scenes/R1.unity
-    guid: f10d56f9aaaac7944bc7e5ffd49d4338
-  - enabled: 0
+    path: Assets/Scenes/Rules1.unity
+    guid: 60fee996141a9c945b0d90d368d1d101
+  - enabled: 1
     path: Assets/Scenes/Rules2.unity
-    guid: b7c7161a7ba0f2c40a4584c49f8b838a
-  - enabled: 0
+    guid: aaf92e34b3aab7745bbbb4add15cbaec
+  - enabled: 1
     path: Assets/Scenes/Rules3.unity
-    guid: 498768ef6c05c2e4f8d7880e33f0c0d8
-  - enabled: 0
+    guid: 3c08882a259ae0c458af4918c7aad452
+  - enabled: 1
     path: Assets/Scenes/Rules4.unity
-    guid: 55a0bacfd9fb74346a51728a369d3ad6
-  - enabled: 0
-    path: Assets/Scenes/Rules5.unity
-    guid: ba008675ea5bc3044ac852381f585a9b
-  - enabled: 0
-    path: Assets/Scenes/Rules6.unity
-    guid: c0dc7c453328b344bafecdbc2981447f
-  - enabled: 0
-    path: Assets/Scenes/Rules7.unity
-    guid: 525a3036f61a2f540b4377b2f0922bb0
-  - enabled: 1
-    path: Assets/Scenes/R2.unity
-    guid: 7b2693328974dc349841fef9db5bb009
-  - enabled: 1
-    path: Assets/Scenes/R0.unity
     guid: d7aec27f21ff606429d3be96c712231b
   - enabled: 1
-    path: Assets/Scenes/R3.unity
-    guid: bd77af0c3b50c4144a7f14ae0e910b40
+    path: Assets/Scenes/Rules5.unity
+    guid: 7b2693328974dc349841fef9db5bb009
   - enabled: 1
-    path: Assets/Scenes/R4.unity
-    guid: 626d6f825ca209941ba1d40d98ad2a6a
+    path: Assets/Scenes/Rules6.unity
+    guid: 2bc6a10aeebd7c244a0f9d425c328554
   - enabled: 1
-    path: Assets/Scenes/R5.unity
-    guid: e714f349f0565de40a09e2a790de6bc1
+    path: Assets/Scenes/Rules7.unity
+    guid: 607a5f004ba38eb47904223f98b0326f
   - enabled: 1
-    path: Assets/Scenes/R6.unity
-    guid: e299e4f8a2b7f4b45a8a881c90255e56
-  - enabled: 1
-    path: Assets/Scenes/R7.unity
-    guid: 3fa99b3dcb4524748a88770d7e2219fa
-  - enabled: 0
     path: Assets/Scenes/Rules8.unity
-    guid: 277116b6da573b24c9b1c41829c41fc4
-  - enabled: 0
+    guid: 37cdbfef2fdd8274495bc815c30b68a6
+  - enabled: 1
     path: Assets/Scenes/Rules9.unity
-    guid: 7656eee5f63127442b6dbdeef891baf8
-  - enabled: 0
+    guid: da9fa6e297fac8e48b18ffa3334a49ee
+  - enabled: 1
     path: Assets/Scenes/Rules10.unity
-    guid: 321c440b2cb68e44687f1ceff20aae13
-  - enabled: 0
-    path: Assets/Scenes/Rules11.unity
-    guid: 803b060b4f4eb0c4b9f4837d847b3bf2
+    guid: e51091b377c224d43836eb594c0dea3b
   - enabled: 1
     path: Assets/Scenes/Coma.unity
     guid: 1174b19338ed32d4bb663689ef10a1a3
-  - enabled: 0
-    path: Assets/Scenes/Rules12.unity
-    guid: e1378054cc05bae4b918437ca91613d0
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: c76af8c24e9cff944b17aa14d6c9e8f4

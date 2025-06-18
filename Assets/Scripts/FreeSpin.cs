@@ -11,6 +11,7 @@ public class FreeSpin : MonoBehaviour
     public TextMeshProUGUI reward;
     public GameEffects gameEffects { get; set; }
     public Button spin;
+    public Button stateSpin;
     public Sprite jackpot;
     public Sprite good;
     public Sprite bad;
@@ -62,8 +63,11 @@ public class FreeSpin : MonoBehaviour
             rbody.AddTorque(RotatePower);
             inRotate = 1;
         }
-        spin.interactable = false;
+        
         state.sprite = yourPrize;
+        spin.interactable = false;
+        stateSpin.interactable = false;
+        
     }
 
     public void GetReward()

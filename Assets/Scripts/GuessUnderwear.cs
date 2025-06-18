@@ -18,7 +18,7 @@ public class GuessUnderwear : MonoBehaviour
         }
         else
         {
-            wrongEffect.fontSize = 98f;
+            wrongEffect.fontSize = 95f;
         }
 
         correctEffect.text = gameEffects.GenerateRandomEffect(gameEffects.goodEffects);
@@ -28,7 +28,7 @@ public class GuessUnderwear : MonoBehaviour
         }
         else
         {
-            correctEffect.fontSize = 98f;
+            correctEffect.fontSize = 95f;
         }
     
     }

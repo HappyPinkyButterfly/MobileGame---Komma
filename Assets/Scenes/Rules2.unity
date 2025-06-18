@@ -210,7 +210,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: R5
+          m_StringArgument: Rules1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1107295985
@@ -285,8 +285,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 530}
-  m_SizeDelta: {x: 900, y: 50}
+  m_AnchoredPosition: {x: 0, y: 470}
+  m_SizeDelta: {x: 1000, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1108501077
 MonoBehaviour:
@@ -308,15 +308,28 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "GENERAL RULES\n\r\nEffects applying on multiple players resolve clockwise,
-    starting from the turn player.\r\n\r\nIf two players are tied in any effect,
-    the turn player decides the outcome.\r\n\r\nSTARE SLAVE\r\n\r\nYou must stare
-    at the designated player.\r\nEvery sip/chug they take, you must copy.\r\n\r\nCHAIN
-    RULE: If a full circle of stare slaves forms, you only drink once per chain.\r\nDURATION:
-    Until the start of your next turn.\r\n\r\nMUSTACHE (Escalating Penalty)\r\n\r\nNo
-    mustache? \u2192 Draw one on their face.\r\nAlready has a mustache? \u2192 Draw
-    a UNIBROW.\r\nAlready has a unibrow? \u2192 Draw a PEN*S on their forehead.\r\nAlready
-    has that? \u2192 Player TAKES A SHOT."
+  m_text: '
+
+
+    CASUAL MODE
+
+    FOR: New players or relaxed games.
+
+
+    SET UP:
+    It is default gamemode, so no need for  setup
+
+
+    Pass the phone between players
+    if not everyone has the app.
+
+
+    For any mode your can add special drinkin
+    types into the deck and penalties by going to GameMode menu and adding them
+
+
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -343,8 +356,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 57
+  m_fontSizeBase: 57
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -859,7 +872,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: R7
+          m_StringArgument: Rules3
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2114597481
