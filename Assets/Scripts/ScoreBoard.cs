@@ -18,8 +18,6 @@ public class ScoreBoard : MonoBehaviour
     public CanvasGroup score;
     public GameEffects gameEffects;
 
-
-
     public int currentPoints;
 
     public void Awake()

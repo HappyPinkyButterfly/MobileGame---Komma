@@ -69,21 +69,7 @@ public class RoundStartComp2 : MonoBehaviour
         amountNumber = Random.Range(1, 3) + gameEffects.drinkCounter.currentCounter;
         amount.text = amountNumber.ToString();
 
-        typeOfDrinking.text = gameEffects.typeOfDrinkingList[index2];
-
-        if (gameEffects.typeOfDrinkingList[index2] == "Second Chug")
-        {
-            typeOfDrinking.fontSize = 80f;
-            amount.rectTransform.anchoredPosition =
-            new Vector2(-300f, amount.rectTransform.anchoredPosition.y);
-        }
-        else
-        {
-            typeOfDrinking.fontSize = 120f;
-            amount.rectTransform.anchoredPosition =
-            new Vector2(-150f, amount.rectTransform.anchoredPosition.y);
-        }
-
+        typeOfDrinking.text = "Penalties";
 
         sideEffect.text = gameEffects.GenerateRandomEffect(gameEffects.roundStartDescription);
 

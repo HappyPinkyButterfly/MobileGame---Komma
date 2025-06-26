@@ -4,11 +4,6 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class StartButton : MonoBehaviour
 {
-    public CanvasGroup action;
-    public CanvasGroup caution;
-    private bool isCompetitiveMode;
-    
-
     public Image startButton;
 
     public RectTransform button;

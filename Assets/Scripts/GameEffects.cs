@@ -47,7 +47,7 @@ public class GameEffects : MonoBehaviour
     public int previousAmount;
     public CanvasGroup disclaimerBackGround;
     public static bool shownDisclaimer = false;
-    
+
 
     private Dictionary<int, List<string>> usedEffectsDict = new Dictionary<int, List<string>>();
     void Update()
@@ -110,7 +110,7 @@ public class GameEffects : MonoBehaviour
         }
         currentlyUsed.Clear();
         return tableOfEffects[Random.Range(0, tableOfEffects.Count)];
-        
+
     }
     public void Awake()
     {
@@ -138,11 +138,6 @@ public class GameEffects : MonoBehaviour
 
         if (Prefrences.Instance != null)
         {
-            mustacheState = Prefrences.Instance.mustacheOn;
-            bottomsUpState = Prefrences.Instance.bottomsUpOn;
-            shotState = Prefrences.Instance.shotOn;
-            slammerState = Prefrences.Instance.slammerOn;
-            kingsCupState = Prefrences.Instance.kingsCupOn;
             competitiveState = Prefrences.Instance.competitiveOn;
             actionState = Prefrences.Instance.actionOn;
         }
@@ -164,21 +159,11 @@ public class GameEffects : MonoBehaviour
             "SAME GENDER"
         };
 
-        typeOfDrinkingList = new List<string>
-        {
-            "Sips",
-            "Sips",
-            "Sips",
-            "Second Chug"
-        };
-
         sideEffectList = new List<string>
         {
             "Have or been walked on during sex",
             "You are simp",
             "Virgin",
-            "Drinking vodka",
-            "Not drinking vodka",
             "Sexy person",
             "Nice person",
             "Hooked up with someone you met online",
@@ -190,10 +175,8 @@ public class GameEffects : MonoBehaviour
             "Kissed or had sex with present player",
             "Turned on by a fictional character",
             "Ever lost keys or wallet",
-            "Ever puked first",
             "Under 180cm",
             "Over 180cm",
-            "Ever had body shot",
             "Had condom popped",
             "Used dating apps",
             "Currently using dating apps",
@@ -207,8 +190,6 @@ public class GameEffects : MonoBehaviour
             "If YOU have or been walked ON during sex",
             "If YOU are simp",
             "If YOU are virgin",
-            "If YOU are drinking vodka",
-            "If YOU are not drinking vodka",
             "If YOU are sexy person",
             "If YOU are nice person",
             "If YOU hooked up with someone you met online",
@@ -220,14 +201,12 @@ public class GameEffects : MonoBehaviour
             "If YOU kissed or had sex with present player",
             "If YOU have been turned on by a fictional character",
             "If YOU ever lost keys or wallet",
-            "If YOU have ever puked first",
             "If YOU are under 180cm",
             "If YOU are over 180cm",
-            "If YOU ever had body shot",
             "If YOU ever had condom popped",
             "If YOU are currently using dating apps",
             "If YOU have been pregnancy scared",
-            "If YOU have slept with odler",
+            "If YOU have slept with older",
             "If YOU have a child",
             "For each relationhip",
             "For each VIRGINITY taken",
@@ -236,9 +215,9 @@ public class GameEffects : MonoBehaviour
             "For every virgin present"
         };
 
-        
 
-        
+
+
         contestTypes = new List<string>
         {
             "BODYCOUNT",
@@ -316,9 +295,9 @@ public class GameEffects : MonoBehaviour
 
         dare = new List<string>
         {
-            "Go up to a stanger nearby and invite them to join our for a round of the drinking game COMA",
+            "Go up to a stanger nearby and invite them to join our for a round of COMA",
             "Go up to a stanger nearby and ask for their phone number or social media",
-            "Take a fun group photo of us playing COMA and post it to your story with #DrinkingGameCOMA"
+            "Take a fun group photo of us playing COMA and post it to your story with #COMA"
         };
 
         wouldYouRather1 = new List<string>
@@ -401,18 +380,16 @@ public class GameEffects : MonoBehaviour
 
 
 
-        
+
     }
     public void UpdateDynamicStrings()
     {
 
         jackpot = new List<string>
         {
-            "Everyone else "+ (5 + amount) +" sips",
-            "Everyone else "+ (4 + amount) +" second chug",
-            "Everyone else "+ (5 + amount) +" sips without touching their drink",
-            "Everyone else "+ (4 + amount) +" second chug sips without touching their drink",
-            "Everyone else STARE SLAVE to YOU and you take "+ (2 + amount) +" sips",
+            "Everyone else "+ (5 + amount) +" penalties",
+            "Everyone else "+ (5 + amount) +" penalties without using hands",
+            "Everyone else STARE SLAVE to YOU and you take "+ (2 + amount) +" penalties",
         };
         badEffects = new List<string>
         {
@@ -420,47 +397,40 @@ public class GameEffects : MonoBehaviour
             "Draw 1 Round start. It becomes TAKE",
             "Draw 2 Round starts and they become TAKE",
             "Draw 2 Round starts and they become TAKE",
-            "TAKE "+ (3 + amount) +" sips without touching your drink",
-            "Chug "+ (2 + amount) +" seconds without touching your drink",
-            "TAKE "+ (2 + amount) +" sips without touching your drink",
-            "Chug "+ (1 + amount) +" seconds without touching your drink",
-            "TAKE sips equal to your bodycount",
-            "TAKE sips equal to the continents you visited",
-            "You are STARE SLAVE to your LEFT and they TAKE "+ (2 + amount) +" sips",
-            "You are STARE SLAVE to your LEFT and they TAKE "+ (3 + amount) +" sips",
-            "You are STARE SLAVE to your RIGHT and they TAKE "+ (2 + amount) +" sips",
-            "You are STARE SLAVE to your RIGHT and they TAKE "+ (3 + amount) +" sips",
-            "You and your RIGHT TAKE "+ (2 + amount) +" sips",
-            "You and your LEFT TAKE chug "+ (3 + amount) +" seconds",
-            "Increase your SipChug Counter by 1",
-            "Increase your SipChug Counter by 1, TAKE "+ (1 + amount) +" sip",
-            "Increase your SipChug Counter by 1, TAKE "+ (2 + amount) +" sips",
-            "Increase your SipChug Counter by 1, TAKE "+ (3 + amount) +" sips",
+            "TAKE "+ (3 + amount) +" penalties without using hands",
+            "TAKE "+ (2 + amount) +" penalties without using hands",
+            "TAKE penalties equal to your bodycount",
+            "TAKE penalties equal to the continents you visited",
+            "You are STARE SLAVE to your LEFT and they TAKE "+ (2 + amount) +" penalties",
+            "You are STARE SLAVE to your LEFT and they TAKE "+ (3 + amount) +" penalties",
+            "You are STARE SLAVE to your RIGHT and they TAKE "+ (2 + amount) +" penalties",
+            "You are STARE SLAVE to your RIGHT and they TAKE "+ (3 + amount) +" penalties",
+            "You and your RIGHT TAKE "+ (2 + amount) +" penalties",
+            "You and your LEFT TAKE  "+ (3 + amount) +" penalties",
+            "Increase your Penalty Counter by 1, TAKE "+ (1 + amount) +" penalties",
+            "Increase your Penalty Counter by 1, TAKE "+ (2 + amount) +" penalties",
+            "Increase your Penalty Counter by 1, TAKE "+ (3 + amount) +" penalties",
         };
 
         actionBad = new List<string>
         {   "Draw CURSE",
-            "Draw CURSE and TAKE "+ (1 + amount) +" sip",
-            "Draw CURSE and TAKE "+ (2 + amount) +" sips",
-            "Draw CURSE and TAKE "+ (3 + amount) +" sips",
+            "Draw CURSE and TAKE "+ (1 + amount) +" penalties",
+            "Draw CURSE and TAKE "+ (2 + amount) +" penalties",
+            "Draw CURSE and TAKE "+ (3 + amount) +" penalties",
             "GIVE PROTECTION to your RIGHT",
-            "GIVE PROTECTION to your RIGHT and you TAKE " + (1 + amount) +" sip",
-            "GIVE PROTECTION to your RIGHT and you TAKE "+ (2 + amount) +" sips",
-            "GIVE PROTECTION to your RIGHT and you TAKE "+ (3 + amount) +" sip",
+            "GIVE PROTECTION to your RIGHT and you TAKE " + (1 + amount) +" penalties",
+            "GIVE PROTECTION to your RIGHT and you TAKE "+ (2 + amount) +" penalties",
+            "GIVE PROTECTION to your RIGHT and you TAKE "+ (3 + amount) +" penalties",
         };
 
         photographer = new List<string>
         {
-            "TAKE photo with your RIGHT and random nearby object, they TAKE "+ (2 + amount) +" sips",
-            "Everyone takes a photo of their drink like it's a luxury product ad, group votes best one, others TAKE "+ (2 + amount) +" sips",
-            "Everyone else takes photo of you, everyone else but the best one TAKE "+ (2 + amount) +" sips",
-            "TAKE photo with your RIGHT making intelectual faces and both TAKE "+ (2 + amount) +" sips",
-            "TAKE group photo with all your drinks",
-            "TAKE a video of everyone else chuging "+ (2 + amount) +" seconds",
-            "TAKE a photo with your RIGHT and your LEFT making one you each sad, happy and confused faces, they TAKE "+ (2 + amount) +" sips",
-            "TAKE a photo with your RIGHT hugging and both of you are fed "+ (2 + amount) +" sips",
+            "TAKE photo with your RIGHT and random nearby object",
+            "Everyone else takes photo of you",
+            "TAKE photo with your RIGHT making intelectual faces",
+            "TAKE a photo with your RIGHT and your LEFT making one you each sad, happy and confused faces",
+            "TAKE a photo with your RIGHT hugging while both of you are fed "+ (2 + amount) +" penalties",
             "Everyone grabs an oject and balace it on their heads, TAKE selfie",
-            "TAKE a video of someone swiping on dating app, if no present player has one, you TAKE "+ (2 + amount) +" sips",
             "TAKE a group photo where everyone else puts their hands on your head"
         };
 
@@ -470,146 +440,31 @@ public class GameEffects : MonoBehaviour
             "Draw 1 Round start. It becomes GIVE",
             "Draw 2 Round starts and they become GIVE",
             "Draw 2 Round starts and they become GIVE",
-            "GIVE "+ (2 + amount) +" Sips without touching their drink",
-            "GIVE chug "+ (2 + amount) +" Seconds",
-            "GIVE sips equal to your bodycount",
-            "GIVE sips equal to the continents you visited",
-            "GIVE STARE SLAVE to anyone on anyone and they TAKE "+ (2 + amount) +" sips",
-            "GIVE STARE SLAVE to anyone on anyone  and they TAKE "+ (3 + amount) +" sips",
-            "Your RIGHT is your STARE SLAVE  and they TAKE "+ (2 + amount) +" sips",
-            "Your RIGHT is your STARE SLAVE  and they TAKE "+ (3 + amount) +" sips",
-            "Everyone else "+ (2 + amount) +" sips",
-            "Everyone else chug "+ (2 + amount) +" seconds",
-            "Your LEFT TAKE "+ (2 + amount) +" sips",
-            "Your RIGHT TAKE "+ (3 + amount) +" sips",
-            "Your LEFT TAKE chug "+ (2 + amount) +" seconds",
-            "Your RIGHT TAKE chug "+ (3 + amount) +" seconds",
-            "GIVE 'Increase your SipChug Counter by 1, TAKE "+ (1 + amount) +" sip'",
-            "GIVE 'Increase your SipChug Counter by 1, TAKE "+ (2 + amount) +" sip'",
-            "GIVE 'Increase your SipChug Counter by 1, TAKE "+ (3 + amount) +" sip'",
-            "Decrease your SipChug Countey by 1 and GIVE "+ (1 + amount) +" sip",
-            "Decrease your SipChug Countey by 1 and GIVE "+ (2 + amount) +" sip",
-            "Decrease your SipChug Countey by 1 and GIVE "+ (3 + amount) +" sip"
+            "GIVE "+ (2 + amount) +" penalties without using hands",
+            "GIVE penalties equal to your bodycount",
+            "GIVE penalties equal to the continents you visited",
+            "GIVE STARE SLAVE to anyone on anyone and they TAKE "+ (2 + amount) +" penalties",
+            "GIVE STARE SLAVE to anyone on anyone  and they TAKE "+ (3 + amount) +" penalties",
+            "Your RIGHT is your STARE SLAVE  and they TAKE "+ (2 + amount) +" penalties",
+            "Your RIGHT is your STARE SLAVE  and they TAKE "+ (3 + amount) +" penalties",
+            "Everyone else "+ (2 + amount) +" penalties",
+            "Your LEFT TAKE "+ (2 + amount) +" penalties",
+            "Your RIGHT TAKE "+ (3 + amount) +" penalties",
+            "Decrease your Penalty Counter by 1 and GIVE "+ (1 + amount) +" penalties",
+            "Decrease your Penalty Counter by 1 and GIVE "+ (2 + amount) +" penalties",
+            "Decrease your Penalty Counter by 1 and GIVE "+ (3 + amount) +" penalties"
         };
 
         actionGood = new List<string>
         {
             "Draw PROTECTION",
-            "Draw PROTECTION and TAKE 1 sip",
-            "Draw PROTECTION and GIVE "+ (1 + amount) +" sip",
-            "Draw PROTECTION and GIVE "+ (2 + amount) +" sips",
-            "Draw PROTECTION and GIVE "+ (3 + amount) +" sips",
+            "Draw PROTECTION and GIVE "+ (1 + amount) +" penalties",
+            "Draw PROTECTION and GIVE "+ (2 + amount) +" penalties",
+            "Draw PROTECTION and GIVE "+ (3 + amount) +" penalties",
             "Draw TREASURE",
-            "Draw TREASURE and TAKE "+ (1 + amount) +" sip",
-            "Draw TREASURE and GIVE "+ (1 + amount) +" sip"
+            "Draw TREASURE and TAKE "+ (1 + amount) +" penalties",
+            "Draw TREASURE and GIVE "+ (1 + amount) +" penalties"
         };
-
-        if (actionState)
-        {
-            badEffects.AddRange(actionBad);
-            goodEffects.AddRange(actionGood);
-            jackpot.Add("Draw PROTECTION and TREASURE");
-        }
-        if (mustacheState)
-        {
-            jackpot.Add("Everyone else gets Mustache");
-        }
-        if (shotState)
-        {
-            jackpot.Add("Everyone else TAKE shot");
-        }
-        if (bottomsUpState)
-        {
-            jackpot.Add("Everyone else Bottoms Up");
-        }
-        if (slammerState)
-        {
-            jackpot.Add("Everyone else TAKE Slammer");
-        }
-        if (kingsCupState)
-        {
-            jackpot.Add("Everyone else TAKE kings cup going clockwise");
-        }
-
-        int repetitionsGood = goodEffects.Count / 10;
-
-        for (int i = 0; i < repetitionsGood; i++)
-        {
-            if (mustacheState)
-            {
-                goodEffects.Add("GIVE Mustache");
-                goodEffects.Add("GIVE Mustache");
-                goodEffects.Add("GIVE Mustache");
-                goodEffects.Add("GIVE Mustache");
-            }
-            if (shotState)
-            {
-                goodEffects.Add("GIVE Shot");
-                goodEffects.Add("GIVE Shot");
-                goodEffects.Add("GIVE Shot");
-            }
-            if (bottomsUpState)
-            {
-                goodEffects.Add("GIVE BottomsUp");
-                goodEffects.Add("GIVE BottomsUp");
-                goodEffects.Add("GIVE BottomsUp");
-            }
-            if (slammerState)
-            {
-                goodEffects.Add("GIVE Slammer");
-                goodEffects.Add("GIVE Slammer");
-                goodEffects.Add("GIVE Slammer");
-            }
-            if (kingsCupState)
-            {
-                goodEffects.Add("GIVE Kings Cup");
-                goodEffects.Add("GIVE Kings Cup");
-                goodEffects.Add("GIVE Kings Cup");
-                goodEffects.Add("GIVE Kings Cup");
-            }
-        }
-
-        int repetitionsBad = badEffects.Count / 10;
-
-        for (int i = 0; i < repetitionsBad; i++)
-        {
-            if (mustacheState)
-            {
-                badEffects.Add("TAKE Mustache");
-                badEffects.Add("TAKE Mustache");
-                badEffects.Add("TAKE Mustache");
-                badEffects.Add("TAKE Mustache");
-            }
-            if (shotState)
-            {
-                badEffects.Add("TAKE Shot");
-                badEffects.Add("TAKE Shot");
-                badEffects.Add("TAKE Shot");
-            }
-            if (bottomsUpState)
-            {
-                badEffects.Add("TAKE BottomsUp");
-                badEffects.Add("TAKE BottomsUp");
-                badEffects.Add("TAKE BottomsUp");
-            }
-            if (slammerState)
-            {
-                badEffects.Add("TAKE Slammer");
-                badEffects.Add("TAKE Slammer");
-                badEffects.Add("TAKE Slammer");
-            }
-            if (kingsCupState)
-            {
-                badEffects.Add("TAKE Kings Cup");
-                badEffects.Add("TAKE Kings Cup");
-                badEffects.Add("TAKE Kings Cup");
-                badEffects.Add("TAKE Kings Cup");
-            }
-        }
-
-        
-
-       
-        
     }
 }
+

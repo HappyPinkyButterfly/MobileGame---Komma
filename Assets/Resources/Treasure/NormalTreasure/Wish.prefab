@@ -170,7 +170,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a592e27fb14243488638db7bc64ab9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameEffects: {fileID: 0}
   one: {fileID: 4796167009386407116}
   two: {fileID: 4180876695712060168}
   three: {fileID: 7923457688093839026}

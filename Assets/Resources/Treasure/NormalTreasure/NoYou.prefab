@@ -411,8 +411,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'If you would drink ANYTHING, you can make someone else do it, then remove
-    me from game
+  m_text: 'If you would have to DO  ANYTHING, you can make someone else do it, then
+    remove me from game
 
 '
   m_isRightToLeft: 0
