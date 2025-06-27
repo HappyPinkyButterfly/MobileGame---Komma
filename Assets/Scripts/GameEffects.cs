@@ -32,6 +32,7 @@ public class GameEffects : MonoBehaviour
     public List<string> dare;
     public List<string> roundStartDescription;
     public List<string> jackpot;
+    public List<string> actionJackpot;
 
 
 
@@ -47,6 +48,7 @@ public class GameEffects : MonoBehaviour
     public int previousAmount;
     public CanvasGroup disclaimerBackGround;
     public static bool shownDisclaimer = false;
+    private bool hasActionBadBeenAdded = false; 
 
 
     private Dictionary<int, List<string>> usedEffectsDict = new Dictionary<int, List<string>>();
@@ -389,14 +391,18 @@ public class GameEffects : MonoBehaviour
         {
             "Everyone else "+ (5 + amount) +" penalties",
             "Everyone else "+ (5 + amount) +" penalties without using hands",
-            "Everyone else STARE SLAVE to YOU and you take "+ (2 + amount) +" penalties",
+            "Everyone else STARE SLAVE to YOU and you take "+ (2 + amount) +" penalties"
         };
+
+        actionJackpot = new List<string>
+        {
+            "DRAW Protection AND Treasure"
+        };
+
         badEffects = new List<string>
         {
-            "Draw 1 Round start. It becomes TAKE",
-            "Draw 1 Round start. It becomes TAKE",
-            "Draw 2 Round starts and they become TAKE",
-            "Draw 2 Round starts and they become TAKE",
+            "Draw 1 Round start",
+            "Draw 2 Round starts",
             "TAKE "+ (3 + amount) +" penalties without using hands",
             "TAKE "+ (2 + amount) +" penalties without using hands",
             "TAKE penalties equal to your bodycount",
@@ -413,7 +419,12 @@ public class GameEffects : MonoBehaviour
         };
 
         actionBad = new List<string>
-        {   "Draw CURSE",
+        {
+            "Draw 1 Round start. It becomes TAKE",
+            "Draw 1 Round start. It becomes TAKE",
+            "Draw 2 Round starts and they become TAKE",
+            "Draw 2 Round starts and they become TAKE",
+            "Draw CURSE",
             "Draw CURSE and TAKE "+ (1 + amount) +" penalties",
             "Draw CURSE and TAKE "+ (2 + amount) +" penalties",
             "Draw CURSE and TAKE "+ (3 + amount) +" penalties",
@@ -436,10 +447,8 @@ public class GameEffects : MonoBehaviour
 
         goodEffects = new List<string>
         {
-            "Draw 1 Round start. It becomes GIVE",
-            "Draw 1 Round start. It becomes GIVE",
-            "Draw 2 Round starts and they become GIVE",
-            "Draw 2 Round starts and they become GIVE",
+            "Draw 1 Round start",
+            "Draw 2 Round starts",
             "GIVE "+ (2 + amount) +" penalties without using hands",
             "GIVE penalties equal to your bodycount",
             "GIVE penalties equal to the continents you visited",
@@ -457,6 +466,10 @@ public class GameEffects : MonoBehaviour
 
         actionGood = new List<string>
         {
+            "Draw 1 Round start. It becomes GIVE",
+            "Draw 1 Round start. It becomes GIVE",
+            "Draw 2 Round starts and they become GIVE",
+            "Draw 2 Round starts and they become GIVE",
             "Draw PROTECTION",
             "Draw PROTECTION and GIVE "+ (1 + amount) +" penalties",
             "Draw PROTECTION and GIVE "+ (2 + amount) +" penalties",
@@ -465,6 +478,14 @@ public class GameEffects : MonoBehaviour
             "Draw TREASURE and TAKE "+ (1 + amount) +" penalties",
             "Draw TREASURE and GIVE "+ (1 + amount) +" penalties"
         };
+
+        if (actionState && !hasActionBadBeenAdded)
+    {
+        badEffects.AddRange(actionBad);
+        goodEffects.AddRange(actionBad); 
+        jackpot.AddRange(actionJackpot); 
+        hasActionBadBeenAdded = true; 
+    }
     }
 }
 
