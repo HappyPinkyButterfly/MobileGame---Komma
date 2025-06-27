@@ -308,9 +308,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "COMA is a turn-based drinking game designed for 4-6 players, where each
-    turn involves drawing cards that dictate drinking challenges, mini-games, and
-    chaotic effects. \n\nThe game features multiple modes to suit different playstyles,
+  m_text: "COMA is a turn-based social party game designed for 4-6 players, where
+    each turn involves drawing cards that dictate social challenges, mini-games,
+    and chaotic effects. \n\nThe game features multiple modes to suit different playstyles,
     from casual to competitive.\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

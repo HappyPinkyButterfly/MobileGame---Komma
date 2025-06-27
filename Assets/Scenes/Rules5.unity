@@ -360,7 +360,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -170, y: 350}
+  m_AnchoredPosition: {x: -170, y: 400}
   m_SizeDelta: {x: 900, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1108501077
@@ -384,9 +384,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "ROUND START CARDS\r\n\r\nDrawn at the beginning of each turn.\r\n\r\nStructure:\r\n\rTOP:
-    Who drinks? (e.g., \"Everyone except you\").\r\n\r\nMIDDLE LEFT:  Amount (e.g.,
-    \"3 sips\").\r\n\r\nMIDDLE RIGHT: Type (\"sips\" or \"chugs\").\r\n\r\nBOTTOM
-    LEFT: If the description matches the player, add the number to the drink count."
+    Who takes penalties? (e.g., \"Everyone except you\").\r\n\r\nMIDDLE LEFT:  Amount
+    (e.g., \"3 penalties\").\r\n\r\nBOTTOM LEFT: If the description matches the player,
+    add the number to the penalties count."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -413,8 +413,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 48
-  m_fontSizeBase: 48
+  m_fontSize: 55
+  m_fontSizeBase: 55
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -897,7 +897,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 8885935957786081294, guid: 19d80088ee67e6b499f87f69a9eb6bee, type: 3}
+  m_Sprite: {fileID: -74301348332507615, guid: 5da7339b93e6e4048a371f7715a05445, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

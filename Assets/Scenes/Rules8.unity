@@ -308,7 +308,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'DRINKING CAP: Any sip/chug effect over 8 is reduced to 8.
+  m_text: 'PENALTIES CAP: Any Penalty effect over 7 is reduced to 7.
 
 
     EFFECT

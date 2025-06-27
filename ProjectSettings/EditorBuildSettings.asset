@@ -39,7 +39,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Rules9.unity
     guid: da9fa6e297fac8e48b18ffa3334a49ee
   - enabled: 1
-    path: Assets/Scenes/Rules10.unity
+    path: Assets/Scenes/Rules9.unity
     guid: e51091b377c224d43836eb594c0dea3b
   - enabled: 1
     path: Assets/Scenes/Coma.unity

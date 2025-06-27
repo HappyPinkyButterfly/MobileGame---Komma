@@ -383,11 +383,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "SIP CHUG Counter\r\n\nThe counter starts at 0 by default\r\n\r\nWhen you
-    get effects with \"Increase Sip/Chug Counter\" or \"Decrease Sip/Chug Counter\":\r\n\r\nTap
+  m_text: "PENALTY Counter\r\n\nThe counter starts at 0 by default\r\n\r\nWhen you
+    get effects with \"Increase Penalty Counter\" or \"Decrease Penalty Counter\":\r\n\r\nTap
     the counter on the app, adjust it by +1 or -1 as instructed\r\r\n\r\nThe new
-    value immediately affects all future drink amounts\n\r\nIf the counter reaches
-    +4 or higher, it automatically resets to 0\r\n\r\nIf the counter reaches -2 or
+    value immediately affects all future penalty amounts\n\r\nIf the counter reaches
+    +3 or higher, it automatically resets to 0\r\n\r\nIf the counter reaches -1 or
     lower, it automatically resets to 0\r\n\r\nThe counter displays in red when at
     +3 or -1 as a warning\r"
   m_isRightToLeft: 0

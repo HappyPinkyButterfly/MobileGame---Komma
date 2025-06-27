@@ -65,11 +65,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Starting Price: 5 sips
+  m_text: 'Starting Price: 5 penalties
 
-    BID: 2 sips
+    BID: 2 penalties
 
-    BIN: 13 sips
+    BIN: 13 penalties
 
 
 '

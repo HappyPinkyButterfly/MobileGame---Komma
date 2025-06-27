@@ -278,11 +278,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Everyone else DRAW Curse and they increase their SipChugCounter by 1
+  m_text: 'Everyone else DRAW Curse and they Increase their Penalty Counter by 1
 
 
     Pay
-    1 sip to DRAW Treasure and Protection'
+    1 penalty to DRAW Treasure and Protection'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

@@ -71,11 +71,11 @@ MonoBehaviour:
     1.) DRAW Curse
 
 
-    2.) Increase your SipChug Counter
+    2.) Increase your Penalty Counter
     by 1
 
 
-    3.) TAKE 1 sip'
+    3.) TAKE 1 penalty'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
