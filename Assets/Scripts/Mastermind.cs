@@ -26,42 +26,42 @@ public class Mastermind : MonoBehaviour
         
         if (one.text.Length > 30)
         {
-            one.fontSize = 48f;
+            one.fontSize = 48f + gameEffects.fontControlSmall;
 
         }
         else
         {
-            one.fontSize = 63f;
+            one.fontSize = 63f + gameEffects.fontControlBig;
         }
 
         if (two.text.Length > 30)
         {
-            two.fontSize = 48f;
+            two.fontSize = 48f + gameEffects.fontControlSmall;
 
         }
         else
         {
-            two.fontSize = 63f;
+            two.fontSize = 63f + gameEffects.fontControlBig;
         }
 
         if (three.text.Length > 30)
         {
-            three.fontSize = 48f;
+            three.fontSize = 48f + gameEffects.fontControlSmall;
 
         }
         else
         {
-            three.fontSize = 63f;
+            three.fontSize = 63f + gameEffects.fontControlBig;
         }
 
         if (four.text.Length > 30)
         {
-            four.fontSize = 48f;
+            four.fontSize = 48f + gameEffects.fontControlSmall;
 
         }
         else
         {
-            four.fontSize = 63f;
+            four.fontSize = 63f + gameEffects.fontControlBig;
         }
 
         

@@ -14,11 +14,11 @@ public class FaceOff : MonoBehaviour
         wrongEffect.text = gameEffects.GenerateRandomEffect(gameEffects.badEffects);
         if (wrongEffect.text.Length > 30)
         {
-            wrongEffect.fontSize = 78f;
+            wrongEffect.fontSize = 78f + gameEffects.fontControlSmall;
         }
         else
         {
-            wrongEffect.fontSize = 98f;
+            wrongEffect.fontSize = 98f + gameEffects.fontControlBig;
         }
 
         distance.text = gameEffects.GenerateRandomEffect(gameEffects.contestTypes);

@@ -17,22 +17,22 @@ public class Tornado : MonoBehaviour
 
         if (first.text.Length > 30)
         {
-            first.fontSize = 50f;
+            first.fontSize = 50f + gameEffects.fontControlSmall;
 
         }
         else
         {
-            first.fontSize = 60f;
+            first.fontSize = 60f + gameEffects.fontControlBig;
         }
 
         if (second.text.Length > 30)
         {
-            second.fontSize = 50f;
+            second.fontSize = 50f + gameEffects.fontControlSmall;
 
         }
         else
         {
-            second.fontSize = 60f;
+            second.fontSize = 60f + gameEffects.fontControlBig;
         }
     }
 }

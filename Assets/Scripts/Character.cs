@@ -26,62 +26,62 @@ public class Character : MonoBehaviour
 
         if (one.text.Length > 20)
         {
-            one.fontSize = 55f;
+            one.fontSize = 55f + gameEffects.fontControlSmall;
 
         }
         else
         {
-            one.fontSize = 65f;
+            one.fontSize = 65f + gameEffects.fontControlBig;
         }
 
         if (two.text.Length > 20)
         {
-            two.fontSize = 55f;
+            two.fontSize = 55f + gameEffects.fontControlSmall;
 
         }
         else
         {
-            two.fontSize = 65f;
+            two.fontSize = 65f + gameEffects.fontControlBig;
         }
 
         if (three.text.Length > 20)
         {
-            three.fontSize = 55f;
+            three.fontSize = 55f + gameEffects.fontControlSmall;
 
         }
         else
         {
-            three.fontSize = 65f;
+            three.fontSize = 65f + gameEffects.fontControlBig;
         }
         
         if (oneEffect.text.Length > 25)
         {
-            oneEffect.fontSize = 55f;
+            oneEffect.fontSize = 55f + gameEffects.fontControlSmall;
 
         }
         else
         {
-            oneEffect.fontSize = 65f;
+            oneEffect.fontSize = 65f + gameEffects.fontControlBig;
         }
 
         if (twoEffect.text.Length > 25)
         {
-            twoEffect.fontSize = 55f;
+            twoEffect.fontSize = 55f + gameEffects.fontControlSmall;
 
         }
         else
         {
-            twoEffect.fontSize = 65f;
+            twoEffect.fontSize = 65f + gameEffects.fontControlBig;
         }
 
         if (threeEffect.text.Length > 25)
         {
-            threeEffect.fontSize = 55f;
+            threeEffect.fontSize = 55f + gameEffects.fontControlSmall;
 
         }
         else
         {
-            threeEffect.fontSize = 65f;
+            threeEffect.fontSize = 65f + gameEffects.fontControlBig;
         }
 
         

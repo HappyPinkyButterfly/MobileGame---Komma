@@ -27,52 +27,52 @@ public class Daredevil : MonoBehaviour
 
         if (one.text.Length > 20)
         {
-            one.fontSize = 55f;
+            one.fontSize = 55f + gameEffects.fontControlSmall;
 
         }
         else
         {
-            one.fontSize = 65f;
+            one.fontSize = 65f + gameEffects.fontControlBig;
         }
 
         if (two.text.Length > 20)
         {
-            two.fontSize = 55f;
+            two.fontSize = 55f + gameEffects.fontControlSmall;
 
         }
         else
         {
-            two.fontSize = 65f;
+            two.fontSize = 65f + gameEffects.fontControlBig;
         }
 
         if (three.text.Length > 20)
         {
-            three.fontSize = 55f;
+            three.fontSize = 55f + gameEffects.fontControlSmall;
 
         }
         else
         {
-            three.fontSize = 65f;
+            three.fontSize = 65f + gameEffects.fontControlBig;
         }
         
         if (four.text.Length > 25)
         {
-            four.fontSize = 55f;
+            four.fontSize = 55f + gameEffects.fontControlSmall;
 
         }
         else
         {
-            four.fontSize = 65f;
+            four.fontSize = 65f + gameEffects.fontControlBig;
         }
 
         if (effect.text.Length > 25)
         {
-            effect.fontSize = 55f;
+            effect.fontSize = 55f + gameEffects.fontControlSmall;
 
         }
         else
         {
-            effect.fontSize = 65f;
+            effect.fontSize = 65f + gameEffects.fontControlBig;
         }
     }   
 }

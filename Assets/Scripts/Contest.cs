@@ -15,23 +15,23 @@ public class Contest : MonoBehaviour
         closestEffect.text = gameEffects.GenerateRandomEffect(gameEffects.badEffects);
         if (closestEffect.text.Length > 30)
         {
-            closestEffect.fontSize = 63f;
+            closestEffect.fontSize = 63f + gameEffects.fontControlSmall;
 
         }
         else
         {
-            closestEffect.fontSize = 88f;
+            closestEffect.fontSize = 88f + gameEffects.fontControlBig;
         }
 
         farthestEffect.text = gameEffects.GenerateRandomEffect(gameEffects.goodEffects);
         if (farthestEffect.text.Length > 30)
         {
-            farthestEffect.fontSize = 63f;
+            farthestEffect.fontSize = 63f + gameEffects.fontControlSmall;
         }
         
         else
         {
-            farthestEffect.fontSize = 88f;
+            farthestEffect.fontSize = 88f + gameEffects.fontControlBig;
         }
         
         int index3 = Random.Range(0, gameEffects.contestTypes.Count);

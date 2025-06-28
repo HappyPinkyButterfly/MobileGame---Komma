@@ -20,42 +20,42 @@ public class Wish : MonoBehaviour
         
         if (one.text.Length > 30)
         {
-            one.fontSize = 47f;
+            one.fontSize = 47f + gameEffects.fontControlSmall;
 
         }
         else
         {
-            one.fontSize = 57f;
+            one.fontSize = 57f + gameEffects.fontControlBig;
         }
 
         if (two.text.Length > 30)
         {
-            two.fontSize = 47f;
+            two.fontSize = 47f  + gameEffects.fontControlSmall;
 
         }
         else
         {
-            two.fontSize = 57f;
+            two.fontSize = 57f + gameEffects.fontControlBig;
         }
 
         if (three.text.Length > 30)
         {
-            three.fontSize = 47f;
+            three.fontSize = 47f + gameEffects.fontControlSmall;
 
         }
         else
         {
-            three.fontSize = 57f;
+            three.fontSize = 57f + gameEffects.fontControlBig;
         }
 
         if (four.text.Length > 30)
         {
-            four.fontSize = 47f;
+            four.fontSize = 47f + gameEffects.fontControlSmall;
 
         }
         else
         {
-            four.fontSize = 57f;
+            four.fontSize = 57f + gameEffects.fontControlBig;
         }
 
         

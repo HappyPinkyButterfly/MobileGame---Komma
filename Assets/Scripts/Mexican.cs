@@ -14,12 +14,12 @@ public class Mexican : MonoBehaviour
         two.text = gameEffects.GenerateRandomEffect(gameEffects.badEffects);
         if (two.text.Length > 30)
         {
-            two.fontSize = 78f;
+            two.fontSize = 78f + gameEffects.fontControlSmall;
 
         }
         else
         {
-            two.fontSize = 88f;
+            two.fontSize = 88f + gameEffects.fontControlBig;
         }
 
 

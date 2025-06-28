@@ -1,13 +1,16 @@
-using System;
+
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using System;
+
 
 public class FreeSpin : MonoBehaviour
 {
 
     public float RotatePower;
     public float StopPower;
+    public int power;
     public TextMeshProUGUI reward;
     public GameEffects gameEffects { get; set; }
     public Button spin;
@@ -31,6 +34,11 @@ public class FreeSpin : MonoBehaviour
         sizeOfState.localPosition = new Vector2(-400, -100);
         sizeOfState.sizeDelta = new Vector2(500, 500);
         state.sprite = clickToSpin;
+
+        power = UnityEngine.Random.Range(200, 400);
+        RotatePower = UnityEngine.Random.Range(RotatePower - power, RotatePower + power);
+        StopPower = UnityEngine.Random.Range(StopPower - power, StopPower + power);
+
     }
 
     float t;
@@ -39,6 +47,7 @@ public class FreeSpin : MonoBehaviour
     {
         if (rbody.angularVelocity > 0)
         {
+
             rbody.angularVelocity -= StopPower * Time.deltaTime;
 
             rbody.angularVelocity = Math.Clamp(rbody.angularVelocity, 0, 1440);
@@ -65,8 +74,8 @@ public class FreeSpin : MonoBehaviour
         }
         
         state.sprite = yourPrize;
-        spin.interactable = false;
-        stateSpin.interactable = false;
+        //spin.interactable = false;
+        //stateSpin.interactable = false;
         
     }
 
@@ -137,12 +146,12 @@ public class FreeSpin : MonoBehaviour
         }
         if (reward.text.Length > 30)
             {
-                reward.fontSize = 78f;
+                reward.fontSize = 78f + gameEffects.fontControlSmall;
 
             }
             else
             {
-                reward.fontSize = 88f;
+                reward.fontSize = 88f + gameEffects.fontControlSmall;
             }
     }
 

@@ -10,6 +10,6 @@ public class Truth : MonoBehaviour
     {
         gameEffects = GetComponentInParent<GameEffects>();
         question.text = gameEffects.GenerateRandomEffect(gameEffects.truth);
-        question.fontSize = 100f;
+        question.fontSize = 100f - gameEffects.fontControlBig;
     }
 }

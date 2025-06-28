@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Linq.Expressions;
 using UnityEngine;
 
 public class GameEffects : MonoBehaviour
@@ -48,7 +47,9 @@ public class GameEffects : MonoBehaviour
     public int previousAmount;
     public CanvasGroup disclaimerBackGround;
     public static bool shownDisclaimer = false;
-    private bool hasActionBadBeenAdded = false; 
+    private bool hasActionBadBeenAdded = false;
+    public int fontControlBig = 0;
+    public int fontControlSmall = 0;
 
 
     private Dictionary<int, List<string>> usedEffectsDict = new Dictionary<int, List<string>>();

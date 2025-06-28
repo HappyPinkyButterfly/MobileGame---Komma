@@ -17,22 +17,22 @@ public class TakeGive : MonoBehaviour
 
         if (takeEffect.text.Length > 20)
         {
-            takeEffect.fontSize = 60f;
+            takeEffect.fontSize = 60f + gameEffects.fontControlSmall;
 
         }
         else
         {
-            takeEffect.fontSize = 70f;
+            takeEffect.fontSize = 70f + gameEffects.fontControlBig;
         }
 
         if (giveEffect.text.Length > 20)
         {
-            giveEffect.fontSize = 60f;
+            giveEffect.fontSize = 60f + gameEffects.fontControlSmall;
 
         }
         else
         {
-            giveEffect.fontSize = 70f;
+            giveEffect.fontSize = 70f + gameEffects.fontControlBig;
         }
     }
 }

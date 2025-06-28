@@ -13,11 +13,11 @@ public class CallOfTheWILD : MonoBehaviour
         typeOfEffect.text = gameEffects.GenerateRandomEffect(gameEffects.badEffects);
         if (typeOfEffect.text.Length > 30)
         {
-            typeOfEffect.fontSize = 78f;
+            typeOfEffect.fontSize = 78f + gameEffects.fontControlSmall;
         }
         else
         {
-            typeOfEffect.fontSize = 98f;
+            typeOfEffect.fontSize = 98f + gameEffects.fontControlBig;
         }
     
     }

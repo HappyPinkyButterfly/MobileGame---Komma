@@ -14,11 +14,11 @@ public class Categories : MonoBehaviour
         typeOfEffect.text = gameEffects.GenerateRandomEffect(gameEffects.badEffects);
         if (typeOfEffect.text.Length > 30)
         {
-            typeOfEffect.fontSize = 100f;
+            typeOfEffect.fontSize = 100f + gameEffects.fontControlSmall;
         }
         else
         {
-            typeOfEffect.fontSize = 120f;
+            typeOfEffect.fontSize = 120f + gameEffects.fontControlBig;
         }
     
     }

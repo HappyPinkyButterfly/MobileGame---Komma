@@ -15,22 +15,22 @@ public class NeverHaveiever : MonoBehaviour
         haveNotEffect.text = gameEffects.GenerateRandomEffect(gameEffects.badEffects);
         if (haveNotEffect.text.Length > 30)
         {
-            haveNotEffect.fontSize = 63f;
+            haveNotEffect.fontSize = 63f + gameEffects.fontControlSmall;
 
         }
         else
         {
-            haveNotEffect.fontSize = 78f;
+            haveNotEffect.fontSize = 78f + gameEffects.fontControlBig;
         }
 
         haveEffect.text = gameEffects.GenerateRandomEffect(gameEffects.goodEffects);
         if (haveEffect.text.Length > 30)
         {
-            haveEffect.fontSize = 63f;
+            haveEffect.fontSize = 63f + gameEffects.fontControlSmall;
         }
         else
         {
-            haveEffect.fontSize = 78f;
+            haveEffect.fontSize = 78f + gameEffects.fontControlBig;
         }
 
         neverHaveIever.text = gameEffects.GenerateRandomEffect(gameEffects.neverHaveIever);

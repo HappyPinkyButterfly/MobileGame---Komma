@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 110
+  controlID: 113
   draggingID: 0
 --- !u!114 &6
 MonoBehaviour:
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 38
+  controlID: 63
   draggingID: 0
 --- !u!114 &7
 MonoBehaviour:
@@ -394,7 +394,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 149affffac9cffff50a9ffff98b2ffff32b3ffffc6b3ffffd2b5ffff92b7ffff62b9ffffe6baffff84bcfffffebeffff84c0ffff2ec3fffffac5ffff26c8ffff86ccffffd4ceffff94d0ffff38d2ffff88d4ffff5ed6ffff04d8fffff0d9ffffb4dcffff08fbffff80b0000026b100008ed8000098da000048dc00008edc0000
+      m_ExpandedIDs: 08fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1021,7 +1021,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Resources/Coma/NormalComa
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1031,15 +1031,15 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 39
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Resources/Coma/NormalComa
   m_LastFoldersGridSize: 39
   m_LastProjectPath: D:\UnItyProjects\ComaLiteSourceTree
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 29}
-    m_SelectedIDs: 74b50000
-    m_LastClickedID: 46452
+    m_SelectedIDs: 60b60000
+    m_LastClickedID: 46688
     m_ExpandedIDs: 00000000d6b40000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1170,7 +1170,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 108
+  m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
@@ -1257,22 +1257,22 @@ MonoBehaviour:
       x: 0
       y: 21
       width: 1108
-      height: 602
-    m_Scale: {x: 0.41805556, y: 0.41805556}
-    m_Translation: {x: 554, y: 301}
+      height: 630
+    m_Scale: {x: 0.4328125, y: 0.4328125}
+    m_Translation: {x: 554, y: 315}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -1325.1827
-      y: -720
-      width: 2650.3655
-      height: 1440
+      x: -1280
+      y: -727.7978
+      width: 2560
+      height: 1455.5956
     m_MinimalGUI: 1
-  m_defaultScale: 0.41805556
-  m_LastWindowPixelSize: {x: 1108, y: 623}
+  m_defaultScale: 0.4328125
+  m_LastWindowPixelSize: {x: 1108, y: 651}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000101000000000000
