@@ -18,7 +18,7 @@ public class Categories : MonoBehaviour
         }
         else
         {
-            typeOfEffect.fontSize = 120f + gameEffects.fontControlBig;
+            typeOfEffect.fontSize = 110f + gameEffects.fontControlBig;
         }
     
     }

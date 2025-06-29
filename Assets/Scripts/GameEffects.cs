@@ -48,7 +48,7 @@ public class GameEffects : MonoBehaviour
     public CanvasGroup disclaimerBackGround;
     public static bool shownDisclaimer = false;
     private bool hasActionBadBeenAdded = false;
-    public int fontControlBig = 0;
+    public int fontControlBig = -3;
     public int fontControlSmall = 0;
 
 
@@ -225,7 +225,6 @@ public class GameEffects : MonoBehaviour
         {
             "BODYCOUNT",
             "AGE",
-            "COUNTRIES VISITED",
             "HAD ONE NIGHT STANDS",
             "INSTAGRAM FOLLOWERS",
             "YEARS SINGLE/TAKEN CURRENTLY",
@@ -390,8 +389,8 @@ public class GameEffects : MonoBehaviour
 
         jackpot = new List<string>
         {
-            "Everyone else "+ (5 + amount) +" penalties",
-            "Everyone else "+ (5 + amount) +" penalties without using hands",
+            "Everyone else "+ (7 + amount) +" penalties",
+            "Everyone else "+ (6 + amount) +" penalties without using hands",
             "Everyone else STARE SLAVE to YOU and you take "+ (2 + amount) +" penalties"
         };
 
@@ -407,32 +406,25 @@ public class GameEffects : MonoBehaviour
             "TAKE "+ (3 + amount) +" penalties without using hands",
             "TAKE "+ (2 + amount) +" penalties without using hands",
             "TAKE penalties equal to your bodycount",
-            "TAKE penalties equal to the continents you visited",
             "You are STARE SLAVE to your LEFT and they TAKE "+ (2 + amount) +" penalties",
-            "You are STARE SLAVE to your LEFT and they TAKE "+ (3 + amount) +" penalties",
-            "You are STARE SLAVE to your RIGHT and they TAKE "+ (2 + amount) +" penalties",
             "You are STARE SLAVE to your RIGHT and they TAKE "+ (3 + amount) +" penalties",
             "You and your RIGHT TAKE "+ (2 + amount) +" penalties",
             "You and your LEFT TAKE  "+ (3 + amount) +" penalties",
-            "Increase your Penalty Counter by 1, TAKE "+ (1 + amount) +" penalties",
             "Increase your Penalty Counter by 1, TAKE "+ (2 + amount) +" penalties",
             "Increase your Penalty Counter by 1, TAKE "+ (3 + amount) +" penalties",
+
         };
 
         actionBad = new List<string>
         {
             "Draw 1 Round start. It becomes TAKE",
-            "Draw 1 Round start. It becomes TAKE",
-            "Draw 2 Round starts and they become TAKE",
             "Draw 2 Round starts and they become TAKE",
             "Draw CURSE",
             "Draw CURSE and TAKE "+ (1 + amount) +" penalties",
             "Draw CURSE and TAKE "+ (2 + amount) +" penalties",
-            "Draw CURSE and TAKE "+ (3 + amount) +" penalties",
             "GIVE PROTECTION to your RIGHT",
             "GIVE PROTECTION to your RIGHT and you TAKE " + (1 + amount) +" penalties",
             "GIVE PROTECTION to your RIGHT and you TAKE "+ (2 + amount) +" penalties",
-            "GIVE PROTECTION to your RIGHT and you TAKE "+ (3 + amount) +" penalties",
         };
 
         photographer = new List<string>
@@ -448,31 +440,21 @@ public class GameEffects : MonoBehaviour
 
         goodEffects = new List<string>
         {
-            "Draw 1 Round start",
-            "Draw 2 Round starts",
             "GIVE "+ (2 + amount) +" penalties without using hands",
             "GIVE penalties equal to your bodycount",
-            "GIVE penalties equal to the continents you visited",
             "GIVE STARE SLAVE to anyone on anyone and they TAKE "+ (2 + amount) +" penalties",
-            "GIVE STARE SLAVE to anyone on anyone  and they TAKE "+ (3 + amount) +" penalties",
             "Your RIGHT is your STARE SLAVE  and they TAKE "+ (2 + amount) +" penalties",
-            "Your RIGHT is your STARE SLAVE  and they TAKE "+ (3 + amount) +" penalties",
             "Everyone else "+ (2 + amount) +" penalties",
             "Your LEFT TAKE "+ (2 + amount) +" penalties",
             "Your RIGHT TAKE "+ (3 + amount) +" penalties",
             "Decrease your Penalty Counter by 1 and GIVE "+ (1 + amount) +" penalties",
-            "Decrease your Penalty Counter by 1 and GIVE "+ (2 + amount) +" penalties",
-            "Decrease your Penalty Counter by 1 and GIVE "+ (3 + amount) +" penalties"
         };
 
         actionGood = new List<string>
         {
             "Draw 1 Round start. It becomes GIVE",
-            "Draw 1 Round start. It becomes GIVE",
-            "Draw 2 Round starts and they become GIVE",
             "Draw 2 Round starts and they become GIVE",
             "Draw PROTECTION",
-            "Draw PROTECTION and GIVE "+ (1 + amount) +" penalties",
             "Draw PROTECTION and GIVE "+ (2 + amount) +" penalties",
             "Draw PROTECTION and GIVE "+ (3 + amount) +" penalties",
             "Draw TREASURE",

@@ -35,9 +35,10 @@ public class FreeSpin : MonoBehaviour
         sizeOfState.sizeDelta = new Vector2(500, 500);
         state.sprite = clickToSpin;
 
-        power = UnityEngine.Random.Range(200, 400);
-        RotatePower = UnityEngine.Random.Range(RotatePower - power, RotatePower + power);
-        StopPower = UnityEngine.Random.Range(StopPower - power, StopPower + power);
+        int powerRot = (int)Math.Round(RotatePower * 0.25);
+        int powerStop = (int)Math.Round(StopPower * 0.4);
+        RotatePower = UnityEngine.Random.Range(RotatePower - powerRot, RotatePower + powerRot);
+        StopPower = UnityEngine.Random.Range(StopPower - powerStop, StopPower + powerStop);
 
     }
 
@@ -74,8 +75,8 @@ public class FreeSpin : MonoBehaviour
         }
         
         state.sprite = yourPrize;
-        //spin.interactable = false;
-        //stateSpin.interactable = false;
+        spin.interactable = false;
+        stateSpin.interactable = false;
         
     }
 

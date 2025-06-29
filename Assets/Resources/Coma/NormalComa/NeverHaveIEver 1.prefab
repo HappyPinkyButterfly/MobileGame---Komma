@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -100, y: 370}
+  m_AnchoredPosition: {x: -100, y: 470}
   m_SizeDelta: {x: 900, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6163373406853650254
@@ -65,7 +65,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: NEVER HAVE I EVER
+  m_text: 'JUST FOR YOU
+
+    NEVER HAVE I EVER'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -508,7 +510,6 @@ MonoBehaviour:
   neverHaveIever: {fileID: 3364369974220098162}
   haveEffect: {fileID: 1402309433442421875}
   haveNotEffect: {fileID: 2731414863110835423}
-  gameEffects: {fileID: 0}
 --- !u!1 &5823019187702275049
 GameObject:
   m_ObjectHideFlags: 0
