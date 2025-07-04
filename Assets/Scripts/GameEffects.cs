@@ -297,9 +297,9 @@ public class GameEffects : MonoBehaviour
 
         dare = new List<string>
         {
-            "Go up to a stanger nearby and invite them to join our for a round of COMA",
+            "Go up to a stanger nearby and invite them to join our for a round of KOMMA",
             "Go up to a stanger nearby and ask for their phone number or social media",
-            "Take a fun group photo of us playing COMA and post it to your story with #COMA"
+            "Take a fun group photo of us playing KOMMA and post it to your story with #KOMMA"
         };
 
         wouldYouRather1 = new List<string>
