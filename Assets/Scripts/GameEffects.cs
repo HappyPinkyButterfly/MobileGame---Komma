@@ -156,7 +156,6 @@ public class GameEffects : MonoBehaviour
             "GIVE",
             "GIVE",
             "GIVE",
-            "GIVE",
             "EVERYONE",
             "EVERYONE ELSE",
             "SAME GENDER"
@@ -164,141 +163,124 @@ public class GameEffects : MonoBehaviour
 
         sideEffectList = new List<string>
         {
-            "Have or been walked on during sex",
-            "You are simp",
-            "Virgin",
-            "Sexy person",
-            "Nice person",
-            "Hooked up with someone you met online",
-            "Taken",
-            "Been with friends ex",
             "Attracted to present player",
+            "Been pregnancy scared",
             "Been skinny dipping",
+            "Been with friends ex",
+            "Have a child",
             "Have made selfie last week",
-            "Kissed or had sex with present player",
-            "Turned on by a fictional character",
-            "Ever lost keys or wallet",
-            "Under 180cm",
-            "Over 180cm",
+            "Have or been walked on during sex",
             "Had condom popped",
+            "Hooked up with someone you met online",
+            "Kissed or had sex with present player",
+            "Nice person",
+            "Over 180cm",
+            "Sexy person",
+            "Slept with older",
+            "Taken",
+            "Turned on by a fictional character",
+            "Under 180cm",
             "Used dating apps",
             "Currently using dating apps",
-            "Been pregnancy scared",
-            "Slept with older",
-            "Have a child"
+            "Ever lost keys or wallet",
+            "Virgin",
+            "You are simp"
         };
 
         roundStartDescription = new List<string>
         {
-            "If YOU have or been walked ON during sex",
-            "If YOU are simp",
-            "If YOU are virgin",
-            "If YOU are sexy person",
-            "If YOU are nice person",
-            "If YOU hooked up with someone you met online",
-            "If YOU are taken",
-            "If YOU been with friends ex",
-            "If YOU are attracted to present player",
-            "If YOU have been skinny dipping",
-            "If YOU have made selfie last week",
-            "If YOU kissed or had sex with present player",
-            "If YOU have been turned on by a fictional character",
-            "If YOU ever lost keys or wallet",
-            "If YOU are under 180cm",
-            "If YOU are over 180cm",
-            "If YOU ever had condom popped",
-            "If YOU are currently using dating apps",
-            "If YOU have been pregnancy scared",
-            "If YOU have slept with older",
-            "If YOU have a child",
-            "For each relationhip",
-            "For each VIRGINITY taken",
-            "For each SIBLING",
             "For each BODYCOUNT",
-            "For every virgin present"
+            "For each RELATIONSHIP",
+            "For each SIBLING",
+            "For each VIRGINITY taken",
+            "For every virgin present",
+            "If YOU are a nice person",
+            "If YOU are a sexy person",
+            "If YOU are attracted to the present player",
+            "If YOU are over 180cm",
+            "If YOU are taken",
+            "If YOU are under 180cm",
+            "If YOU are virgin",
+            "If YOU are simp",
+            "If YOU ever had a condom pop",
+            "If YOU ever lost keys or wallet",
+            "If YOU have a child",
+            "If YOU have been pregnancy scared",
+            "If YOU have been skinny dipping",
+            "If YOU have been turned on by a fictional character",
+            "If YOU have hooked up with someone you met online",
+            "If YOU have made a selfie last week",
+            "If YOU have or have been walked on during sex",
+            "If YOU have slept with someone older",
+            "If YOU kissed or had sex with the present player",
+            "If YOU have been with a friend's ex"
         };
-
-
-
 
         contestTypes = new List<string>
         {
-            "BODYCOUNT",
             "AGE",
-            "HAD ONE NIGHT STANDS",
+            "BODYCOUNT",
+            "HAD ONE-NIGHT STANDS",
             "INSTAGRAM FOLLOWERS",
-            "YEARS SINGLE/TAKEN CURRENTLY",
-            "NUMBER OF TATTOOS",
             "LENGTH OF LONGEST RELATIONSHIP",
-            "TIMES GOT REJECTED",
-            "NUMBER OF DRINKS HAD TONIGHT",
-            "NUMBER OF LANGUAGES SPOKEN",
-            "NUMBER OF DIFFERENT JOBS HAD",
-            "NUMBER OF INSTRUMENTS PLAYED",
-            "MOST EXPENSIVE PURCHASE"
+            "MOST EXPENSIVE PURCHASE",
+            "NUMBER OF TATTOOS",
+            "YEARS SINGLE/TAKEN CURRENTLY"
         };
 
         descriptionList = new List<string>
         {
-            "To get friendzoned",
-            "Is the biggest simp",
-            "To have the worst cooking skills",
-            "To have foot fetish",
-            "Catch feelings after one night stand",
-            "To never find true love",
-            "To be the gayest",
-            "To work at McDonalds",
-            "To become a pornstar",
-            "To have a child first",
-            "You would fuck",
-            "Biggest whore or fuckboy",
-            "Marry someone rich and famous",
-            "Date more than one person at a time",
-            "Get arrested",
-            "Die first in a horror film",
-            "Regularly check an exs Instagram",
-            "Date their best friends ex",
-            "Wear socks with sandals",
-            "Give the best hug",
-            "have the highest screen time",
             "Become an influencer",
-            "Laugh in a serious moment",
+            "Be the gayest",
+            "Biggest whore or fuckboy",
+            "Catch feelings after a one-night stand",
             "Commit a crime",
+            "Date more than one person at a time",
+            "Date their best friend's ex",
+            "Die first in a horror film",
+            "Get arrested",
+            "Get friendzoned",
+            "Give the best hug",
             "Have a threesome",
-            "Marry for money"
+            "Have the highest screen time",
+            "Have a foot fetish",
+            "Have a child first",
+            "Is the biggest simp",
+            "Laugh in a serious moment",
+            "Marry for money",
+            "Marry someone rich and famous",
+            "Regularly check an ex's Instagram",
+            "Have the worst cooking skills",
+            "Never find true love",
+            "Work at McDonald's",
+            "Become a pornstar",
+            "Wear socks with sandals",
+            "You would fuck"
         };
 
         truth = new List<string>
         {
-            "What is your worst date experiance?",
-            "Tell us about your ideal bodytype of a partner",
+            "Have you ever done something so wrong that you immediately regretted it? What?",
+            "How do you define love?",
+            "How do you handle rejection?",
+            "Tell us about your ideal body type of a partner",
             "Tell us about your ideal character of a partner",
-            "What is your biggest turn on",
-            "Describe your worst injury",
-            "What's a mistake you've made that you still feel guilty about",
-            "What's something you've Googled that you aren't proud to admit",
-            "How do you really feel about your job?",
-            "Who in the group has the most attractive parents?",
-            "What's your dream job? ",
-            "Have you ever done something so wrong that you immediately regretted it? What? ",
-            "How do you handle rejection? ",
-            "What do you consider to be the most romantic thing a person could do?",
-            "How do you define love? ",
-            "What habits attract you the most? ",
-            "Would you accept an arranged marriage? Why? ",
+            "What about you do you think turns me on?",
+            "What habits attract you the most?",
+            "What is your biggest turn-on?",
+            "What is your worst date experience?",
+            "What's a mistake you've made that you still feel guilty about?",
+            "What's something you've Googled that you aren't proud to admit?",
             "What's your craziest one-night stand story?",
             "What's the most embarrassing experience you've had while in bed?",
-            "What's your favorite position in bed? ",
-            "Would you say it's easy for you to be seduced? How? ",
-            "What 'type' do you prefer to hook up with? ",
-            "What's a fantasy of yours that has yet to happen?",
-            "What about you do you think turns me on? ",
+            "What's your favorite position in bed?",
+            "Would you say it's easy for you to be seduced? How?"
         };
 
         dare = new List<string>
         {
-            "Go up to a stanger nearby and invite them to join our for a round of KOMMA",
-            "Go up to a stanger nearby and ask for their phone number or social media",
+            "Go up to a stranger nearby and ask for their phone number or social media",
+            "Go up to a stranger nearby and invite them to join us for a round of KOMMA",
             "Take a fun group photo of us playing KOMMA and post it to your story with #KOMMA"
         };
 
@@ -341,57 +323,53 @@ public class GameEffects : MonoBehaviour
 
         neverHaveIever = new List<string>
         {
-            "Stolen anything",
-            "Missed a flight",
-            "Drunk-dialed my ex",
-            "Gone skinny-dipping",
             "Been on a yacht",
             "Been on TV",
-            "Had to go to court",
-            "Kissed more than one person in 24 hours",
-            "Had a one-night stand",
-            "Gone on a solo vacation",
-            "Gotten stopped by airport security",
-            "Had a threesome",
-            "Lied about my age",
             "Been the alibi for a lying friend",
-            "Role-played",
-            "Worn someone elses underwear",
-            "Gone to a strip club",
-            "Tried psychedelics",
-            "Met someone famous",
-            "Had sex on a beach",
             "Dated someone older than me",
             "Dated someone younger than me",
+            "Drunk-dialed my ex",
+            "Gone on a solo vacation",
+            "Gone skinny-dipping",
+            "Gone to a strip club",
+            "Gotten stopped by airport security",
             "Had a friend with benefits",
-            "Kissed a friend"
+            "Had a one-night stand",
+            "Had a threesome",
+            "Had sex on a beach",
+            "Had to go to court",
+            "Kissed a friend",
+            "Kissed more than one person in 24 hours",
+            "Lied about my age",
+            "Met someone famous",
+            "Missed a flight",
+            "Role-played",
+            "Stolen anything",
+            "Tried psychedelics",
+            "Worn someone else's underwear"
         };
 
         detective = new List<string>
         {
-            "MY BEST TRAIT",
-            "FAMOUS MOVIE ACTOR",
-            "KITCHEN ITEM",
+            "BEDROOM ITEM",
+            "CLASSROOM ITEM",
             "COUNTRY IN EUROPE",
             "EVERYDAY JOB",
-            "HISTORICAL FIGURE",
-            "CLASSROOM ITEM",
+            "FAMOUS MOVIE ACTOR",
             "FAMOUS MOVIE ACTRESS",
-            "BEDROOM ITEM",
-            };
-
-
-
-
+            "HISTORICAL FIGURE",
+            "KITCHEN ITEM",
+            "MY BEST TRAIT"
+        };
     }
     public void UpdateDynamicStrings()
     {
 
         jackpot = new List<string>
         {
-            "Everyone else "+ (7 + amount) +" penalties",
-            "Everyone else "+ (6 + amount) +" penalties without using hands",
-            "Everyone else STARE SLAVE to YOU and you take "+ (2 + amount) +" penalties"
+            "Everyone else TAKE " + (6 + amount) + " penalties without using hands",
+            "Everyone else TAKE " + (7 + amount) + " penalties",
+            "Everyone else is STARE SLAVE to YOU, TAKE " + (2 + amount) + " penalties"
         };
 
         actionJackpot = new List<string>
@@ -403,63 +381,62 @@ public class GameEffects : MonoBehaviour
         {
             "Draw 1 Round start",
             "Draw 2 Round starts",
-            "TAKE "+ (3 + amount) +" penalties without using hands",
-            "TAKE "+ (2 + amount) +" penalties without using hands",
-            "TAKE penalties equal to your bodycount",
-            "You are STARE SLAVE to your LEFT and they TAKE "+ (2 + amount) +" penalties",
-            "You are STARE SLAVE to your RIGHT and they TAKE "+ (3 + amount) +" penalties",
-            "You and your RIGHT TAKE "+ (2 + amount) +" penalties",
-            "You and your LEFT TAKE  "+ (3 + amount) +" penalties",
-            "Increase your Penalty Counter by 1, TAKE "+ (2 + amount) +" penalties",
-            "Increase your Penalty Counter by 1, TAKE "+ (3 + amount) +" penalties",
-
+            "TAKE " + (3 + amount) + " penalties without using hands",
+            "TAKE " + (2 + amount) + " penalties without using hands",
+            "TAKE penalties equal to your body count",
+            "You are STARE SLAVE to your LEFT, and they TAKE " + (2 + amount) + " penalties",
+            "You are STARE SLAVE to your RIGHT, and they TAKE " + (3 + amount) + " penalties",
+            "You and your LEFT TAKE " + (3 + amount) + " penalties",
+            "You and your RIGHT TAKE " + (2 + amount) + " penalties",
+            "Increase your Penalty Counter by 1, then TAKE " + (2 + amount) + " penalties",
+            "Increase your Penalty Counter by 1, then TAKE " + (3 + amount) + " penalties"
         };
 
         actionBad = new List<string>
         {
-            "Draw 1 Round start. It becomes TAKE",
-            "Draw 2 Round starts and they become TAKE",
+            "Draw 1 Round start; it becomes TAKE",
+            "Draw 2 Round starts; they become TAKE",
             "Draw CURSE",
-            "Draw CURSE and TAKE "+ (1 + amount) +" penalties",
-            "Draw CURSE and TAKE "+ (2 + amount) +" penalties",
+            "Draw CURSE and TAKE " + (1 + amount) + " penalty",
+            "Draw CURSE and TAKE " + (2 + amount) + " penalties",
             "GIVE PROTECTION to your RIGHT",
-            "GIVE PROTECTION to your RIGHT and you TAKE " + (1 + amount) +" penalties",
-            "GIVE PROTECTION to your RIGHT and you TAKE "+ (2 + amount) +" penalties",
+            "GIVE PROTECTION to your RIGHT and TAKE " + (1 + amount) + " penalty",
+            "GIVE PROTECTION to your RIGHT and TAKE " + (2 + amount) + " penalties"
         };
 
         photographer = new List<string>
         {
-            "TAKE photo with your RIGHT and random nearby object",
-            "Everyone else takes photo of you",
-            "TAKE photo with your RIGHT making intelectual faces",
-            "TAKE a photo with your RIGHT and your LEFT making one you each sad, happy and confused faces",
-            "TAKE a photo with your RIGHT hugging while both of you are fed "+ (2 + amount) +" penalties",
-            "Everyone grabs an oject and balace it on their heads, TAKE selfie",
-            "TAKE a group photo where everyone else puts their hands on your head"
+            "TAKE a photo with your RIGHT and a random nearby object",
+            "TAKE a photo with your RIGHT making intellectual faces",
+            "TAKE a photo with your RIGHT and your LEFT making sad, happy, and confused faces (one each)",
+            "TAKE a photo with your RIGHT hugging while both of you are fed " + (2 + amount) + " penalties",
+            "TAKE a group photo where everyone else puts their hands on your head",
+            "Everyone else takes a photo of you",
+            "Everyone grabs an object and balances it on their heads; TAKE a selfie"
         };
 
         goodEffects = new List<string>
         {
-            "GIVE "+ (2 + amount) +" penalties without using hands",
-            "GIVE penalties equal to your bodycount",
-            "GIVE STARE SLAVE to anyone on anyone and they TAKE "+ (2 + amount) +" penalties",
-            "Your RIGHT is your STARE SLAVE  and they TAKE "+ (2 + amount) +" penalties",
-            "Everyone else "+ (2 + amount) +" penalties",
-            "Your LEFT TAKE "+ (2 + amount) +" penalties",
-            "Your RIGHT TAKE "+ (3 + amount) +" penalties",
-            "Decrease your Penalty Counter by 1 and GIVE "+ (1 + amount) +" penalties",
+            "Decrease your Penalty Counter by 1 and GIVE " + (1 + amount) + " penalty",
+            "GIVE " + (2 + amount) + " penalties without using hands",
+            "GIVE penalties equal to your body count",
+            "GIVE STARE SLAVE to anyone, and they TAKE " + (2 + amount) + " penalties",
+            "Your LEFT TAKE " + (2 + amount) + " penalties",
+            "Your RIGHT is your STARE SLAVE and they TAKE " + (2 + amount) + " penalties",
+            "Your RIGHT TAKE " + (3 + amount) + " penalties",
+            "Everyone else TAKE " + (2 + amount) + " penalties"
         };
 
         actionGood = new List<string>
         {
-            "Draw 1 Round start. It becomes GIVE",
-            "Draw 2 Round starts and they become GIVE",
+            "Draw 1 Round start; it becomes GIVE",
+            "Draw 2 Round starts; they become GIVE",
             "Draw PROTECTION",
-            "Draw PROTECTION and GIVE "+ (2 + amount) +" penalties",
-            "Draw PROTECTION and GIVE "+ (3 + amount) +" penalties",
+            "Draw PROTECTION and GIVE " + (2 + amount) + " penalties",
+            "Draw PROTECTION and GIVE " + (3 + amount) + " penalties",
             "Draw TREASURE",
-            "Draw TREASURE and TAKE "+ (1 + amount) +" penalties",
-            "Draw TREASURE and GIVE "+ (1 + amount) +" penalties"
+            "Draw TREASURE and TAKE " + (1 + amount) + " penalty",
+            "Draw TREASURE and GIVE " + (1 + amount) + " penalty"
         };
 
         if (actionState && !hasActionBadBeenAdded)

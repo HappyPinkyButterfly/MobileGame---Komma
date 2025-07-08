@@ -285,8 +285,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 400}
-  m_SizeDelta: {x: 1000, y: 50}
+  m_AnchoredPosition: {x: 0, y: 450}
+  m_SizeDelta: {x: 1300, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1108501077
 MonoBehaviour:
@@ -308,10 +308,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "KOMMA is a turn-based social party game designed for 4-6 players, where
+  m_text: 'KOMMA is a turn-based social party game designed for 4-6 players, where
     each turn involves drawing cards that dictate social challenges, mini-games,
-    and chaotic effects. \n\nThe game features multiple modes to suit different playstyles,
-    from casual to competitive.\n"
+    chaotic effects and taking penlaties, which can be whatever the players decide
+    to be.
+
+
+    Its a game played with 2 decks. For the start of the round draw
+    ROUND START. After resolving it, draw KOMMA. After resolving it click on KOMMA
+    once more to reset both decks and pass turn to your left neighbour.
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -338,8 +345,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 68
-  m_fontSizeBase: 68
+  m_fontSize: 65
+  m_fontSizeBase: 65
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

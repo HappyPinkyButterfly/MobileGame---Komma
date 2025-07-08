@@ -98,5 +98,10 @@ public class RuelsExplanation : MonoBehaviour
     {
         GameObject auctionRule = Resources.Load<GameObject>("Explanations/RedGreen");
         Instantiate(auctionRule, comaLite.transform.position, comaLite.transform.rotation, comaLite.transform);
+    }
+    public void Waterfall()
+    {
+        GameObject auctionRule = Resources.Load<GameObject>("Explanations/WaterFall");
+        Instantiate(auctionRule, comaLite.transform.position, comaLite.transform.rotation, comaLite.transform);
     } 
 }

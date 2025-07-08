@@ -533,11 +533,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "COMA Cards\r\n\r\nTrigger wild effects (e.g., role-swapping, group challenges).\r\n\r\nIn
-    Expert Mode, may unlock Treasure, Curse, or Protection cards.\n\n\nTREASURE -
-    It is used immediatly or if it has \" * \", then it lasts until your next COMA
-    card\n\nCURSE  -Lasts until your next COMA card\n\nPROTECTION -lasts until you
-    next round start draw or when used\n\nClick on them to remove them\r"
+  m_text: "KOMMA Cards\r\n\r\n\rFor the end of your turn draw KOMMA. After resolving
+    it, click on KOMMA again to reset both decks\n\r\nIn Expert Mode, may unlock
+    Treasure, Curse, or Protection cards.\n\n\nTREASURE - It is used immediatly or
+    if it has \" * \", then it lasts until your next KOMMA card\n\nCURSE  -Lasts
+    until your next KOMMA card\n\nPROTECTION -lasts until you next round start draw
+    or when used\n\nClick on them to remove them\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -564,8 +565,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45
-  m_fontSizeBase: 45
+  m_fontSize: 44
+  m_fontSizeBase: 44
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
