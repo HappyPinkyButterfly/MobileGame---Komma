@@ -57,9 +57,16 @@ This mechanic adds tension and excitement — and ensures that nobody escapes th
 
 ---
 
-## 📸 Showcase (coming soon...)
+## 📸 Showcase
 
-> *(GIFs or video demo can be added – let me know if you'd like to include one.)*
+### 🟢 Casual Mode – Light, fun, and friendly
+![Casual](ShowcaseMedia/Casual.gif)
+
+### 🟠 Competitive Mode – Fast-paced & full of energy
+![Competitive](ShowcaseMedia/Competitive.gif)
+
+### 🔴 Expert Mode – For the brave and bold only
+![Expert](ShowcaseMedia/Expert.gif)
 
 ---
 
